@@ -1,0 +1,463 @@
+<html>
+
+<head>
+
+    <title>SPERO</title>
+    <meta charset="utf-8" />
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen, handheld" />
+
+	<link rel="stylesheet" href="animate.css">
+
+<!--[if lt IE 7.]>
+<script defer type="text/javascript" src="pngfix.js"></script>
+<![endif]-->
+
+<script src="jquery-latest.js" type="text/javascript"></script>
+<script src="jquery.min.js" type="text/javascript"></script>
+<script src="jquery.js" type="text/javascript"></script>
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+<script src="jquery-latest.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 13,
+
+                    draggable: false,zoomControl: false, scrollwheel: false,disableDoubleClickZoom: true,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(40.9900, -73.9900), // New York
+                    /*center: new google.maps.LatLng(40.2035444,-8.4111983),*/
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"color":"#f5f5f2"},{"visibility":"on"}]},{"featureType":"administrative","stylers":[{"visibility":"off"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"poi.attraction","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","stylers":[{"visibility":"off"}]},{"featureType":"poi.place_of_worship","stylers":[{"visibility":"off"}]},{"featureType":"poi.school","stylers":[{"visibility":"off"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#ffffff"},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"visibility":"simplified"},{"color":"#ffffff"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"color":"#ffffff"},{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","stylers":[{"color":"#ffffff"}]},{"featureType":"poi.park","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#71c8d4"}]},{"featureType":"landscape","stylers":[{"color":"#e5e8e7"}]},{"featureType":"poi.park","stylers":[{"color":"#8ba129"}]},{"featureType":"road","stylers":[{"color":"#ffffff"}]},{"featureType":"poi.sports_complex","elementType":"geometry","stylers":[{"color":"#c7c7c7"},{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#a0d3d3"}]},{"featureType":"poi.park","stylers":[{"color":"#91b65d"}]},{"featureType":"poi.park","stylers":[{"gamma":1.51}]},{"featureType":"road.local","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"poi.government","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"landscape","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","stylers":[{"visibility":"simplified"}]},{"featureType":"road"},{"featureType":"road"},{},{"featureType":"road.highway"}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using out element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+            }
+        </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+    $(function() {
+          var timer = setInterval( slide, 1500);
+
+          var counter = 0;
+          var pos = false;
+
+          var showN = 0;
+          
+          var sStat = 0; 
+
+
+          $(document).ready(function (){
+				$('.btMessUm').click(function () {
+                    $('html, body').animate({
+                       scrollTop: (($(".conAni").offset().top)-105)
+                    }, 300);
+
+                    showN = 2;
+			    });
+
+				$('.btMessUmDois').click(function () {
+                    $('html, body').animate({
+                       scrollTop: (($(".sliTres").offset().top)-105)
+                    }, 300);
+			    });
+
+			    $('.txMessDois').click(function () {
+                    $('html, body').animate({
+                       scrollTop: (($(".sliTres").offset().top)-105)
+                    }, 300);
+			    });
+			    
+			    $('.tres').click(function () {
+			    	if (sStat == 0){
+	                    $('html, body').animate({
+	                       scrollTop: (($(".conAni").offset().top)-105)
+	                    }, 300);
+
+	                    showN = 2;
+	                }
+
+		                $('.tres').click(function () {
+			                if (sStat == 1){
+			                	$('html, body').animate({
+			                       scrollTop: (($(".sliUM").offset().top)-105)
+			                    }, 300);
+			                }   
+			            });     
+			    });
+
+			    $('.dois').click(function () {
+	                $('html, body').animate({
+	                    scrollTop: (($(".sliTres").offset().top)-105)
+	                }, 300);
+			    });
+			});
+
+
+      
+          function slide() {
+
+          	if (pos == true){counter ++;} 
+
+            if(counter==0) {$(".ConT3").fadeOut(10);
+            				$(".ConT2").fadeOut(10);
+                            $(".ConT1").fadeIn(300);
+
+                            $(".numUm").css({"color":"rgb(52, 152, 219)"})
+                            $(".numDois").css({"color":"black"})
+                            $(".numTres").css({"color":"black"})
+							}
+
+            if(counter==1) {$(".ConT1").fadeOut(10);
+                            $(".ConT3").fadeOut(10);
+                            $(".ConT2").fadeIn(300);
+
+                            $(".numUm").css({"color":"black"})
+                            $(".numDois").css({"color":"rgb(52, 152, 219)"})
+                            $(".numTres").css({"color":"black"})
+                            }
+
+            if(counter==2) {$(".ConT1").fadeOut(10);
+                            $(".ConT2").fadeOut(10);
+                            $(".ConT3").fadeIn(300);
+
+                            $(".numDois").css({"color":"black"})
+                            $(".numUm").css({"color":"black"})
+                            $(".numTres").css({"color":"rgb(52, 152, 219)"})
+
+                            pos = false;
+                            }
+          }
+
+
+        $(".numUm").click(function(){ 
+        	$(".ConT2").css({"display":"none"})
+            counter = 0;
+        });
+
+        $(".numDois").click(function(){ 
+            counter = 1;
+        });
+
+        $(".numTres").click(function(){ 
+            counter = 2;
+        });
+
+
+
+
+
+
+        $(document).scroll(function(){
+			var doisOffset = $(".sliDois").offset();
+			var doisOffset2 = $(".sliTres").offset();
+
+			var dPos = (doisOffset.top -400);
+			var dPos2 = (doisOffset.top -200);
+			var dPos3 = (doisOffset2.top -300);
+
+			var scroll = $(window).scrollTop();
+
+			if(scroll >= dPos){
+				$(".menu").show(300);
+				$(".logotipo").hide(10);
+				sStat = 1;
+			}
+
+			else{
+				$(".menu").hide(10);
+				$(".logotipo").show(300);
+			}
+
+
+
+			if(scroll >= dPos3){
+				$('.conP').addClass('animated swing');
+				sStat = 0;
+			}
+
+			if(scroll >= dPos2){
+				if (showN == 2){
+					$('.news').addClass('animated pulse');
+					pos = true;
+				}
+			}
+
+		});
+	});
+
+
+$(document).ready(function (){
+	$('.ConRepUm').addClass('animated bounceInDown');
+	$('.ConRepDois').addClass('animated bounceInDown');
+	$('.ConRepTres').addClass('animated bounceInDown');
+	$('.ConRepQuatro').addClass('animated bounceInDown');
+
+	$('.ConDesUm').addClass('animated flipInX');
+	$('.ConDesDois').addClass('animated flipInX');
+	$('.ConDesTres').addClass('animated flipInX');
+	$('.ConDesQuatro').addClass('animated flipInX');	
+});
+
+</script>
+
+
+</head>
+
+
+<body>
+
+
+
+	<div class="menu">
+			<div class="um" style="cursor: pointer">
+				<div class="conSpe">
+					<img id="imgSpe" src="img/sper.png" />
+				</div>	
+			</div>
+
+			<div class="dois" style="cursor: pointer">
+				<div class="ConBaixo">
+					<img id="imgBaixo" src="img/baixo.png" />
+				</div>
+			</div>
+
+			<div class="tres" style="cursor: pointer">
+				<div class="ConCima">
+					<img id="imgCima" src="img/cima.png" />
+				</div>
+			</div>
+	</div>
+
+
+
+	<div class="logotipo">
+		<div class="conLog">
+			<img id="imgLog" src="img/sper2.png" />
+		</div>	
+	</div>
+
+
+
+
+	
+<div class="conWrap">
+	<div class="wrap">
+
+		<div class="sliUm">
+			<div class="ConRep">
+
+				<div class="repUm">
+					<div class="ConDesUm">
+						<img id="imgDesUm" src="img/prob1.png" />
+					</div>
+					<div class="ConRepUm">
+						<img id="imgRepUm" src="img/report.png" />
+					</div>
+				</div>
+
+				<div class="repDois">
+					<div class="ConDesDois">
+						<img id="imgDesDois" src="img/prob2.png" />
+					</div>
+					<div class="ConRepDois">
+						<img id="imgRepDois" src="img/report.png" />
+					</div>	
+				</div>
+
+				<div class="repTres">
+					<div class="ConDesTres">
+						<img id="imgDesTres" src="img/prob3.png" />
+					</div>
+					<div class="ConRepTres">
+						<img id="imgRepTres" src="img/report.png" />
+					</div>	
+				</div>
+
+				<div class="repQuatro">
+					<div class="ConDesQuatro">
+						<img id="imgDesQuatro" src="img/prob4.png" />
+					</div>
+					<div class="ConRepQuatro">
+						<img id="imgRepQuatro" src="img/report.png" />
+					</div>	
+				</div>	
+			</div>
+
+			<div class="messUm">
+				<div class="btMessUm" style="cursor: pointer">
+					<div class="txMessUm">
+						<p>Agora podes intervir</p>
+						<p>melhorando a tua cidade</p>
+					</div>	
+					<div class="triUm">
+						<div class="conTriUm">
+							<img id="imgTri" src="img/tri.png" />
+						</div>
+					</div>
+				</div>	
+			</div>
+
+			<div class="messUmDois">
+				<div class="btMessUmDois" style="cursor: pointer">
+					<div class="txMessUmDois">
+						<p>Serviços SPERO</p>
+						<p>para profissionais</p>
+					</div>	
+					<div class="triUmDois">
+						<div class="conTriUmDois">
+							<img id="imgTri" src="img/tri2.png" />
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+
+
+
+		<div class="sliDois">
+			<div class="conAni">
+				<div class="ConT1">
+					<img id="imgT" src="img/tele.png" />
+				</div>
+				<div class="ConT2">
+					<img id="imgT" src="img/tele2.png" />
+				</div>
+				<div class="ConT3">
+					<img id="imgT" src="img/tele3.png" />
+				</div>
+
+				<div class="numeros">
+					<div class="numUm" style="cursor: pointer">
+						<p>1</p>
+					</div>
+
+					<div class="numDois" style="cursor: pointer">
+						<p>2</p>
+					</div>
+
+					<div class="numTres" style="cursor: pointer">
+						<p>3</p>
+					</div>
+				</div>	
+			</div>	
+
+			<div class="afeWrap">
+				<div class="conAfe">
+					<div class="afect">
+						<div class="ConEx">
+							<img id="imgEx" src="img/exclama.png" />
+						</div>
+
+						<div class="exMess">
+							<p>Diz que problemas também te</p>
+							<p>afectam e partilha-os!</p>
+						</div>
+
+						<div class="ConSoc">
+							<img id="imgSoc" src="img/soci.png" />
+						</div>
+					</div>
+				</div>
+
+				<div class="news">
+					<form id="nIn" method="get" action=" ">
+						<div class="per">Queres saber mais?</div>
+					    <input type="text" class="rect" placeholder="Deixa o teu e-mail..." value="" name="q" size="21" maxlength="120">
+					     <input type="submit" class="but" value="SUBMETER">
+					</form>
+				</div>
+
+				<div class="messDois">
+					<div class="btMessDois" style="cursor: pointer">
+						<div class="txMessDois">
+							<p>Profissionais vão estar atentos</p>
+							<p>para resolver os problemas</p>
+						</div>
+						<div class="triDois">
+							<div class="ConTriDois">
+								<img id="imgTriDois" src="img/tri2.png" />
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>	
+		</div>
+
+
+
+		<div class="sliTres">
+			<div class="messTres">
+				<div class="txMessTres">
+					<p>Serviços SPERO para profssionais</p>
+				</div>
+			</div>
+
+			<div class="servi">
+				<div class="ConEd">
+					<img id="imgEd" src="img/edi.png" />
+				</div>
+				<div class="ConEs">
+					<img id="imgEs" src="img/estr.png" />
+				</div>
+				<div class="ConMun">
+					<img id="imgMun" src="img/mun.png" />
+				</div>
+				<div class="ConAg">
+					<img id="imgAg" src="img/agu.png" />
+				</div>
+			</div>	
+
+			<div class="ConP">
+				<img id="imgP" src="img/planet.png" />
+			</div>
+		</div>
+
+	</div>	
+</div>
+
+	<div class="conMap">
+		<div id="map"></div>
+	</div>
+
+</body>
+</html>
