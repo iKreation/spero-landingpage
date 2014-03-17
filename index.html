@@ -114,7 +114,7 @@
 		                $('.tres').click(function () {
 			                if (sStat == 1){
 			                	$('html, body').animate({
-			                       scrollTop: (($(".sliUM").offset().top)-105)
+			                       scrollTop: (($(".ConRep").offset().top)-105)
 			                    }, 300);
 			                }   
 			            });     
@@ -133,16 +133,19 @@
 
           	if (pos == true){counter ++;} 
 
-            if(counter==0) {$(".ConT3").fadeOut(10);
+            if(counter==0) {
+							}
+
+            if(counter==1) {$(".ConT3").fadeOut(10);
             				$(".ConT2").fadeOut(10);
                             $(".ConT1").fadeIn(300);
 
                             $(".numUm").css({"color":"rgb(52, 152, 219)"})
                             $(".numDois").css({"color":"black"})
                             $(".numTres").css({"color":"black"})
-							}
+                            }
 
-            if(counter==1) {$(".ConT1").fadeOut(10);
+            if(counter==2) {$(".ConT1").fadeOut(10);
                             $(".ConT3").fadeOut(10);
                             $(".ConT2").fadeIn(300);
 
@@ -151,7 +154,7 @@
                             $(".numTres").css({"color":"black"})
                             }
 
-            if(counter==2) {$(".ConT1").fadeOut(10);
+            if(counter==3) {$(".ConT1").fadeOut(10);
                             $(".ConT2").fadeOut(10);
                             $(".ConT3").fadeIn(300);
 
@@ -160,21 +163,21 @@
                             $(".numTres").css({"color":"rgb(52, 152, 219)"})
 
                             pos = false;
-                            }
+                            }                
           }
 
 
         $(".numUm").click(function(){ 
         	$(".ConT2").css({"display":"none"})
-            counter = 0;
-        });
-
-        $(".numDois").click(function(){ 
             counter = 1;
         });
 
-        $(".numTres").click(function(){ 
+        $(".numDois").click(function(){ 
             counter = 2;
+        });
+
+        $(".numTres").click(function(){ 
+            counter = 3;
         });
 
 
@@ -184,11 +187,11 @@
 
         $(document).scroll(function(){
 			var doisOffset = $(".sliDois").offset();
-			var doisOffset2 = $(".sliTres").offset();
+			var doisOffset2 = $(".servi").offset();
 
 			var dPos = (doisOffset.top -400);
 			var dPos2 = (doisOffset.top -200);
-			var dPos3 = (doisOffset2.top -300);
+			var dPos3 = (doisOffset2.top -400);
 
 			var scroll = $(window).scrollTop();
 
@@ -206,7 +209,7 @@
 
 
 			if(scroll >= dPos3){
-				$('.conP').addClass('animated swing');
+				$('.planeta').addClass('animated tada');
 				sStat = 0;
 			}
 
@@ -225,12 +228,13 @@ $(document).ready(function (){
 	$('.ConRepUm').addClass('animated bounceInDown');
 	$('.ConRepDois').addClass('animated bounceInDown');
 	$('.ConRepTres').addClass('animated bounceInDown');
-	$('.ConRepQuatro').addClass('animated bounceInDown');
+	$('.ConRepQuatro').addClass('animated bounceInDown');	
 
-	$('.ConDesUm').addClass('animated flipInX');
-	$('.ConDesDois').addClass('animated flipInX');
-	$('.ConDesTres').addClass('animated flipInX');
-	$('.ConDesQuatro').addClass('animated flipInX');	
+	/*por isto a aparecer depois*/
+	$('.ConDesUm').fadeIn(800);	
+	$('.ConDesDois').fadeIn(800);	
+	$('.ConDesTres').fadeIn(800);	
+	$('.ConDesQuatro').fadeIn(800);	
 });
 
 </script>
@@ -446,7 +450,7 @@ $(document).ready(function (){
 				</div>
 			</div>	
 
-			<div class="ConP">
+			<div class="planeta">
 				<img id="imgP" src="img/planet.png" />
 			</div>
 		</div>

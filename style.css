@@ -72,7 +72,7 @@ b{
 
 
 .conP {
-  -moz-animation-duration: 1s;
+  -moz-animation-duration: 2s;
   -moz-animation-delay: 0s;
   -webkit-animation-duration:3s;
   -webkit-animation-delay:2s;
@@ -80,68 +80,37 @@ b{
 
 .news {
   -moz-animation-duration: 2s;
-  -moz-animation-delay: 2s;
+  -moz-animation-delay: 3s;
   -webkit-animation-duration:3s;
   -webkit-animation-delay:2s;
 }
 
 .ConRepUm {
   -moz-animation-duration: 2s;
-  -moz-animation-delay: 2s;
+  -moz-animation-delay: 1s;
   -webkit-animation-duration:3s;
   -webkit-animation-delay:2s;
 }
 
 .ConRepDois {
   -moz-animation-duration: 2s;
-  -moz-animation-delay: 3s;
+  -moz-animation-delay: 2s;
   -webkit-animation-duration:3s;
   -webkit-animation-delay:3s;
 }
 
 .ConRepTres {
   -moz-animation-duration: 2s;
-  -moz-animation-delay: 4s;
+  -moz-animation-delay: 3s;
   -webkit-animation-duration:3s;
   -webkit-animation-delay:4s;
 }
 
 .ConRepQuatro {
   -moz-animation-duration: 2s;
-  -moz-animation-delay: 5s;
-  -webkit-animation-duration:3s;
-  -webkit-animation-delay:5s;
-}
-
-
-
-
-.ConDesUm {
-  -moz-animation-duration: 3s;
-  -moz-animation-delay: 3s;
-  -webkit-animation-duration:3s;
-  -webkit-animation-delay:3s;
-}
-
-.ConDesDois {
-  -moz-animation-duration: 3s;
   -moz-animation-delay: 4s;
   -webkit-animation-duration:3s;
-  -webkit-animation-delay:4s;
-}
-
-.ConDesTres {
-  -moz-animation-duration: 3s;
-  -moz-animation-delay: 5s;
-  -webkit-animation-duration:3s;
   -webkit-animation-delay:5s;
-}
-
-.ConDesQuatro {
-  -moz-animation-duration: 3s;
-  -moz-animation-delay: 6s;
-  -webkit-animation-duration:3s;
-  -webkit-animation-delay:6s;
 }
 
 
@@ -358,6 +327,8 @@ body{
     background: transparent;
 
     z-index: 1000;
+
+    display:none;
 }
 #imgDesUm{
 	position:absolute;
@@ -407,6 +378,7 @@ body{
     background: transparent;
 
     z-index: 1000;
+    display:none;
 }
 #imgDesDois{
 	position:absolute;
@@ -458,6 +430,7 @@ body{
     background: transparent;
 
     z-index: 1000;
+    display:none;
 }
 #imgDesTres{
 	position:absolute;
@@ -510,6 +483,7 @@ body{
     background: transparent;
 
     z-index: 1000;
+    display:none;
 }
 #imgDesQuatro{
 	position:absolute;
@@ -738,20 +712,21 @@ body{
 
 .numUm{
 	width:20px;
+	color:black;
 }
 
 .numDois{
 	width:20px;
 	margin-left: 50px;
 	margin-top: -38px;
-	color: rgb(52, 152, 219);
+	color: black;
 }
 
 .numTres{
 	width:20px;
 	margin-left: 100px;
 	margin-top: -38px;
-	color: rgb(52, 152, 219);
+	color: black;
 }
 /* NUMEROS -----------------*/
 
@@ -776,6 +751,7 @@ body{
 	margin-top: 20px;
 
 	background: rgba(39, 174, 96, 0.9);
+	display: none;
 }
 
 .afect{
@@ -849,8 +825,8 @@ body{
 	height: 115px;
 
 	float: left;
-	margin-left: 5%;
-	margin-top: 55px;
+	margin-left: 25%;
+	margin-top: -30px;
 	padding-left: 10;
 	padding-top: 10;
 	 
@@ -927,7 +903,7 @@ body{
 	height: 100px;
 
 	float: right;
-	margin-top: 70px;
+	margin-top: 170px;
 
 	line-height: 150%;
 	text-align: center;
@@ -1120,7 +1096,7 @@ body{
 
 
 /* IMG PLANETA -----------------*/
-.ConP{
+.planeta{
 	width:280px;
 	height: 280px;
 	display:block; 
