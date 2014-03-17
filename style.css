@@ -71,48 +71,9 @@ b{
 
 
 
-
-
-
-body.ie6 #goodAntiAliasing,
-body.ie7 #goodAntiAliasing,
-body.ie8 #goodAntiAliasing {
-	background-color: white;
-}
-
-#goodAntiAliasing {
-	opacity: 0.5;
-
-        /* IE 8: yes, it is ugly but it has to be on one line. :-( */
-        -ms-filter: "progid:DXImageTransform.Microsoft.Chroma(color='white') progid:DXImageTransform.Microsoft.Alpha(opacity=50)";
-
-        /* IE 6,7 is more flexible: it can be on multiple lines. */
-	filter: progid:DXImageTransform.Microsoft.Chroma(color='white')
-                progid:DXImageTransform.Microsoft.Alpha(opacity=50);
-	
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .conP {
   -moz-animation-duration: 1s;
-  -moz-animation-delay: 1s;
+  -moz-animation-delay: 0s;
   -webkit-animation-duration:3s;
   -webkit-animation-delay:2s;
 }
@@ -242,7 +203,7 @@ body{
 .um{
 	background: black;
 	height: 35px;
-	width: 30%;
+	width: 25%;
 	padding-top: 15;
 	float: left;
 }
@@ -252,8 +213,8 @@ body{
 	display:block; 
     position:relative;
     overflow:hidden;
-    margin-left: 10%;
-    margin-top: 2px;
+    margin-top: 10px;
+    margin-left: 15px;
 }
 #imgSpe{
 	position:absolute;
@@ -269,17 +230,17 @@ body{
 	background: rgb(50,50,50);
 	float: left;
 	width: 50px;
-	height: 30px;
+	height: 35px;
 	padding-top: 20;
 	padding-left: 20;
 	color:white;
 }
-.conBaixo, .conCima{
-	width:20px;
-	height:20px;
+.setBaixo, .setCima{
+	width:15px;
+	height:15px;
 
-	margin-top: -5px;
-	margin-left: 4px;
+	margin-top: 10px;
+	margin-left: 17px;
 
 	display:block; 
     position:relative;
@@ -301,7 +262,7 @@ body{
 	background: rgb(80,80,80);
 	float: left;
 	width: 50px;
-	height: 30px;
+	height: 35px;
 	padding-top: 20;
 	padding-left: 20;
 	color:white;
@@ -611,19 +572,17 @@ body{
 	background: rgba(39, 174, 96, 0.9);
 }
 
-.ConTriUm{
+.Contri{
 	width:80px;
-	height: 35px;
+	height: 55px;
 	display:block; 
     position:relative;
     overflow:hidden;
 
-    margin-left: calc(100% - 120px);
-    margin-top: 10px;
+    margin-left: 60%;
+    margin-top: 15px;
 
     background: transparent;
-
-    z-index: 1000;
 }
 #imgTri{
 	position:absolute;
@@ -650,8 +609,8 @@ body{
 
 .btMessUmDois{
 	width:350px;
-	margin-left: 150px;
-	margin-top: -60px;
+	margin-left: 650px;
+	margin-top: -130px;
 	float: left;
 }
 
@@ -665,15 +624,15 @@ body{
 	background: rgba(52, 152, 219, 0.9);
 }
 
-.ConTriUmDois{
+.triangulo2{
 	width:80px;
-	height: 35px;
+	height: 55px;
 	display:block; 
     position:relative;
     overflow:hidden;
 
     margin-left: 25%;
-    margin-top: 10px;
+    margin-top: 15px;
 
     background: transparent;
 }
@@ -886,8 +845,8 @@ body{
 
 /* NEWSLETTER -----------------*/
 .news{
-	width: 290px;
-	height: 105px;
+	width: 310px;
+	height: 115px;
 
 	float: left;
 	margin-left: 5%;
@@ -902,10 +861,16 @@ body{
 	background: rgba(39, 174, 96, 0.9);
 }
 
+.per{
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
 .rect{
 	width: 250px;
 
 	margin-top: 10px;
+	margin-left: 15px;
 
 	font-family: Ssemi;
 	font-size: 20px;
@@ -1048,9 +1013,9 @@ body{
 	width:400px;
 	height: 50px;
 
-	padding-top: 20;
 	margin-left: 0px;
 	margin-top: 0px;
+	padding-top: 20px;
 
 	font-family: sSemi;
 	font-size: 24px;
