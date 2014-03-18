@@ -80,7 +80,7 @@ b{
 
 .news {
   -moz-animation-duration: 2s;
-  -moz-animation-delay: 3s;
+  -moz-animation-delay: 4s;
   -webkit-animation-duration:3s;
   -webkit-animation-delay:2s;
 }
@@ -109,6 +109,20 @@ b{
 .ConRepQuatro {
   -moz-animation-duration: 2s;
   -moz-animation-delay: 4s;
+  -webkit-animation-duration:3s;
+  -webkit-animation-delay:5s;
+}
+
+.messUm {
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 5s;
+  -webkit-animation-duration:3s;
+  -webkit-animation-delay:5s;
+}
+
+.messUmDois {
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 5s;
   -webkit-animation-duration:3s;
   -webkit-animation-delay:5s;
 }
@@ -143,7 +157,7 @@ body{
 
 	position: absolute;
 	z-index: 99999999;
-	left: calc(50% - 42.5%); 
+	left: calc(50% - 42%);
 	top: 7%;
 
 	background: transparent;
@@ -285,6 +299,89 @@ body{
 
 
 
+/* DESCRIÇÃO REPORTS ---------------------------------------------*/
+.repDes1{
+	width:450px;
+	height: 220px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 550px;
+	margin-top: 60px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+}
+.txDes{
+	width:400px;
+	height: 100px;
+	font-size: 20px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.ConProb{
+	width:200px;
+	height: 300px;
+	display:block; 
+    position:absolute;
+    overflow:hidden;
+    z-index: 9999;
+    margin-left: 350px;
+    margin-top: 60px;
+
+    background: transparent;
+    display: none;
+}
+#imgProb{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.ConSoc2{
+	width:35px;
+	height: 35px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-top: 50px;
+    margin-left: 20px;
+
+    background: transparent;
+}
+#imgSoc2{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+.ConSoc3{
+	width:35px;
+	height: 35px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-top: -35px;
+    margin-left: 70px;
+
+    background: transparent;
+}
+#imgSoc3{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/* DESCRIÇÃO REPORTS ---------------------------------------------*/
+
+
+
+
 
 /* PRIMEIRO SLIDE ---------------------------------------------*/
 .sliUm{
@@ -329,6 +426,8 @@ body{
     z-index: 1000;
 
     display:none;
+
+    cursor: pointer;
 }
 #imgDesUm{
 	position:absolute;
@@ -349,6 +448,8 @@ body{
     background: transparent;
 
     z-index: 1000;
+
+    cursor: pointer;
 }
 #imgRepUm{
 	position:absolute;

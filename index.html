@@ -107,17 +107,15 @@
 	                    $('html, body').animate({
 	                       scrollTop: (($(".conAni").offset().top)-105)
 	                    }, 300);
-
 	                    showN = 2;
+	                    sStat = 1;
 	                }
-
-		                $('.tres').click(function () {
-			                if (sStat == 1){
+			                else {
 			                	$('html, body').animate({
 			                       scrollTop: (($(".ConRep").offset().top)-105)
 			                    }, 300);
-			                }   
-			            });     
+			                    sStat = 0;
+			                }     
 			    });
 
 			    $('.dois').click(function () {
@@ -163,21 +161,47 @@
                             $(".numTres").css({"color":"rgb(52, 152, 219)"})
 
                             pos = false;
-                            }                
+                            }
+
+            if(counter==4) {$(".ConT3").fadeOut(10);
+            				$(".ConT2").fadeOut(10);
+                            $(".ConT1").fadeIn(300);
+
+                            $(".numUm").css({"color":"rgb(52, 152, 219)"})
+                            $(".numDois").css({"color":"black"})
+                            $(".numTres").css({"color":"black"})
+                            }
+
+            if(counter==5) {$(".ConT1").fadeOut(10);
+                            $(".ConT3").fadeOut(10);
+                            $(".ConT2").fadeIn(300);
+
+                            $(".numUm").css({"color":"black"})
+                            $(".numDois").css({"color":"rgb(52, 152, 219)"})
+                            $(".numTres").css({"color":"black"})
+                            }
+
+            if(counter==6) {$(".ConT1").fadeOut(10);
+                            $(".ConT2").fadeOut(10);
+                            $(".ConT3").fadeIn(300);
+
+                            $(".numDois").css({"color":"black"})
+                            $(".numUm").css({"color":"black"})
+                            $(".numTres").css({"color":"rgb(52, 152, 219)"})
+                            }                                
           }
 
 
         $(".numUm").click(function(){ 
-        	$(".ConT2").css({"display":"none"})
-            counter = 1;
+            counter = 4;
         });
 
         $(".numDois").click(function(){ 
-            counter = 2;
+            counter = 5;
         });
 
         $(".numTres").click(function(){ 
-            counter = 3;
+            counter = 6;
         });
 
 
@@ -198,7 +222,6 @@
 			if(scroll >= dPos){
 				$(".menu").show(300);
 				$(".logotipo").hide(10);
-				sStat = 1;
 			}
 
 			else{
@@ -218,10 +241,45 @@
 					$('.news').addClass('animated pulse');
 					pos = true;
 				}
+				sStat = 0;
 			}
 
 		});
 	});
+
+
+
+$(document).ready(function(){
+var repUm = false;
+
+    $(".ConRepUm").click(function(){
+    	if (!repUm){
+		    $('.repDes1').fadeIn(300);
+		    $('.ConProb').fadeIn(300);
+		    repUm = true;
+		}
+		else{
+			$('.repDes1').fadeOut(300);
+		    $('.ConProb').fadeOut(300);
+		    repUm = false;
+		}
+	});    
+	$(".ConDesUm").click(function(){
+		if (!repUm){
+		    $('.repDes1').fadeIn(300);
+		    $('.ConProb').fadeIn(300);
+		    repUm = true;
+		}
+		else{
+			$('.repDes1').fadeOut(300);
+		    $('.ConProb').fadeOut(300);
+		    repUm = false;
+		}
+	}); 
+});
+
+
+
 
 
 $(document).ready(function (){
@@ -235,7 +293,13 @@ $(document).ready(function (){
 	$('.ConDesDois').fadeIn(800);	
 	$('.ConDesTres').fadeIn(800);	
 	$('.ConDesQuatro').fadeIn(800);	
+
+	$('.messUm').addClass('animated fadeInUp');
+	$('.messUmDois').addClass('animated fadeInUp');
 });
+
+
+
 
 </script>
 
@@ -280,7 +344,6 @@ $(document).ready(function (){
 	</div>
 
 
-	
 
 <div class="conWrap">
 	<div class="wrap">
@@ -296,6 +359,25 @@ $(document).ready(function (){
 						<img id="imgRepUm" src="img/report.png" />
 					</div>
 				</div>
+
+				<div class="ConProb">
+					<img id="imgProb" src="img/buraco.png" />
+				</div>
+				<div class="repDes1"> 
+					<div class="txDes">
+						<p>Este é o buraco na estrada pelo qual passas todos os dias. Agora profissionais saberão que este problema existe.</p>
+						<br>
+						<p>Partilha-o também nas redes sociais.</p> 
+					</div>
+
+					<div class="ConSoc2">
+						<img id="imgSoc2" src="img/face.png" />
+					</div>
+					<div class="ConSoc3">
+						<img id="imgSoc3" src="img/twit.png" />
+					</div>
+				</div>
+
 
 				<div class="repDois">
 					<div class="ConDesDois">
