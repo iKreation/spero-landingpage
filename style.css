@@ -299,7 +299,7 @@ body{
 
 
 
-/* DESCRIÇÃO REPORTS ---------------------------------------------*/
+/* DESCRIÇÃO REPORTS 1---------------------------------------------*/
 .repDes1{
 	width:450px;
 	height: 220px;
@@ -377,7 +377,169 @@ body{
     left:0; 
     width:100%;
 }
-/* DESCRIÇÃO REPORTS ---------------------------------------------*/
+/* DESCRIÇÃO REPORTS 1---------------------------------------------*/
+
+/* DESCRIÇÃO REPORTS 2---------------------------------------------*/
+.repDes2{
+	width:450px;
+	height: 220px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 450px;
+	margin-top: 60px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+}
+.txDes{
+	width:400px;
+	height: 100px;
+	font-size: 20px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.ConProb2{
+	width:200px;
+	height: 300px;
+	display:block; 
+    position:absolute;
+    overflow:hidden;
+    z-index: 9999;
+    margin-left: 250px;
+    margin-top: 60px;
+
+    background: transparent;
+    display: none;
+}
+#imgProb2{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.ConSoc2{
+	width:35px;
+	height: 35px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-top: 50px;
+    margin-left: 20px;
+
+    background: transparent;
+}
+#imgSoc2{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+.ConSoc3{
+	width:35px;
+	height: 35px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-top: -35px;
+    margin-left: 70px;
+
+    background: transparent;
+}
+#imgSoc3{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/* DESCRIÇÃO REPORTS 2---------------------------------------------*/
+
+
+/* DESCRIÇÃO REPORTS 3---------------------------------------------*/
+.repDes3{
+	width:450px;
+	height: 220px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 450px;
+	margin-top: 220px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+}
+.txDes{
+	width:400px;
+	height: 100px;
+	font-size: 20px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.ConProb3{
+	width:200px;
+	height: 300px;
+	display:block; 
+    position:absolute;
+    overflow:hidden;
+    z-index: 9999;
+    margin-left: 250px;
+    margin-top: 220px;
+
+    background: transparent;
+    display: none;
+}
+#imgProb3{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.ConSoc2{
+	width:35px;
+	height: 35px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-top: 50px;
+    margin-left: 20px;
+
+    background: transparent;
+}
+#imgSoc2{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+.ConSoc3{
+	width:35px;
+	height: 35px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-top: -35px;
+    margin-left: 70px;
+
+    background: transparent;
+}
+#imgSoc3{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/* DESCRIÇÃO REPORTS 3---------------------------------------------*/
+
 
 
 
@@ -480,6 +642,8 @@ body{
 
     z-index: 1000;
     display:none;
+
+     cursor: pointer;
 }
 #imgDesDois{
 	position:absolute;
@@ -500,6 +664,8 @@ body{
     background: transparent;
 
     z-index: 1000;
+
+     cursor: pointer;
 }
 #imgRepDois{
 	position:absolute;
@@ -532,6 +698,8 @@ body{
 
     z-index: 1000;
     display:none;
+
+     cursor: pointer;
 }
 #imgDesTres{
 	position:absolute;
@@ -552,6 +720,8 @@ body{
     background: transparent;
 
     z-index: 1000;
+
+     cursor: pointer;
 }
 #imgRepTres{
 	position:absolute;
@@ -585,6 +755,8 @@ body{
 
     z-index: 1000;
     display:none;
+
+     cursor: pointer;
 }
 #imgDesQuatro{
 	position:absolute;
@@ -605,6 +777,8 @@ body{
     background: transparent;
 
     z-index: 1000;
+
+     cursor: pointer;
 }
 #imgRepQuatro{
 	position:absolute;

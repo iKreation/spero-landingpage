@@ -161,47 +161,20 @@
                             $(".numTres").css({"color":"rgb(52, 152, 219)"})
 
                             pos = false;
-                            }
-
-            if(counter==4) {$(".ConT3").fadeOut(10);
-            				$(".ConT2").fadeOut(10);
-                            $(".ConT1").fadeIn(300);
-
-                            $(".numUm").css({"color":"rgb(52, 152, 219)"})
-                            $(".numDois").css({"color":"black"})
-                            $(".numTres").css({"color":"black"})
-                            }
-
-            if(counter==5) {$(".ConT1").fadeOut(10);
-                            $(".ConT3").fadeOut(10);
-                            $(".ConT2").fadeIn(300);
-
-                            $(".numUm").css({"color":"black"})
-                            $(".numDois").css({"color":"rgb(52, 152, 219)"})
-                            $(".numTres").css({"color":"black"})
-                            }
-
-            if(counter==6) {$(".ConT1").fadeOut(10);
-                            $(".ConT2").fadeOut(10);
-                            $(".ConT3").fadeIn(300);
-
-                            $(".numDois").css({"color":"black"})
-                            $(".numUm").css({"color":"black"})
-                            $(".numTres").css({"color":"rgb(52, 152, 219)"})
-                            }                                
+                            }                               
           }
 
 
         $(".numUm").click(function(){ 
-            counter = 4;
+            counter = 1;
         });
 
         $(".numDois").click(function(){ 
-            counter = 5;
+            counter = 2;
         });
 
         $(".numTres").click(function(){ 
-            counter = 6;
+            counter = 3;
         });
 
 
@@ -251,6 +224,9 @@
 
 $(document).ready(function(){
 var repUm = false;
+var repDois = false;
+var repTres = false;
+var repQuatro = false;
 
     $(".ConRepUm").click(function(){
     	if (!repUm){
@@ -307,6 +283,126 @@ var repUm = false;
 		    repUm = false;
 		}
 	}); 
+
+
+
+
+	$(".ConRepDois").click(function(){
+    	if (!repDois){
+		    $('.repDes2').fadeIn(300);
+		    $('.ConProb2').fadeIn(300);
+
+		    $('.ConRepUm').fadeOut(100);
+			$('.ConRepTres').fadeOut(100);
+			$('.ConRepQuatro').fadeOut(100);
+			$('.ConDesUm').fadeOut(100);	
+			$('.ConDesTres').fadeOut(100);	
+			$('.ConDesQuatro').fadeOut(100);	
+
+		    repDois = true;
+		}
+		else{
+			$('.repDes2').fadeOut(100);
+		    $('.ConProb2').fadeOut(100);
+
+		    $('.ConRepUm').fadeIn(300);
+			$('.ConRepTres').fadeIn(300);
+			$('.ConRepQuatro').fadeIn(300);
+			$('.ConDesUm').fadeIn(300);	
+			$('.ConDesTres').fadeIn(300);	
+			$('.ConDesQuatro').fadeIn(300);	
+		    repDois = false;
+		}
+	});    
+	$(".ConDesDois").click(function(){
+		if (!repDois){
+		    $('.repDes2').fadeIn(300);
+		    $('.ConProb2').fadeIn(300);
+
+		    $('.ConRepUm').fadeOut(100);
+			$('.ConRepTres').fadeOut(100);
+			$('.ConRepQuatro').fadeOut(100);
+			$('.ConDesUm').fadeOut(100);	
+			$('.ConDesTres').fadeOut(100);	
+			$('.ConDesQuatro').fadeOut(100);	
+
+		    repDois = true;
+		}
+		else{
+			$('.repDes2').fadeOut(100);
+		    $('.ConProb2').fadeOut(100);
+
+		    $('.ConRepUm').fadeIn(300);
+			$('.ConRepTres').fadeIn(300);
+			$('.ConRepQuatro').fadeIn(300);
+			$('.ConDesUm').fadeIn(300);	
+			$('.ConDesTres').fadeIn(300);	
+			$('.ConDesQuatro').fadeIn(300);	
+
+		    repDois = false;
+		}
+	}); 
+
+
+
+
+
+
+	$(".ConRepTres").click(function(){
+    	if (!repTres){
+		    $('.repDes3').fadeIn(300);
+		    $('.ConProb3').fadeIn(300);
+
+		    $('.ConRepUm').fadeOut(100);
+			$('.ConRepDois').fadeOut(100);
+			$('.ConRepQuatro').fadeOut(100);
+			$('.ConDesUm').fadeOut(100);	
+			$('.ConDesDois').fadeOut(100);	
+			$('.ConDesQuatro').fadeOut(100);	
+
+		    repTres = true;
+		}
+		else{
+			$('.repDes3').fadeOut(100);
+		    $('.ConProb3').fadeOut(100);
+
+		    $('.ConRepUm').fadeIn(300);
+			$('.ConRepDois').fadeIn(300);
+			$('.ConRepQuatro').fadeIn(300);
+			$('.ConDesUm').fadeIn(300);	
+			$('.ConDesDois').fadeIn(300);	
+			$('.ConDesQuatro').fadeIn(300);	
+		    repTres = false;
+		}
+	});    
+	$(".ConDesTres").click(function(){
+		if (!repTres){
+		    $('.repDes3').fadeIn(300);
+		    $('.ConProb3').fadeIn(300);
+
+		    $('.ConRepUm').fadeOut(100);
+			$('.ConRepDois').fadeOut(100);
+			$('.ConRepQuatro').fadeOut(100);
+			$('.ConDesUm').fadeOut(100);	
+			$('.ConDesDois').fadeOut(100);	
+			$('.ConDesQuatro').fadeOut(100);	
+
+		    repTres = true;
+		}
+		else{
+			$('.repDes3').fadeOut(100);
+		    $('.ConProb3').fadeOut(100);
+
+		    $('.ConRepUm').fadeIn(300);
+			$('.ConRepDois').fadeIn(300);
+			$('.ConRepQuatro').fadeIn(300);
+			$('.ConDesUm').fadeIn(300);	
+			$('.ConDesDois').fadeIn(300);	
+			$('.ConDesQuatro').fadeIn(300);	
+
+		    repTres = false;
+		}
+	}); 
 });
 
 
@@ -330,11 +426,11 @@ $(document).ready(function (){
 });
 
 
-
-$('.ConRepDois').fadeOut(100);
+/*
+$('.ConRepUm').fadeOut(100);
 $('.ConRepTres').fadeOut(100);
 $('.ConRepQuatro').fadeOut(100);
-$('.ConDesDois').fadeOut(100);	
+$('.ConDesUm').fadeOut(100);	
 $('.ConDesTres').fadeOut(100);	
 $('.ConDesQuatro').fadeOut(100);
 
@@ -344,7 +440,7 @@ $('.ConRepQuatro').fadeIn(100);
 $('.ConDesDois').fadeIn(100);	
 $('.ConDesTres').fadeIn(100);	
 $('.ConDesQuatro').fadeIn(100);	
-
+*/
 </script>
 
 
@@ -423,6 +519,23 @@ $('.ConDesQuatro').fadeIn(100);
 				</div>
 
 
+				<div class="ConProb2">
+					<img id="imgProb2" src="img/passeio.jpg" />
+				</div>
+				<div class="repDes2"> 
+					<div class="txDes">
+						<p>Este é o passeio no qual tropessas todos os dias. Agora profissionais saberão que este problema existe.</p>
+						<br>
+						<p>Partilha-o também nas redes sociais.</p> 
+					</div>
+
+					<div class="ConSoc2">
+						<img id="imgSoc2" src="img/face.png" />
+					</div>
+					<div class="ConSoc3">
+						<img id="imgSoc3" src="img/twit.png" />
+					</div>
+				</div>
 				<div class="repDois">
 					<div class="ConDesDois">
 						<img id="imgDesDois" src="img/prob2.png" />
@@ -432,6 +545,24 @@ $('.ConDesQuatro').fadeIn(100);
 					</div>	
 				</div>
 
+
+				<div class="ConProb3">
+					<img id="imgProb3" src="img/sin.jpg" />
+				</div>
+				<div class="repDes3"> 
+					<div class="txDes">
+						<p>Este é o sinal que te faz confusão todos os dias. Agora profissionais saberão que este problema existe.</p>
+						<br>
+						<p>Partilha-o também nas redes sociais.</p> 
+					</div>
+
+					<div class="ConSoc2">
+						<img id="imgSoc2" src="img/face.png" />
+					</div>
+					<div class="ConSoc3">
+						<img id="imgSoc3" src="img/twit.png" />
+					</div>
+				</div>
 				<div class="repTres">
 					<div class="ConDesTres">
 						<img id="imgDesTres" src="img/prob3.png" />
