@@ -1025,26 +1025,31 @@ body{
 	margin-left: 20%;
 	font-family: Ssemi;
 	font-size: 38px;
-	color: black;
 }
 
 .numUm{
-	width:20px;
-	color:black;
+	width:40px;
+	color:white;
+	background: rgba(39, 174, 96, 0.9);
+	text-align: center;
 }
 
 .numDois{
-	width:20px;
+	width:40px;
 	margin-left: 50px;
 	margin-top: -38px;
-	color: black;
+	color: white;
+	background: rgba(39, 174, 96, 0.9);
+	text-align: center;
 }
 
 .numTres{
-	width:20px;
+	width:40px;
 	margin-left: 100px;
 	margin-top: -38px;
-	color: black;
+	color: white;
+	background: rgba(39, 174, 96, 0.9);
+	text-align: center;
 }
 /* NUMEROS -----------------*/
 
