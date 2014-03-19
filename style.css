@@ -1144,8 +1144,8 @@ body{
 
 /* NEWSLETTER -----------------*/
 .news{
-	width: 310px;
-	height: 115px;
+	width: 330px;
+	height: 140px;
 
 	float: left;
 	margin-left: 25%;
@@ -1161,15 +1161,15 @@ body{
 }
 
 .per{
-	margin-left: 15px;
-	margin-top: 10px;
+	margin-left: 25px;
+	margin-top: 15px;
 }
 
 .rect{
 	width: 250px;
 
-	margin-top: 10px;
-	margin-left: 15px;
+	margin-top: 20px;
+	margin-left: 25px;
 
 	font-family: Ssemi;
 	font-size: 20px;
@@ -1185,10 +1185,10 @@ body{
 .but{
 	width:150px;
 	height: 40px;
-	margin-top: 15px;
+	margin-top: 20px;
 	margin-left: calc(50% - 20px);
 
-	font-family: Sreg;
+	font-family: Ssemi;
 	font-size: 22px;
 	color: rgb(64,212,126);
 
