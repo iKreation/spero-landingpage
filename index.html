@@ -90,6 +90,14 @@
                     showN = 2;
 			    });
 
+			    $('.repDes4').click(function () {
+                    $('html, body').animate({
+                       scrollTop: (($(".conAni").offset().top)-105)
+                    }, 300);
+
+                    showN = 2;
+			    });
+
 				$('.btMessUmDois').click(function () {
                     $('html, body').animate({
                        scrollTop: (($(".sliTres").offset().top)-105)
@@ -219,6 +227,28 @@
 
 		});
 	});
+
+
+
+
+$(document).ready(function (){
+	$('.ConRepUm').addClass('animated bounceInDown');
+	$('.ConRepDois').addClass('animated bounceInDown');
+	$('.ConRepTres').addClass('animated bounceInDown');
+	$('.ConRepQuatro').addClass('animated bounceInDown');	
+
+	/*por isto a aparecer depois*/
+	$('.ConDesUm').fadeIn(800);	
+	$('.ConDesDois').fadeIn(800);	
+	$('.ConDesTres').fadeIn(800);	
+	$('.ConDesQuatro').fadeIn(800);	
+
+	$('.messUm').addClass('animated fadeInUp');
+	$('.messUmDois').addClass('animated fadeInUp');
+});
+
+
+
 
 
 
@@ -358,7 +388,7 @@ var repQuatro = false;
 			$('.ConRepQuatro').fadeOut(100);
 			$('.ConDesUm').fadeOut(100);	
 			$('.ConDesDois').fadeOut(100);	
-			$('.ConDesQuatro').fadeOut(100);	
+			$('.ConDesQuatro').fadeOut(100);
 
 		    repTres = true;
 		}
@@ -372,6 +402,7 @@ var repQuatro = false;
 			$('.ConDesUm').fadeIn(300);	
 			$('.ConDesDois').fadeIn(300);	
 			$('.ConDesQuatro').fadeIn(300);	
+	
 		    repTres = false;
 		}
 	});    
@@ -385,7 +416,7 @@ var repQuatro = false;
 			$('.ConRepQuatro').fadeOut(100);
 			$('.ConDesUm').fadeOut(100);	
 			$('.ConDesDois').fadeOut(100);	
-			$('.ConDesQuatro').fadeOut(100);	
+			$('.ConDesQuatro').fadeOut(100);
 
 		    repTres = true;
 		}
@@ -402,6 +433,68 @@ var repQuatro = false;
 
 		    repTres = false;
 		}
+	});
+
+
+
+
+
+
+	$(".ConRepQuatro").click(function(){
+    	if (!repQuatro){
+		    $('.repDes4').fadeIn(300);
+		    $('.ConProb4').fadeIn(300);
+
+		    $('.ConRepUm').fadeOut(100);
+			$('.ConRepDois').fadeOut(100);
+			$('.ConRepTres').fadeOut(100);
+			$('.ConDesUm').fadeOut(100);	
+			$('.ConDesDois').fadeOut(100);	
+			$('.ConDesTres').fadeOut(100);
+
+		    repQuatro = true;
+		}
+		else{
+			$('.repDes4').fadeOut(100);
+		    $('.ConProb4').fadeOut(100);
+
+		    $('.ConRepUm').fadeIn(300);
+			$('.ConRepDois').fadeIn(300);
+			$('.ConRepTres').fadeIn(300);
+			$('.ConDesUm').fadeIn(300);	
+			$('.ConDesDois').fadeIn(300);	
+			$('.ConDesTres').fadeIn(300);	
+	
+		    repQuatro = false;
+		}
+	});    
+	$(".ConDesQuatro").click(function(){
+		if (!repQuatro){
+		    $('.repDes4').fadeIn(300);
+		    $('.ConProb4').fadeIn(300);
+
+		    $('.ConRepUm').fadeOut(100);
+			$('.ConRepDois').fadeOut(100);
+			$('.ConRepTres').fadeOut(100);
+			$('.ConDesUm').fadeOut(100);	
+			$('.ConDesDois').fadeOut(100);	
+			$('.ConDesTres').fadeOut(100);
+
+		    repQuatro = true;
+		}
+		else{
+			$('.repDes4').fadeOut(100);
+		    $('.ConProb4').fadeOut(100);
+
+		    $('.ConRepUm').fadeIn(300);
+			$('.ConRepDois').fadeIn(300);
+			$('.ConRepTres').fadeIn(300);
+			$('.ConDesUm').fadeIn(300);	
+			$('.ConDesDois').fadeIn(300);	
+			$('.ConDesTres').fadeIn(300);	
+
+		    repQuatro = false;
+		}
 	}); 
 });
 
@@ -409,21 +502,7 @@ var repQuatro = false;
 
 
 
-$(document).ready(function (){
-	$('.ConRepUm').addClass('animated bounceInDown');
-	$('.ConRepDois').addClass('animated bounceInDown');
-	$('.ConRepTres').addClass('animated bounceInDown');
-	$('.ConRepQuatro').addClass('animated bounceInDown');	
 
-	/*por isto a aparecer depois*/
-	$('.ConDesUm').fadeIn(800);	
-	$('.ConDesDois').fadeIn(800);	
-	$('.ConDesTres').fadeIn(800);	
-	$('.ConDesQuatro').fadeIn(800);	
-
-	$('.messUm').addClass('animated fadeInUp');
-	$('.messUmDois').addClass('animated fadeInUp');
-});
 
 
 /*
@@ -572,6 +651,18 @@ $('.ConDesQuatro').fadeIn(100);
 					</div>	
 				</div>
 
+
+				<div class="repDes4"> 
+					<div class="txDes4">
+						<p>Queres ser das primeiras pessoas a intervir?</p>
+						<p><b>Deixa-nos o teu e-mail.</b></p>
+					</div>
+					<div class="triDes4">
+						<div class="tri4">
+							<img id="imgTri4" src="img/tri3.png" />
+						</div>
+					</div>
+				</div>
 				<div class="repQuatro">
 					<div class="ConDesQuatro">
 						<img id="imgDesQuatro" src="img/prob4.png" />

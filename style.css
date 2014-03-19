@@ -164,7 +164,7 @@ body{
 }
 .wrap{
 	width: 100%;
-	height: 2150px;
+	/*height: 2150px;*/
 
 	background: transparent;
 }
@@ -462,17 +462,17 @@ body{
 
 /* DESCRIÇÃO REPORTS 3---------------------------------------------*/
 .repDes3{
-	width:450px;
+	width:360px;
 	height: 220px;
 	position: absolute;
 	z-index: 9999;
-	margin-left: 450px;
-	margin-top: 220px;
+	margin-left: 200px;
+	margin-top: 70px;
 	background: rgba(192, 57, 43, 0.9);
 	display: none;
 }
 .txDes{
-	width:400px;
+	width:320px;
 	height: 100px;
 	font-size: 20px;
 	font-family: Sreg;
@@ -489,8 +489,8 @@ body{
     position:absolute;
     overflow:hidden;
     z-index: 9999;
-    margin-left: 250px;
-    margin-top: 220px;
+    margin-left: 0px;
+    margin-top: 70px;
 
     background: transparent;
     display: none;
@@ -541,6 +541,49 @@ body{
 /* DESCRIÇÃO REPORTS 3---------------------------------------------*/
 
 
+/* DESCRIÇÃO REPORTS 4---------------------------------------------*/
+.repDes4{
+	width:300px;
+	height: 120px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 630px;
+	margin-top: 100px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+	cursor: pointer;
+}
+.txDes4{
+	width:240px;
+	height: 100px;
+	font-size: 20px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.tri4{
+	width:80px;
+	height: 55px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-left: 15%;
+    margin-top: 15px;
+
+    background: transparent;
+}
+#imgTri4{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/* DESCRIÇÃO REPORTS 4---------------------------------------------*/
+
 
 
 
@@ -558,7 +601,7 @@ body{
 	height: 360px;
 	display:block; 
     position:relative;
-    overflow:hidden;
+
     margin: auto;
 
     background: transparent;
@@ -735,7 +778,7 @@ body{
 
 /*QUATRO*/
 .repQuatro{
-	width:140px;
+	width:150px;
 	height: 150px;
 	position: absolute;
 	margin-top: 180px;
@@ -743,7 +786,7 @@ body{
 	background: transparent;
 }
 .ConDesQuatro{
-	width:140px;
+	width:150px;
 	height: 35px;
 	display:block; 
     position:relative;
