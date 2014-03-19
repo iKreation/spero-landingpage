@@ -258,6 +258,11 @@ var repDois = false;
 var repTres = false;
 var repQuatro = false;
 
+var desc1 = false;
+var desc2 = false;
+var desc3 = false;
+var desc4 = false;
+
     $(".ConRepUm").click(function(){
     	if (!repUm){
 		    $('.repDes1').fadeIn(300);
@@ -495,7 +500,124 @@ var repQuatro = false;
 
 		    repQuatro = false;
 		}
+	});
+
+
+
+
+
+
+
+ 
+	$(".ConEd").click(function(){
+		if (!desc1){
+		    $('.desc1').fadeIn(300);
+
+		    $('.ConEs').fadeOut(100);
+			$('.ConMun').fadeOut(100);
+			$('.ConAg').fadeOut(100);
+			$('.planeta').fadeOut(100);	
+
+		    desc1 = true;
+		}
+		else{
+			$('.desc1').fadeOut(300);
+
+		    $('.ConEs').fadeIn(100);
+			$('.ConMun').fadeIn(100);
+			$('.ConAg').fadeIn(100);
+			$('.planeta').fadeIn(100);	
+
+		    desc1 = false;
+		}
 	}); 
+
+
+
+
+	$(".ConEs").click(function(){
+		if (!desc2){
+		    $('.desc3').fadeIn(300);
+
+		    $('.ConEd').fadeOut(100);
+			$('.ConMun').fadeOut(100);
+			$('.ConAg').fadeOut(100);
+			$('.planeta').fadeOut(100);	
+
+		    desc2 = true;
+		}
+		else{
+			$('.desc3').fadeOut(300);
+
+		    $('.ConEd').fadeIn(100);
+			$('.ConMun').fadeIn(100);
+			$('.ConAg').fadeIn(100);
+			$('.planeta').fadeIn(100);	
+
+		    desc2 = false;
+		}
+	}); 
+
+
+
+	$(".ConMun").click(function(){
+		if (!desc3){
+		    $('.desc3').fadeIn(300);
+
+		    $('.ConEs').fadeOut(100);
+			$('.ConEd').fadeOut(100);
+			$('.ConAg').fadeOut(100);
+			$('.planeta').fadeOut(100);	
+
+			$(".ConMun").css({"margin-left":"15%"})
+
+		    desc3 = true;
+		}
+		else{
+			$('.desc3').fadeOut(300);
+
+		    $('.ConEs').fadeIn(100);
+			$('.ConEd').fadeIn(100);
+			$('.ConAg').fadeIn(100);
+			$('.planeta').fadeIn(100);	
+
+			$(".ConMun").css({"margin-left":"25%"})
+
+		    desc3 = false;
+		}
+	});
+
+
+
+
+	$(".ConAg").click(function(){
+		if (!desc4){
+		    $('.desc4').fadeIn(300);
+
+		    $('.ConEs').fadeOut(100);
+			$('.ConEd').fadeOut(100);
+			$('.ConMun').fadeOut(100);
+			$('.planeta').fadeOut(100);	
+
+			
+			$(".ConMun").css({"margin-left":"15%"})
+
+		    desc4 = true;
+		}
+		else{
+			$('.desc4').fadeOut(300);
+
+		    $('.ConEs').fadeIn(100);
+			$('.ConEd').fadeIn(100);
+			$('.ConMun').fadeIn(100);
+			$('.planeta').fadeIn(100);	
+
+			$(".ConMun").css({"margin-left":"25%"})
+			$(".ConAg").css({"margin-left":"margin-left:15%"})
+
+		    desc4 = false;
+		}
+	});
 });
 
 
@@ -784,15 +906,22 @@ $('.ConDesQuatro').fadeIn(100);
 			</div>
 
 			<div class="servi">
+				<div class="desc1"></div>
 				<div class="ConEd">
 					<img id="imgEd" src="img/edi.png" />
 				</div>
+
+				<div class="desc2"></div>
 				<div class="ConEs">
 					<img id="imgEs" src="img/estr.png" />
 				</div>
+
+				<div class="desc3"></div>
 				<div class="ConMun">
 					<img id="imgMun" src="img/mun.png" />
 				</div>
+
+				<div class="desc4"></div>
 				<div class="ConAg">
 					<img id="imgAg" src="img/agu.png" />
 				</div>

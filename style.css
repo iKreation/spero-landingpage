@@ -157,7 +157,7 @@ body{
 
 	position: absolute;
 	z-index: 99999999;
-	left: calc(50% - 42%);
+	left: calc(50% - 45%);
 	top: 7%;
 
 	background: transparent;
@@ -1347,6 +1347,7 @@ body{
     margin-left: 15%;
 
     background: transparent;
+	cursor:pointer;
 }
 #imgEd{
 	position:absolute;
@@ -1367,6 +1368,7 @@ body{
     margin-left: 15%;
 
     background: transparent;
+    cursor:pointer;
 }
 #imgEs{
 	position:absolute;
@@ -1387,6 +1389,7 @@ body{
     margin-left: 25%;
 
     background: transparent;
+    cursor:pointer;
 }
 #imgMun{
 	position:absolute;
@@ -1407,6 +1410,7 @@ body{
     margin-left: 15%;
 
     background: transparent;
+    cursor:pointer;
 }
 #imgAg{
 	position:absolute;
@@ -1457,6 +1461,72 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DESCRIÇÃO REPORTS 1---------------------------------------------*/
+.desc1{
+	width:400px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 300px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+
+.desc2{
+	width:400px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 300px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+
+.desc3{
+	width:400px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 300px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+
+.desc4{
+	width:400px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 300px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+
+
+
+/* DESCRIÇÃO REPORTS 4---------------------------------------------*/
 
 
 
