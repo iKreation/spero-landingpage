@@ -238,17 +238,28 @@ $(document).ready(function (){
 	$('.ConRepQuatro').addClass('animated bounceInDown');	
 
 	/*por isto a aparecer depois*/
-	$('.ConDesUm').fadeIn(800);	
-	$('.ConDesDois').fadeIn(800);	
-	$('.ConDesTres').fadeIn(800);	
-	$('.ConDesQuatro').fadeIn(800);	
+
 
 	$('.messUm').addClass('animated fadeInUp');
 	$('.messUmDois').addClass('animated fadeInUp');
 });
 
 
+setTimeout(function() {
+	$('.ConDesUm').show(300);
+}, 4000);
 
+setTimeout(function() {
+	$('.ConDesDois').show(300);	
+}, 5000);
+
+setTimeout(function() {	
+	$('.ConDesTres').show(300);	
+}, 6000);
+
+setTimeout(function() {
+	$('.ConDesQuatro').show(300);	
+}, 7000);
 
 
 
@@ -511,7 +522,7 @@ var desc4 = false;
  
 	$(".ConEd").click(function(){
 		if (!desc1){
-		    $('.desc1').fadeIn(300);
+		    $('.desc1').show(300);
 
 		    $('.ConEs').fadeOut(100);
 			$('.ConMun').fadeOut(100);
@@ -537,7 +548,7 @@ var desc4 = false;
 
 	$(".ConEs").click(function(){
 		if (!desc2){
-		    $('.desc3').fadeIn(300);
+		    $('.desc3').show(300);
 
 		    $('.ConEd').fadeOut(100);
 			$('.ConMun').fadeOut(100);
@@ -562,7 +573,7 @@ var desc4 = false;
 
 	$(".ConMun").click(function(){
 		if (!desc3){
-		    $('.desc3').fadeIn(300);
+		    $('.desc3').show(300);
 
 		    $('.ConEs').fadeOut(100);
 			$('.ConEd').fadeOut(100);
@@ -592,7 +603,7 @@ var desc4 = false;
 
 	$(".ConAg").click(function(){
 		if (!desc4){
-		    $('.desc4').fadeIn(300);
+		    $('.desc4').show(300);
 
 		    $('.ConEs').fadeOut(100);
 			$('.ConEd').fadeOut(100);
