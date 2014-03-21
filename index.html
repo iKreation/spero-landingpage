@@ -77,8 +77,6 @@
           var pos = false;
 
           var showN = 0;
-          
-          var sStat = 0; 
 
 
           $(document).ready(function (){
@@ -109,21 +107,25 @@
                        scrollTop: (($(".sliTres").offset().top)-105)
                     }, 300);
 			    });
-			    
+	
+/* -------------  MENU -------------------------------*/    			    
 			    $('.tres').click(function () {
-			    	if (sStat == 0){
 	                    $('html, body').animate({
 	                       scrollTop: (($(".conAni").offset().top)-105)
 	                    }, 300);
 	                    showN = 2;
-	                    sStat = 1;
-	                }
-			                else {
-			                	$('html, body').animate({
-			                       scrollTop: (($(".ConRep").offset().top)-105)
-			                    }, 300);
-			                    sStat = 0;
-			                }     
+
+	                    $(".tres").css({"display":"none"})
+	                    $(".tres2").css({"display":"block"})
+			    });
+
+			    $('.tres2').click(function () {
+	                $('html, body').animate({
+	                    scrollTop: (($(".sliUm").offset().top)-105)
+	                }, 300);
+
+	                $(".tres").css({"display":"block"})
+	                $(".tres2").css({"display":"none"})
 			    });
 
 			    $('.dois').click(function () {
@@ -131,10 +133,8 @@
 	                    scrollTop: (($(".sliTres").offset().top)-105)
 	                }, 300);
 			    });
-			});
-
-
-      
+/* -------------  MENU -------------------------------*/    
+     		}); 
 
 
 
@@ -245,6 +245,7 @@
 
 
 
+/* -------------  ANIMAÇÕES PAG 1 -------------------------------*/ 
 
 $(document).ready(function (){
 	$('.ConRepUm').addClass('animated bounceInDown');
@@ -272,6 +273,8 @@ setTimeout(function() {
 setTimeout(function() {
 	$('.ConDesQuatro').show(300);	
 }, 5500);
+
+/* -------------  ANIMAÇÕES PAG 1 -------------------------------*/ 
 
 
 
@@ -529,8 +532,7 @@ var desc4 = false;
 
 
 
-
-
+/* -------------  PÁGINA 3 -------------------------------*/ 
  
 	$(".ConEd").click(function(){
 		if (!desc1){
@@ -592,7 +594,9 @@ var desc4 = false;
 			$('.ConAg').fadeOut(100);
 			$('.planeta').fadeOut(100);	
 
+			setTimeout(function() {
 			$(".ConMun").css({"margin-left":"15%"})
+			}, 100);
 
 		    desc3 = true;
 		}
@@ -603,9 +607,9 @@ var desc4 = false;
 			$('.ConEd').fadeIn(100);
 			$('.ConAg').fadeIn(100);
 			$('.planeta').fadeIn(100);	
-
+			
 			$(".ConMun").css({"margin-left":"25%"})
-
+			
 		    desc3 = false;
 		}
 	});
@@ -622,8 +626,9 @@ var desc4 = false;
 			$('.ConMun').fadeOut(100);
 			$('.planeta').fadeOut(100);	
 
-			
+			setTimeout(function() {
 			$(".ConMun").css({"margin-left":"15%"})
+			}, 200);
 
 		    desc4 = true;
 		}
@@ -641,30 +646,9 @@ var desc4 = false;
 		    desc4 = false;
 		}
 	});
+
+/* -------------  PÁGINA 3 -------------------------------*/ 	
 });
-
-
-
-
-
-
-
-
-/*
-$('.ConRepUm').fadeOut(100);
-$('.ConRepTres').fadeOut(100);
-$('.ConRepQuatro').fadeOut(100);
-$('.ConDesUm').fadeOut(100);	
-$('.ConDesTres').fadeOut(100);	
-$('.ConDesQuatro').fadeOut(100);
-
-$('.ConRepDois').fadeIn(100);
-$('.ConRepTres').fadeIn(100);
-$('.ConRepQuatro').fadeIn(100);
-$('.ConDesDois').fadeIn(100);	
-$('.ConDesTres').fadeIn(100);	
-$('.ConDesQuatro').fadeIn(100);	
-*/
 </script>
 
 
@@ -701,6 +685,12 @@ $('.ConDesQuatro').fadeIn(100);
 			</div>
 
 			<div class="tres" style="cursor: pointer">
+				<div class="setCima">
+					<img id="imgCima" src="img/cima.png" />
+				</div>
+			</div>
+
+			<div class="tres tres2" style="cursor: pointer">
 				<div class="setCima">
 					<img id="imgCima" src="img/cima.png" />
 				</div>
