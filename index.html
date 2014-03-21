@@ -57,7 +57,7 @@
                 // Create the Google Map using out element and options defined above
                 var map = new google.maps.Map(mapElement, mapOptions);
             }
-        </script>
+</script>
 
 
 
@@ -135,34 +135,48 @@
 
 
       
-          function slide() {
+
+
+
+
+/* -------------  SLIDE -------------------------------*/      
+        function slide() {
 
           	if (pos == true){counter ++;} 
 
             if(counter==0) {
 							}
 
-            if(counter==1) {$(".ConT3").fadeOut(10);
-            				$(".ConT2").fadeOut(10);
-                            $(".ConT1").fadeIn(300);
+            if(counter==1) {$(".ConT3").hide(10);
+            				$(".ConT2").hide(10);
+
+                            setTimeout(function() {
+                            	$(".ConT1").fadeIn(300);
+							}, 100);
 
                             $(".numUm").css({"background":"rgba(52, 152, 219, 0.9)"})
                             $(".numDois").css({"background":"rgba(39, 174, 96, 0.9)"})
                             $(".numTres").css({"background":"rgba(39, 174, 96, 0.9)"})
                             }
 
-            if(counter==2) {$(".ConT1").fadeOut(10);
-                            $(".ConT3").fadeOut(10);
-                            $(".ConT2").fadeIn(300);
+            if(counter==2) {$(".ConT1").hide(10);
+                            $(".ConT3").hide(10);
+
+                            setTimeout(function() {
+                            	$(".ConT2").fadeIn(300);
+                            }, 100);
 
                             $(".numDois").css({"background":"rgba(52, 152, 219, 0.9)"})
                             $(".numUm").css({"background":"rgba(39, 174, 96, 0.9)"})
                             $(".numTres").css({"background":"rgba(39, 174, 96, 0.9)"})
                             }
 
-            if(counter==3) {$(".ConT1").fadeOut(10);
-                            $(".ConT2").fadeOut(10);
-                            $(".ConT3").fadeIn(300);
+            if(counter==3) {$(".ConT1").hide(10);
+                            $(".ConT2").hide(10);
+
+                            setTimeout(function() {
+                            	$(".ConT3").fadeIn(300);
+                            }, 100);
 
                             $(".numTres").css({"background":"rgba(52, 152, 219, 0.9)"})
                             $(".numDois").css({"background":"rgba(39, 174, 96, 0.9)"})
@@ -170,7 +184,7 @@
 
                             pos = false;
                             }                               
-          }
+        }
 
 
         $(".numUm").click(function(){ 
@@ -185,6 +199,7 @@
             counter = 3;
         });
 
+/* -------------  SLIDE -------------------------------*/ 
 
 
 
@@ -244,19 +259,19 @@ $(document).ready(function (){
 
 setTimeout(function() {
 	$('.ConDesUm').show(300);
-}, 4000);
+}, 2500);
 
 setTimeout(function() {
 	$('.ConDesDois').show(300);	
-}, 5000);
+}, 3500);
 
 setTimeout(function() {	
 	$('.ConDesTres').show(300);	
-}, 6000);
+}, 4500);
 
 setTimeout(function() {
 	$('.ConDesQuatro').show(300);	
-}, 7000);
+}, 5500);
 
 
 
