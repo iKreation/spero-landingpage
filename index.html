@@ -114,18 +114,12 @@
 	                       scrollTop: (($(".conAni").offset().top)-105)
 	                    }, 300);
 	                    showN = 2;
-
-	                    $(".tres").css({"display":"none"})
-	                    $(".tres2").css({"display":"block"})
 			    });
 
 			    $('.tres2').click(function () {
 	                $('html, body').animate({
 	                    scrollTop: (($(".sliUm").offset().top)-105)
 	                }, 300);
-
-	                $(".tres").css({"display":"block"})
-	                $(".tres2").css({"display":"none"})
 			    });
 
 			    $('.dois').click(function () {
@@ -205,7 +199,29 @@
 
 
 
-        $(document).scroll(function(){
+    $(document).scroll(function(){
+		/* -----------MENU ------------------------*/
+			var bt12 = $(".btMessUmDois").offset();
+			var slide2 = (bt12.top + 500);
+
+			var bt2 = $(".btMessDois").offset();
+			var slide3 = (bt2.top + 300);
+
+			if (scroll >= slide2){
+				$(".tres").css({"display":"none"})
+	            $(".tres2").css({"display":"block"})
+			}
+
+			if (scroll >= slide3){
+				$(".tres").css({"display":"block"})
+	            $(".tres2").css({"display":"none"})
+			}
+			else{
+				$(".tres").css({"display":"none"})
+	            $(".tres2").css({"display":"block"})
+			}
+		/* -----------MENU ------------------------*/
+			
 			var doisOffset = $(".sliDois").offset();
 			var doisOffset2 = $(".servi").offset();
 
@@ -215,21 +231,19 @@
 
 			var scroll = $(window).scrollTop();
 
+
 			if(scroll >= dPos){
 				$(".menu").show(300);
 				$(".logotipo").hide(10);
 			}
-
 			else{
 				$(".menu").hide(10);
 				$(".logotipo").show(300);
 			}
 
 
-
 			if(scroll >= dPos3){
 				$('.planeta').addClass('animated tada');
-				sStat = 0;
 			}
 
 			if(scroll >= dPos2){
@@ -237,7 +251,6 @@
 					$('.news').addClass('animated pulse');
 					pos = true;
 				}
-				sStat = 0;
 			}
 
 		});
@@ -291,28 +304,28 @@ var desc4 = false;
 
     $(".ConRepUm").click(function(){
     	if (!repUm){
-		    $('.repDes1').fadeIn(300);
-		    $('.ConProb').fadeIn(300);
+		    $('.repDes1').show(300);
+		    $('.ConProb').show(300);
 
-		    $('.ConRepDois').fadeOut(100);
-			$('.ConRepTres').fadeOut(100);
-			$('.ConRepQuatro').fadeOut(100);
-			$('.ConDesDois').fadeOut(100);	
-			$('.ConDesTres').fadeOut(100);	
-			$('.ConDesQuatro').fadeOut(100);	
+		    $('.ConRepDois').hide(100);
+			$('.ConRepTres').hide(100);
+			$('.ConRepQuatro').hide(100);
+			$('.ConDesDois').hide(100);	
+			$('.ConDesTres').hide(100);	
+			$('.ConDesQuatro').hide(100);	
 
 		    repUm = true;
 		}
 		else{
-			$('.repDes1').fadeOut(100);
-		    $('.ConProb').fadeOut(100);
+			$('.repDes1').hide(100);
+		    $('.ConProb').hide(100);
 
-		    $('.ConRepDois').fadeIn(300);
-			$('.ConRepTres').fadeIn(300);
-			$('.ConRepQuatro').fadeIn(300);
-			$('.ConDesDois').fadeIn(300);	
-			$('.ConDesTres').fadeIn(300);	
-			$('.ConDesQuatro').fadeIn(300);	
+		    $('.ConRepDois').show(300);
+			$('.ConRepTres').show(300);
+			$('.ConRepQuatro').show(300);
+			$('.ConDesDois').show(300);	
+			$('.ConDesTres').show(300);	
+			$('.ConDesQuatro').show(300);	
 		    repUm = false;
 		}
 	});    
