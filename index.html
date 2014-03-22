@@ -200,6 +200,9 @@
 
 
     $(document).scroll(function(){
+    	var scroll = $(window).scrollTop();
+
+    	
 		/* -----------MENU ------------------------*/
 			var bt12 = $(".btMessUmDois").offset();
 			var slide2 = (bt12.top + 500);
@@ -229,7 +232,7 @@
 			var dPos2 = (doisOffset.top -200);
 			var dPos3 = (doisOffset2.top -400);
 
-			var scroll = $(window).scrollTop();
+			
 
 
 			if(scroll >= dPos){
@@ -291,6 +294,10 @@ setTimeout(function() {
 
 
 
+
+
+
+/* -------------  HIDE/SHOW DESCRIÇÕES PAG 1 -------------------------------*/ 
 $(document).ready(function(){
 var repUm = false;
 var repDois = false;
@@ -304,15 +311,15 @@ var desc4 = false;
 
     $(".ConRepUm").click(function(){
     	if (!repUm){
-		    $('.repDes1').show(300);
-		    $('.ConProb').show(300);
+		    $('.repDes1').fadeIn(300);
+		    $('.ConProb').fadeIn(300);
 
-		    $('.ConRepDois').hide(100);
-			$('.ConRepTres').hide(100);
-			$('.ConRepQuatro').hide(100);
-			$('.ConDesDois').hide(100);	
-			$('.ConDesTres').hide(100);	
-			$('.ConDesQuatro').hide(100);	
+		    $('#imgRepDois').css({"opacity":"0"})
+			$('#imgRepTres').css({"opacity":"0"})
+			$('#imgRepQuatro').css({"opacity":"0"})
+			$('.ConDesDois').css({"opacity":"0"})	
+			$('.ConDesTres').css({"opacity":"0"})
+			$('.ConDesQuatro').css({"opacity":"0"})	
 
 		    repUm = true;
 		}
@@ -320,12 +327,12 @@ var desc4 = false;
 			$('.repDes1').hide(100);
 		    $('.ConProb').hide(100);
 
-		    $('.ConRepDois').show(300);
-			$('.ConRepTres').show(300);
-			$('.ConRepQuatro').show(300);
-			$('.ConDesDois').show(300);	
-			$('.ConDesTres').show(300);	
-			$('.ConDesQuatro').show(300);	
+		    $('#imgRepDois').css({"opacity":"1"})
+			$('#imgRepTres').css({"opacity":"1"})
+			$('#imgRepQuatro').css({"opacity":"1"})
+			$('.ConDesDois').css({"opacity":"1"})
+			$('.ConDesTres').css({"opacity":"1"})	
+			$('.ConDesQuatro').css({"opacity":"1"})	
 		    repUm = false;
 		}
 	});    
@@ -334,12 +341,12 @@ var desc4 = false;
 		    $('.repDes1').fadeIn(300);
 		    $('.ConProb').fadeIn(300);
 
-		    $('.ConRepDois').fadeOut(100);
-			$('.ConRepTres').fadeOut(100);
-			$('.ConRepQuatro').fadeOut(100);
-			$('.ConDesDois').fadeOut(100);	
-			$('.ConDesTres').fadeOut(100);	
-			$('.ConDesQuatro').fadeOut(100);	
+		    $('#imgRepDois').css({"opacity":"0"})
+			$('#imgRepTres').css({"opacity":"0"})
+			$('#imgRepQuatro').css({"opacity":"0"})
+			$('.ConDesDois').css({"opacity":"0"})	
+			$('.ConDesTres').css({"opacity":"0"})
+			$('.ConDesQuatro').css({"opacity":"0"})		
 
 		    repUm = true;
 		}
@@ -347,12 +354,12 @@ var desc4 = false;
 			$('.repDes1').fadeOut(100);
 		    $('.ConProb').fadeOut(100);
 
-		    $('.ConRepDois').fadeIn(300);
-			$('.ConRepTres').fadeIn(300);
-			$('.ConRepQuatro').fadeIn(300);
-			$('.ConDesDois').fadeIn(300);	
-			$('.ConDesTres').fadeIn(300);	
-			$('.ConDesQuatro').fadeIn(300);	
+		    $('#imgRepDois').css({"opacity":"1"})
+			$('#imgRepTres').css({"opacity":"1"})
+			$('#imgRepQuatro').css({"opacity":"1"})
+			$('.ConDesDois').css({"opacity":"1"})
+			$('.ConDesTres').css({"opacity":"1"})	
+			$('.ConDesQuatro').css({"opacity":"1"})	
 
 		    repUm = false;
 		}
@@ -366,12 +373,12 @@ var desc4 = false;
 		    $('.repDes2').fadeIn(300);
 		    $('.ConProb2').fadeIn(300);
 
-		    $('.ConRepUm').fadeOut(100);
-			$('.ConRepTres').fadeOut(100);
-			$('.ConRepQuatro').fadeOut(100);
-			$('.ConDesUm').fadeOut(100);	
-			$('.ConDesTres').fadeOut(100);	
-			$('.ConDesQuatro').fadeOut(100);	
+		    $('#imgRepUm').css({"opacity":"0"})
+			$('#imgRepTres').css({"opacity":"0"})
+			$('#imgRepQuatro').css({"opacity":"0"})
+			$('.ConDesUm').css({"opacity":"0"})	
+			$('.ConDesTres').css({"opacity":"0"})	
+			$('.ConDesQuatro').css({"opacity":"0"})	
 
 		    repDois = true;
 		}
@@ -379,12 +386,12 @@ var desc4 = false;
 			$('.repDes2').fadeOut(100);
 		    $('.ConProb2').fadeOut(100);
 
-		    $('.ConRepUm').fadeIn(300);
-			$('.ConRepTres').fadeIn(300);
-			$('.ConRepQuatro').fadeIn(300);
-			$('.ConDesUm').fadeIn(300);	
-			$('.ConDesTres').fadeIn(300);	
-			$('.ConDesQuatro').fadeIn(300);	
+		    $('#imgRepUm').css({"opacity":"1"})
+			$('#imgRepTres').css({"opacity":"1"})
+			$('#imgRepQuatro').css({"opacity":"1"})
+			$('.ConDesUm').css({"opacity":"1"})
+			$('.ConDesTres').css({"opacity":"1"})
+			$('.ConDesQuatro').css({"opacity":"1"})	
 		    repDois = false;
 		}
 	});    
@@ -393,12 +400,12 @@ var desc4 = false;
 		    $('.repDes2').fadeIn(300);
 		    $('.ConProb2').fadeIn(300);
 
-		    $('.ConRepUm').fadeOut(100);
-			$('.ConRepTres').fadeOut(100);
-			$('.ConRepQuatro').fadeOut(100);
-			$('.ConDesUm').fadeOut(100);	
-			$('.ConDesTres').fadeOut(100);	
-			$('.ConDesQuatro').fadeOut(100);	
+		    $('#imgRepUm').css({"opacity":"0"})
+			$('#imgRepTres').css({"opacity":"0"})
+			$('#imgRepQuatro').css({"opacity":"0"})
+			$('.ConDesUm').css({"opacity":"0"})	
+			$('.ConDesTres').css({"opacity":"0"})	
+			$('.ConDesQuatro').css({"opacity":"0"})
 
 		    repDois = true;
 		}
@@ -406,12 +413,12 @@ var desc4 = false;
 			$('.repDes2').fadeOut(100);
 		    $('.ConProb2').fadeOut(100);
 
-		    $('.ConRepUm').fadeIn(300);
-			$('.ConRepTres').fadeIn(300);
-			$('.ConRepQuatro').fadeIn(300);
-			$('.ConDesUm').fadeIn(300);	
-			$('.ConDesTres').fadeIn(300);	
-			$('.ConDesQuatro').fadeIn(300);	
+		    $('#imgRepUm').css({"opacity":"1"})
+			$('#imgRepTres').css({"opacity":"1"})
+			$('#imgRepQuatro').css({"opacity":"1"})
+			$('.ConDesUm').css({"opacity":"1"})
+			$('.ConDesTres').css({"opacity":"1"})
+			$('.ConDesQuatro').css({"opacity":"1"})	
 
 		    repDois = false;
 		}
@@ -427,12 +434,12 @@ var desc4 = false;
 		    $('.repDes3').fadeIn(300);
 		    $('.ConProb3').fadeIn(300);
 
-		    $('.ConRepUm').fadeOut(100);
-			$('.ConRepDois').fadeOut(100);
-			$('.ConRepQuatro').fadeOut(100);
-			$('.ConDesUm').fadeOut(100);	
-			$('.ConDesDois').fadeOut(100);	
-			$('.ConDesQuatro').fadeOut(100);
+		    $('#imgRepUm').css({"opacity":"0"})
+			$('#imgRepDois').css({"opacity":"0"})
+			$('#imgRepQuatro').css({"opacity":"0"})
+			$('.ConDesUm').css({"opacity":"0"})	
+			$('.ConDesDois').css({"opacity":"0"})
+			$('.ConDesQuatro').css({"opacity":"0"})
 
 		    repTres = true;
 		}
@@ -440,12 +447,12 @@ var desc4 = false;
 			$('.repDes3').fadeOut(100);
 		    $('.ConProb3').fadeOut(100);
 
-		    $('.ConRepUm').fadeIn(300);
-			$('.ConRepDois').fadeIn(300);
-			$('.ConRepQuatro').fadeIn(300);
-			$('.ConDesUm').fadeIn(300);	
-			$('.ConDesDois').fadeIn(300);	
-			$('.ConDesQuatro').fadeIn(300);	
+		    $('#imgRepUm').css({"opacity":"1"})
+			$('#imgRepDois').css({"opacity":"1"})
+			$('#imgRepQuatro').css({"opacity":"1"})
+			$('.ConDesUm').css({"opacity":"1"})
+			$('.ConDesDois').css({"opacity":"1"})	
+			$('.ConDesQuatro').css({"opacity":"1"})
 	
 		    repTres = false;
 		}
@@ -455,12 +462,12 @@ var desc4 = false;
 		    $('.repDes3').fadeIn(300);
 		    $('.ConProb3').fadeIn(300);
 
-		    $('.ConRepUm').fadeOut(100);
-			$('.ConRepDois').fadeOut(100);
-			$('.ConRepQuatro').fadeOut(100);
-			$('.ConDesUm').fadeOut(100);	
-			$('.ConDesDois').fadeOut(100);	
-			$('.ConDesQuatro').fadeOut(100);
+		     $('#imgRepUm').css({"opacity":"0"})
+			$('#imgRepDois').css({"opacity":"0"})
+			$('#imgRepQuatro').css({"opacity":"0"})
+			$('.ConDesUm').css({"opacity":"0"})	
+			$('.ConDesDois').css({"opacity":"0"})
+			$('.ConDesQuatro').css({"opacity":"0"})
 
 		    repTres = true;
 		}
@@ -468,12 +475,12 @@ var desc4 = false;
 			$('.repDes3').fadeOut(100);
 		    $('.ConProb3').fadeOut(100);
 
-		    $('.ConRepUm').fadeIn(300);
-			$('.ConRepDois').fadeIn(300);
-			$('.ConRepQuatro').fadeIn(300);
-			$('.ConDesUm').fadeIn(300);	
-			$('.ConDesDois').fadeIn(300);	
-			$('.ConDesQuatro').fadeIn(300);	
+		    $('#imgRepUm').css({"opacity":"1"})
+			$('#imgRepDois').css({"opacity":"1"})
+			$('#imgRepQuatro').css({"opacity":"1"})
+			$('.ConDesUm').css({"opacity":"1"})
+			$('.ConDesDois').css({"opacity":"1"})	
+			$('.ConDesQuatro').css({"opacity":"1"})	
 
 		    repTres = false;
 		}
@@ -489,12 +496,12 @@ var desc4 = false;
 		    $('.repDes4').fadeIn(300);
 		    $('.ConProb4').fadeIn(300);
 
-		    $('.ConRepUm').fadeOut(100);
-			$('.ConRepDois').fadeOut(100);
-			$('.ConRepTres').fadeOut(100);
-			$('.ConDesUm').fadeOut(100);	
-			$('.ConDesDois').fadeOut(100);	
-			$('.ConDesTres').fadeOut(100);
+		    $('#imgRepUm').css({"opacity":"0"})
+			$('#imgRepDois').css({"opacity":"0"})
+			$('#imgRepTres').css({"opacity":"0"})
+			$('.ConDesUm').css({"opacity":"0"})	
+			$('.ConDesDois').css({"opacity":"0"})	
+			$('.ConDesTres').css({"opacity":"0"})
 
 		    repQuatro = true;
 		}
@@ -502,12 +509,12 @@ var desc4 = false;
 			$('.repDes4').fadeOut(100);
 		    $('.ConProb4').fadeOut(100);
 
-		    $('.ConRepUm').fadeIn(300);
-			$('.ConRepDois').fadeIn(300);
-			$('.ConRepTres').fadeIn(300);
-			$('.ConDesUm').fadeIn(300);	
-			$('.ConDesDois').fadeIn(300);	
-			$('.ConDesTres').fadeIn(300);	
+		    $('#imgRepUm').css({"opacity":"1"})	
+			$('#imgRepDois').css({"opacity":"1"})	
+			$('#imgRepTres').css({"opacity":"1"})	
+			$('.ConDesUm').css({"opacity":"1"})	
+			$('.ConDesDois').css({"opacity":"1"})		
+			$('.ConDesTres').css({"opacity":"1"})		
 	
 		    repQuatro = false;
 		}
@@ -517,12 +524,12 @@ var desc4 = false;
 		    $('.repDes4').fadeIn(300);
 		    $('.ConProb4').fadeIn(300);
 
-		    $('.ConRepUm').fadeOut(100);
-			$('.ConRepDois').fadeOut(100);
-			$('.ConRepTres').fadeOut(100);
-			$('.ConDesUm').fadeOut(100);	
-			$('.ConDesDois').fadeOut(100);	
-			$('.ConDesTres').fadeOut(100);
+		    $('#imgRepUm').css({"opacity":"0"})
+			$('#imgRepDois').css({"opacity":"0"})
+			$('#imgRepTres').css({"opacity":"0"})
+			$('.ConDesUm').css({"opacity":"0"})	
+			$('.ConDesDois').css({"opacity":"0"})	
+			$('.ConDesTres').css({"opacity":"0"})
 
 		    repQuatro = true;
 		}
@@ -530,17 +537,18 @@ var desc4 = false;
 			$('.repDes4').fadeOut(100);
 		    $('.ConProb4').fadeOut(100);
 
-		    $('.ConRepUm').fadeIn(300);
-			$('.ConRepDois').fadeIn(300);
-			$('.ConRepTres').fadeIn(300);
-			$('.ConDesUm').fadeIn(300);	
-			$('.ConDesDois').fadeIn(300);	
-			$('.ConDesTres').fadeIn(300);	
+		    $('#imgRepUm').css({"opacity":"1"})	
+			$('#imgRepDois').css({"opacity":"1"})	
+			$('#imgRepTres').css({"opacity":"1"})	
+			$('.ConDesUm').css({"opacity":"1"})	
+			$('.ConDesDois').css({"opacity":"1"})		
+			$('.ConDesTres').css({"opacity":"1"})
 
 		    repQuatro = false;
 		}
 	});
 
+/* -------------  HIDE/SHOW DESCRIÇÕES PAG 1 -------------------------------*/ 
 
 
 
