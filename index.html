@@ -535,6 +535,45 @@ var desc4 = false;
 		}
 	});
 
+/* -------------  CLICK FORA ------------*/ 
+		$('html').click(function() {
+			$('.repDes1').fadeOut(100);
+		    $('.ConProb').fadeOut(100);
+
+			$('.repDes2').fadeOut(100);
+		    $('.ConProb2').fadeOut(100);
+
+			$('.repDes3').fadeOut(100);
+		    $('.ConProb3').fadeOut(100);
+
+			$('.repDes4').fadeOut(100);
+		    $('.ConProb4').fadeOut(100);
+
+		    $('#imgRepUm').css({"opacity":"1"})	
+			$('#imgRepDois').css({"opacity":"1"})	
+			$('#imgRepTres').css({"opacity":"1"})
+			$('#imgRepQuatro').css({"opacity":"1"})	
+			$('.ConDesUm').css({"opacity":"1"})	
+			$('.ConDesDois').css({"opacity":"1"})		
+			$('.ConDesTres').css({"opacity":"1"})
+			$('.ConDesQuatro').css({"opacity":"1"})
+		});
+
+		$('.repQuatro').click(function(event){
+		    event.stopPropagation();
+		});
+		$('.repTres').click(function(event){
+		    event.stopPropagation();
+		});
+		$('.repDois').click(function(event){
+		    event.stopPropagation();
+		});
+		$('.repUm').click(function(event){
+		    event.stopPropagation();
+		});
+/* -------------  CLICK FORA ------------*/ 
+		
+
 /* -------------  HIDE/SHOW DESCRIÇÕES PAG 1 -------------------------------*/ 
 
 
@@ -542,13 +581,13 @@ var desc4 = false;
 
 /* -------------  HIDE/SHOW PÁGINA 3 -------------------------------*/ 
  
-	$(".ConEd").click(function(){
+	$(".edif").click(function(){
 		if (!desc1){
 		    $('.desc1').show(300);
 
-		    $('.ConEs').fadeOut(100);
-			$('.ConMun').fadeOut(100);
-			$('.ConAg').fadeOut(100);
+		    $('.estr').fadeOut(100);
+			$('.munic').fadeOut(100);
+			$('.agua').fadeOut(100);
 			$('.planeta').css({"opacity":"0"})	
 
 		    desc1 = true;
@@ -556,9 +595,9 @@ var desc4 = false;
 		else{
 			$('.desc1').hide(1);
 
-		    $('.ConEs').fadeIn(100);
-			$('.ConMun').fadeIn(100);
-			$('.ConAg').fadeIn(100);
+		    $('.estr').fadeIn(100);
+			$('.munic').fadeIn(100);
+			$('.agua').fadeIn(100);
 			$('.planeta').css({"opacity":"1"})	
 
 		    desc1 = false;
@@ -568,23 +607,23 @@ var desc4 = false;
 
 
 
-	$(".ConEs").click(function(){
+	$(".estr").click(function(){
 		if (!desc2){
-		    $('.desc3').show(300);
+		    $('.desc2').show(300);
 
-		    $('.ConEd').fadeOut(100);
-			$('.ConMun').fadeOut(100);
-			$('.ConAg').fadeOut(100);
+		    $('.edif').fadeOut(100);
+			$('.munic').fadeOut(100);
+			$('.agua').fadeOut(100);
 			$('.planeta').css({"opacity":"0"})		
 
 		    desc2 = true;
 		}
 		else{
-			$('.desc3').hide(1);
+			$('.desc2').hide(1);
 
-		    $('.ConEd').fadeIn(100);
-			$('.ConMun').fadeIn(100);
-			$('.ConAg').fadeIn(100);
+		    $('.edif').fadeIn(100);
+			$('.munic').fadeIn(100);
+			$('.agua').fadeIn(100);
 			$('.planeta').css({"opacity":"1"})	
 
 		    desc2 = false;
@@ -593,17 +632,17 @@ var desc4 = false;
 
 
 
-	$(".ConMun").click(function(){
+	$(".munic").click(function(){
 		if (!desc3){
 		    $('.desc3').show(300);
 
-		    $('.ConEs').fadeOut(100);
-			$('.ConEd').fadeOut(100);
-			$('.ConAg').fadeOut(100);
+		    $('.estr').fadeOut(100);
+			$('.edif').fadeOut(100);
+			$('.agua').fadeOut(100);
 			$('.planeta').css({"opacity":"0"})		
 
 			setTimeout(function() {
-			$(".ConMun").css({"margin-left":"15%"})
+			$(".munic").css({"margin-left":"15%"})
 			}, 100);
 
 		    desc3 = true;
@@ -611,12 +650,12 @@ var desc4 = false;
 		else{
 			$('.desc3').hide(1);
 
-		    $('.ConEs').fadeIn(100);
-			$('.ConEd').fadeIn(100);
-			$('.ConAg').fadeIn(100);
+		    $('.estr').fadeIn(100);
+			$('.edif').fadeIn(100);
+			$('.agua').fadeIn(100);
 			$('.planeta').css({"opacity":"1"})	
 			
-			$(".ConMun").css({"margin-left":"25%"})
+			$(".munic").css({"margin-left":"25%"})
 			
 		    desc3 = false;
 		}
@@ -625,17 +664,17 @@ var desc4 = false;
 
 
 
-	$(".ConAg").click(function(){
+	$(".agua").click(function(){
 		if (!desc4){
 		    $('.desc4').show(300);
 
-		    $('.ConEs').fadeOut(100);
-			$('.ConEd').fadeOut(100);
-			$('.ConMun').fadeOut(100);
+		    $('.estr').fadeOut(100);
+			$('.edif').fadeOut(100);
+			$('.munic').fadeOut(100);
 			$('.planeta').css({"opacity":"0"})
 
 			setTimeout(function() {
-			$(".ConMun").css({"margin-left":"15%"})
+			$(".agua").css({"margin-left":"15%"})
 			}, 200);
 
 		    desc4 = true;
@@ -643,19 +682,59 @@ var desc4 = false;
 		else{
 			$('.desc4').hide(1);
 
-		    $('.ConEs').fadeIn(100);
-			$('.ConEd').fadeIn(100);
-			$('.ConMun').fadeIn(100);
+		    $('.estr').fadeIn(100);
+			$('.edif').fadeIn(100);
+			$('.munic').fadeIn(100);
 			$('.planeta').css({"opacity":"1"})	
 
-			$(".ConMun").css({"margin-left":"25%"})
-			$(".ConAg").css({"margin-left":"margin-left:15%"})
+			$(".munic").css({"margin-left":"25%"})
+			$(".agua").css({"margin-left":"margin-left:15%"})
 
 		    desc4 = false;
 		}
 	});
 
-/* -------------  HIDE/SHOW PÁGINA 3 -------------------------------*/ 	
+
+
+/* -------------  CLICK FORA ------------*/ 
+		$('html').click(function() {
+			$('.desc1').hide(1);
+			$('.desc2').hide(1);
+			$('.desc3').hide(1);
+			$('.desc4').hide(1);
+
+			$('.estr').fadeIn(100);
+			$('.edif').fadeIn(100);
+			$('.munic').fadeIn(100);
+			$('.agua').fadeIn(100);
+			$('.planeta').css({"opacity":"1"})
+
+			$(".munic").css({"margin-left":"25%"})
+			$(".agua").css({"margin-left":"margin-left:15%"})
+		});
+
+		$('.edif').click(function(event){
+		    event.stopPropagation();
+		});
+		$('.estr').click(function(event){
+		    event.stopPropagation();
+		});
+		$('.munic').click(function(event){
+		    event.stopPropagation();
+		});
+		$('.agua').click(function(event){
+		    event.stopPropagation();
+		});
+/* -------------  CLICK FORA ------------*/ 
+
+
+
+
+/* -------------  HIDE/SHOW PÁGINA 3 -------------------------------*/ 
+
+
+
+
 });
 </script>
 
@@ -711,6 +790,7 @@ var desc4 = false;
 	<div class="wrap">
 
 		<div class="sliUm">
+
 			<div class="ConRep">
 
 				<div class="repUm">
@@ -928,24 +1008,32 @@ var desc4 = false;
 
 			<div class="servi">
 				<div class="desc1"></div>
-				<div class="ConEd">
-					<img id="imgEd" src="img/edi.png" />
+				<div class="edif">
+					<div class="ConEd">
+						<img id="imgEd" src="img/edi.png" />
+					</div>
 				</div>
 
 				<div class="desc2"></div>
-				<div class="ConEs">
-					<img id="imgEs" src="img/estr.png" />
+				<div class="estr">
+					<div class="ConEs">
+						<img id="imgEs" src="img/estr.png" />
+					</div>
 				</div>
 
 				<div class="desc3"></div>
-				<div class="ConMun">
-					<img id="imgMun" src="img/mun.png" />
-				</div>
+				<div class="munic">
+					<div class="ConMun">
+						<img id="imgMun" src="img/mun.png" />
+					</div>
+				</div>	
 
 				<div class="desc4"></div>
-				<div class="ConAg">
-					<img id="imgAg" src="img/agu.png" />
-				</div>
+				<div class="agua"> 
+					<div class="ConAg">
+						<img id="imgAg" src="img/agu.png" />
+					</div>
+				</div>	
 			</div>	
 
 			<div class="planeta">
