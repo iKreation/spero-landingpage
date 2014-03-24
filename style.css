@@ -493,7 +493,7 @@ body{
     position:absolute;
     overflow:hidden;
     z-index: 9999;
-    margin-left: 100px;
+    margin-left: 90px;
     margin-top: 70px;
 
     background: transparent;
@@ -746,7 +746,7 @@ body{
     z-index: 1000;
     display:none;
 
-     cursor: pointer;
+    cursor: pointer;
 }
 #imgDesTres{
 	position:absolute;

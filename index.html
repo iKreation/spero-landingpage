@@ -4,7 +4,7 @@
 <head>
 
     <title>SPERO</title>
-    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -71,12 +71,76 @@
 
 
     $(function() {
-          var timer = setInterval( slide, 1500);
+        var timer = setInterval( slide, 1600);
 
-          var counter = 0;
-          var pos = false;
+    	var counter = 0; 
 
-          var showN = 0;
+        var showN = 0;
+
+        var start = false;
+
+
+        function slide() {
+        	if (start){ 
+
+	            if(counter==0) {$(".ConT3").hide(10);
+	            				$(".ConT2").hide(10);
+
+	                            setTimeout(function() {
+	                            	$(".ConT1").fadeIn(300);
+								}, 100);
+
+	                            $(".numUm").css({"background":"rgba(52, 152, 219, 0.9)"})
+	                            $(".numDois").css({"background":"rgba(39, 174, 96, 0.9)"})
+	                            $(".numTres").css({"background":"rgba(39, 174, 96, 0.9)"})
+	                            counter++; 
+	                            return;
+	                            }
+	            if(counter==1) {$(".ConT1").hide(10);
+	                            $(".ConT3").hide(10);
+
+	                            setTimeout(function() {
+	                            	$(".ConT2").fadeIn(300);
+	                            }, 100);
+
+	                            $(".numDois").css({"background":"rgba(52, 152, 219, 0.9)"})
+	                            $(".numUm").css({"background":"rgba(39, 174, 96, 0.9)"})
+	                            $(".numTres").css({"background":"rgba(39, 174, 96, 0.9)"})
+	                            }
+
+	            if(counter==2) {$(".ConT1").hide(10);
+	                            $(".ConT2").hide(10);
+
+	                            setTimeout(function() {
+	                            	$(".ConT3").fadeIn(300);
+	                            }, 100);
+
+	                            $(".numTres").css({"background":"rgba(52, 152, 219, 0.9)"})
+	                            $(".numDois").css({"background":"rgba(39, 174, 96, 0.9)"})
+	                            $(".numUm").css({"background":"rgba(39, 174, 96, 0.9)"})
+	                            }
+	            
+	            counter == 2? counter = 2 : counter = 2;
+        	}
+
+        }
+
+        $(".numUm").click(function(){ 
+            counter = 0;
+        });
+
+        $(".numDois").click(function(){ 
+            counter = 1;
+        });
+
+        $(".numTres").click(function(){ 
+            counter = 2;
+        });
+
+
+
+
+
 
 
           $(document).ready(function (){
@@ -85,7 +149,7 @@
                        scrollTop: (($(".conAni").offset().top)-105)
                     }, 300);
 
-                    showN = 2;
+                    start = true;
 			    });
 
 			    $('.repDes4').click(function () {
@@ -93,7 +157,7 @@
                        scrollTop: (($(".conAni").offset().top)-105)
                     }, 300);
 
-                    showN = 2;
+                    start = true;
 			    });
 
 				$('.btMessUmDois').click(function () {
@@ -113,7 +177,7 @@
 	                    $('html, body').animate({
 	                       scrollTop: (($(".conAni").offset().top)-105)
 	                    }, 300);
-	                    showN = 2;
+	                start = true;    
 			    });
 
 			    $('.tres2').click(function () {
@@ -130,70 +194,6 @@
 /* -------------  MENU -------------------------------*/    
      		}); 
 
-
-
-
-/* -------------  SLIDE -------------------------------*/      
-        function slide() {
-
-          	if (pos == true){counter ++;} 
-
-            if(counter==0) {
-							}
-
-            if(counter==1) {$(".ConT3").hide(10);
-            				$(".ConT2").hide(10);
-
-                            setTimeout(function() {
-                            	$(".ConT1").fadeIn(300);
-							}, 100);
-
-                            $(".numUm").css({"background":"rgba(52, 152, 219, 0.9)"})
-                            $(".numDois").css({"background":"rgba(39, 174, 96, 0.9)"})
-                            $(".numTres").css({"background":"rgba(39, 174, 96, 0.9)"})
-                            }
-
-            if(counter==2) {$(".ConT1").hide(10);
-                            $(".ConT3").hide(10);
-
-                            setTimeout(function() {
-                            	$(".ConT2").fadeIn(300);
-                            }, 100);
-
-                            $(".numDois").css({"background":"rgba(52, 152, 219, 0.9)"})
-                            $(".numUm").css({"background":"rgba(39, 174, 96, 0.9)"})
-                            $(".numTres").css({"background":"rgba(39, 174, 96, 0.9)"})
-                            }
-
-            if(counter==3) {$(".ConT1").hide(10);
-                            $(".ConT2").hide(10);
-
-                            setTimeout(function() {
-                            	$(".ConT3").fadeIn(300);
-                            }, 100);
-
-                            $(".numTres").css({"background":"rgba(52, 152, 219, 0.9)"})
-                            $(".numDois").css({"background":"rgba(39, 174, 96, 0.9)"})
-                            $(".numUm").css({"background":"rgba(39, 174, 96, 0.9)"})
-
-                            pos = false;
-                            }                               
-        }
-
-
-        $(".numUm").click(function(){ 
-            counter = 1;
-        });
-
-        $(".numDois").click(function(){ 
-            counter = 2;
-        });
-
-        $(".numTres").click(function(){ 
-            counter = 3;
-        });
-
-/* -------------  SLIDE -------------------------------*/ 
 
 
 
@@ -250,10 +250,7 @@
 			}
 
 			if(scroll >= dPos2){
-				if (showN == 2){
-					$('.news').addClass('animated pulse');
-					pos = true;
-				}
+				start = true;
 			}
 
 		});
@@ -366,8 +363,6 @@ var desc4 = false;
 	}); 
 
 
-
-
 	$(".ConRepDois").click(function(){
     	if (!repDois){
 		    $('.repDes2').fadeIn(300);
@@ -423,10 +418,6 @@ var desc4 = false;
 		    repDois = false;
 		}
 	}); 
-
-
-
-
 
 
 	$(".ConRepTres").click(function(){
@@ -485,10 +476,6 @@ var desc4 = false;
 		    repTres = false;
 		}
 	});
-
-
-
-
 
 
 	$(".ConRepQuatro").click(function(){
@@ -553,7 +540,7 @@ var desc4 = false;
 
 
 
-/* -------------  PÁGINA 3 -------------------------------*/ 
+/* -------------  HIDE/SHOW PÁGINA 3 -------------------------------*/ 
  
 	$(".ConEd").click(function(){
 		if (!desc1){
@@ -562,17 +549,17 @@ var desc4 = false;
 		    $('.ConEs').fadeOut(100);
 			$('.ConMun').fadeOut(100);
 			$('.ConAg').fadeOut(100);
-			$('.planeta').fadeOut(100);	
+			$('.planeta').css({"opacity":"0"})	
 
 		    desc1 = true;
 		}
 		else{
-			$('.desc1').fadeOut(300);
+			$('.desc1').hide(1);
 
 		    $('.ConEs').fadeIn(100);
 			$('.ConMun').fadeIn(100);
 			$('.ConAg').fadeIn(100);
-			$('.planeta').fadeIn(100);	
+			$('.planeta').css({"opacity":"1"})	
 
 		    desc1 = false;
 		}
@@ -588,17 +575,17 @@ var desc4 = false;
 		    $('.ConEd').fadeOut(100);
 			$('.ConMun').fadeOut(100);
 			$('.ConAg').fadeOut(100);
-			$('.planeta').fadeOut(100);	
+			$('.planeta').css({"opacity":"0"})		
 
 		    desc2 = true;
 		}
 		else{
-			$('.desc3').fadeOut(300);
+			$('.desc3').hide(1);
 
 		    $('.ConEd').fadeIn(100);
 			$('.ConMun').fadeIn(100);
 			$('.ConAg').fadeIn(100);
-			$('.planeta').fadeIn(100);	
+			$('.planeta').css({"opacity":"1"})	
 
 		    desc2 = false;
 		}
@@ -613,7 +600,7 @@ var desc4 = false;
 		    $('.ConEs').fadeOut(100);
 			$('.ConEd').fadeOut(100);
 			$('.ConAg').fadeOut(100);
-			$('.planeta').fadeOut(100);	
+			$('.planeta').css({"opacity":"0"})		
 
 			setTimeout(function() {
 			$(".ConMun").css({"margin-left":"15%"})
@@ -622,12 +609,12 @@ var desc4 = false;
 		    desc3 = true;
 		}
 		else{
-			$('.desc3').fadeOut(300);
+			$('.desc3').hide(1);
 
 		    $('.ConEs').fadeIn(100);
 			$('.ConEd').fadeIn(100);
 			$('.ConAg').fadeIn(100);
-			$('.planeta').fadeIn(100);	
+			$('.planeta').css({"opacity":"1"})	
 			
 			$(".ConMun").css({"margin-left":"25%"})
 			
@@ -645,7 +632,7 @@ var desc4 = false;
 		    $('.ConEs').fadeOut(100);
 			$('.ConEd').fadeOut(100);
 			$('.ConMun').fadeOut(100);
-			$('.planeta').fadeOut(100);	
+			$('.planeta').css({"opacity":"0"})
 
 			setTimeout(function() {
 			$(".ConMun").css({"margin-left":"15%"})
@@ -654,12 +641,12 @@ var desc4 = false;
 		    desc4 = true;
 		}
 		else{
-			$('.desc4').fadeOut(300);
+			$('.desc4').hide(1);
 
 		    $('.ConEs').fadeIn(100);
 			$('.ConEd').fadeIn(100);
 			$('.ConMun').fadeIn(100);
-			$('.planeta').fadeIn(100);	
+			$('.planeta').css({"opacity":"1"})	
 
 			$(".ConMun").css({"margin-left":"25%"})
 			$(".ConAg").css({"margin-left":"margin-left:15%"})
@@ -668,7 +655,7 @@ var desc4 = false;
 		}
 	});
 
-/* -------------  PÁGINA 3 -------------------------------*/ 	
+/* -------------  HIDE/SHOW PÁGINA 3 -------------------------------*/ 	
 });
 </script>
 
