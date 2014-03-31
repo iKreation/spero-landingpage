@@ -282,7 +282,7 @@ body{
 	width:160px;
 	height:40px;
 
-	margin-top: 12px;
+	margin-top: 6px;
 	margin-left: calc(50% - 88px);
 
 	display:block; 
@@ -626,6 +626,7 @@ body{
 }
 .repUm:hover > .ConDesUm{
 	width:190px;
+	margin-left: -10px;
 }
 .ConDesUm{
 	width:170px;
@@ -684,6 +685,7 @@ body{
 }
 .repDois:hover > .ConDesDois{
 	width:180px;
+	margin-left: -10px;
 }
 .ConDesDois{
 	width:160px;
@@ -743,6 +745,7 @@ body{
 }
 .repTres:hover > .ConDesTres{
 	width:230px;
+	margin-left: -10px;
 }
 .ConDesTres{
 	width:210px;
@@ -803,6 +806,7 @@ body{
 }
 .repQuatro:hover > .ConDesQuatro{
 	width:170px;
+	margin-left: -10px;
 }
 .ConDesQuatro{
 	width:150px;
