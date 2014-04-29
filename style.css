@@ -860,7 +860,7 @@ body{
 .messUm{
 	width:100%;
 	height: 100px;
-	margin-top: 30px;
+	margin-top: 0px;
 
 	line-height: 150%;
 	text-align: center;
@@ -1605,3 +1605,101 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE ATÉ 900px---------------------------------------------*/
+
+/*1165*/
+@media only screen and (max-width : 72.813em) {
+.conWrap{
+	width:100%;
+
+	position: absolute;
+	z-index: 100;
+	left: 0;
+	top: 8%;
+
+	background: transparent;
+}
+
+.messDois{
+	width:390px;
+	height: 100px;
+
+	float: left;
+	margin-top: 170px;
+	margin-left: 5%;
+
+	line-height: 150%;
+	text-align: center;
+	font-size: 24px;
+	font-family: Ssemi;
+	color: white;
+
+	background: rgba(52, 152, 219, 0.9);
+}
+
+.news{
+	width: 330px;
+	height: 135px;
+
+	float: left;
+	margin-left: 15%;
+	margin-top: -30px;
+	padding-left: 10;
+	padding-top: 10;
+	 
+	font-family: Ssemi;	
+	font-size: 28px; 
+	color:white;
+
+	background: rgba(39, 174, 96, 0.9);
+}
+}
+
+
+
+
+/*990*/
+@media only screen and (max-width : 61.875em) {
+.sliTres{
+	width:90%;
+	height: 540px;
+
+	margin: auto;
+	margin-top: 200px;
+
+	background: transparent;
+}
+}
+
+/* RESPONSIVE ATÉ 900px---------------------------------------------*/
