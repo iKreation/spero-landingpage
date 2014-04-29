@@ -312,7 +312,7 @@ body{
 	position: absolute;
 	z-index: 9999;
 	margin-left: 46%;
-	margin-top: 100px;
+	margin-top: 120px;
 	background: rgba(192, 57, 43, 0.9);
 	display: none;
 }
@@ -335,7 +335,7 @@ body{
     overflow:hidden;
     z-index: 9999;
     margin-left: 30%;
-    margin-top: 100px;
+    margin-top: 120px;
 
     background: transparent;
     display: none;
@@ -1528,31 +1528,6 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* DESCRIÇÃO SERVIÇOS---------------------------------------------*/
 .desc1{
 	width:400px;
@@ -1636,7 +1611,7 @@ body{
 
 
 
-/* RESPONSIVE ATÉ 900px---------------------------------------------*/
+/* RESPONSIVE > 900px---------------------------------------------*/
 
 /*1165*/
 @media only screen and (max-width : 72.813em) {
@@ -1702,4 +1677,712 @@ body{
 }
 }
 
-/* RESPONSIVE ATÉ 900px---------------------------------------------*/
+/* RESPONSIVE > 900px---------------------------------------------*/
+
+
+
+
+/* RESPONSIVE > 650px---------------------------------------------*/
+/*900*/
+@media only screen and (max-width : 56.250em) {
+.menu{
+	position: fixed;
+	top:20px;
+	left: 20px;
+	width: 650px;
+	height: 50px;
+	z-index: 999999999999;
+
+	display: none;
+}
+
+.logotipo{
+	width: 170px;
+	height: 35px;
+
+	top: 20px;
+	left: 20px;
+	z-index: 999999999999;
+	position: fixed;
+
+	background: rgba(30,30,30,0.8);
+}
+
+.conLog{
+	width:120px;
+	height:40px;
+
+	margin-top: 3px;
+	margin-left: calc(50% - 70px);
+
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+}
+#imgLog{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+    background: transparent;
+}
+
+.sliUm{
+	width:100%;
+	height: 560px;
+
+	margin-top: 0px;
+	background: transparent;
+}
+
+.repTres{
+	width:150px;
+	height: 150px;
+	position: absolute;
+	margin-top: 180px;
+	margin-left: 40%;
+	background: transparent;
+	display: none;
+}
+
+.repDois{
+	width:160px;
+	height: 150px;
+	position: absolute;
+	margin-left: 70%;
+	background: transparent;
+}
+
+.repQuatro{
+	width:140px;
+	height: 150px;
+	position: absolute;
+	margin-top: 130px;
+	margin-left: 40%;
+	background: transparent;
+}
+.repQuatro:hover > .ConDesQuatro{
+	width:160px;
+	margin-left: -10px;
+}
+.ConDesQuatro{
+	width:140px;
+	height: 35px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin: auto;
+
+    background: transparent;
+
+    z-index: 1000;
+    display:none;
+
+     cursor: pointer;
+}
+#imgDesQuatro{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+.ConRepQuatro{
+	width:40px;
+	height: 80px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin: auto;
+    margin-top: 20px;
+
+    background: transparent;
+
+    z-index: 1000;
+
+     cursor: pointer;
+}
+#imgRepQuatro{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.repDes1{
+	width:50%;
+	height: 270px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 46%;
+	margin-top: 120px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+}
+.txDes1{
+	width:90%;
+	height: 100px;
+	font-size: 18px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.repDes2{
+	width:50%;
+	height: 260px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 41%;
+	margin-top: 150px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+}
+.txDes{
+	width:90%;
+	height: 100px;
+	font-size: 18px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.repDes3{
+	width:40%;
+	height: 270px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 31%;
+	margin-top: 200px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+}
+.txDes3{
+	width:90%;
+	height: 100px;
+	font-size: 20px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.repDes4{
+	width:300px;
+	height: 120px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 35%;
+	margin-top: 260px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+	cursor: pointer;
+}
+.txDes4{
+	width:240px;
+	height: 100px;
+	font-size: 20px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.messUm{
+	width:100%;
+	height: 100px;
+	margin-top: -50px;
+
+	line-height: 150%;
+	text-align: center;
+	font-size: 20px;
+	font-family: Ssemi;
+	color: white;
+
+	background: transparent;
+}
+
+.btMessUm{
+	width:250px;
+	margin-left: 10%;
+	float: left;
+}
+
+.txMessUm{
+	width:270px;
+
+	padding-top: 10px;
+	padding-bottom: 12px;
+	margin: auto;
+
+	background: rgba(39, 174, 96, 0.9);
+}
+
+.messUmDois{
+	width:100%;
+	height: 100px;
+
+	line-height: 150%;
+	text-align: center;
+	font-size: 20px;
+	font-family: Ssemi;
+	color: white;
+
+	background: transparent;
+}
+
+.btMessUmDois{
+	width:350px;
+	margin-left: 50%;
+	margin-top: -130px;
+	float: left;
+}
+
+.txMessUmDois{
+	width:230px;
+
+	padding-top: 10px;
+	padding-bottom: 12px;
+	margin: auto;
+
+	background: rgba(52, 152, 219, 0.9);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sliDois{
+	width:100%;
+	height: 530px;
+
+	margin: auto;
+	margin-top: 150px;
+
+	background: transparent;
+}
+
+.conAni{
+	width:360px;
+	height: 520px;
+	background: transparent;
+	margin-left: calc(50% - 180px);
+}
+
+.ConT1{
+	/*width do telemovel(ou foto) só é 220px*/
+	/*width:270px;*/
+	width:360px;
+	height: 360px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+
+    background: transparent;
+}
+.ConT2{
+	width:360px;
+	height: 360px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+
+    background: transparent;
+
+    display: none;
+}
+.ConT3{
+	width:360px;
+	height: 360px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+
+    background: transparent;
+
+    display: none;
+}
+
+.numeros{
+	width:220px;
+	height: 40px;
+	position: absolute;
+
+	margin-top: 332px;
+	margin-left: 200px;
+	font-family: Ssemi;
+	font-size: 30px;
+}
+
+.numUm{
+	width:40px;
+	color:white;
+	background: rgba(39, 174, 96, 0.9);
+	text-align: center;
+}
+
+.numDois{
+	width:40px;
+	margin-left: 50px;
+	margin-top: -30px;
+	color: white;
+	background: rgba(39, 174, 96, 0.9);
+	text-align: center;
+}
+
+.numTres{
+	width:40px;
+	margin-left: 100px;
+	margin-top: -30px;
+	color: white;
+	background: rgba(39, 174, 96, 0.9);
+	text-align: center;
+}
+
+.news{
+	width: 280px;
+	height: 110px;
+
+	float: none;
+	margin-left: calc(-20% - 220px);
+	margin-top: 410px;
+	padding-left: 10;
+	padding-top: 20;
+	 
+	font-family: Ssemi;	
+	font-size: 22px; 
+	color:white;
+
+	background: rgba(39, 174, 96, 0.9);
+}
+
+.per{
+	margin-left: 25px;
+	margin-top: 45px;
+	padding-top: 10px;
+}
+
+.rect{
+	width: 230px;
+
+	margin-top: 10px;
+	margin-left: 25px;
+
+	font-family: Ssemi;
+	font-size: 20px;
+	color: white;
+
+	background: none;
+	border-color: white;
+	
+	border:0.125em solid white;
+	padding-left:5; 
+}
+
+.but{
+	width:150px;
+	height: 40px;
+	margin-top: 10px;
+	margin-left: calc(50% - 20px);
+
+	font-family: Sbold;
+	font-size: 26px;
+	color: rgb(64,212,126);
+
+	cursor: pointer;
+	border: none;
+	background-color:white; 
+	border:0.125em solid white;
+}
+
+.messDois{
+	width:270px;
+	height: 100px;
+
+	float: none;
+	margin-top: -50px;
+	margin-left: 2%;
+
+	line-height: 150%;
+	text-align: center;
+	font-size: 18px;
+	font-family: Ssemi;
+	color: white;
+
+	background: rgba(52, 152, 219, 0.9);
+}
+
+.btMessDois{
+	width:270px;
+	background: transparent;	
+}
+
+.txMessDois{
+	width:260px;
+
+	padding-top: 13px;
+	padding-bottom: 25px;
+	margin: auto;
+
+	background: transparent;
+}
+
+.sliTres{
+	width:90%;
+	height: 540px;
+
+	margin: auto;
+	margin-top: 300px;
+
+	background: transparent;
+}
+
+.txMessTres{
+	width:400px;
+	height: 30px;
+
+	margin-left: 0px;
+	margin-top: 0px;
+	padding-top: 10px;
+
+	font-family: sSemi;
+	font-size: 22px;
+	text-align: center;
+	color: white;
+
+	background: rgba(52, 152, 219, 0.9);
+}
+
+.servi{
+	width:100%;
+	height: 440px;	
+
+	margin-top: 170px;
+
+	float: left;
+
+	background: transparent;
+}
+.edif{
+	width:154px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 30px;
+    margin-left: 10%;
+
+    background: transparent;
+	cursor:pointer;
+}
+.ConEd{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin: auto;
+}
+.ConEd :hover{
+	border: 2px solid white;
+}
+#imgEd{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.estr{
+	width:154px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 30px;
+    margin-left: 10%;
+
+    background: transparent;
+	cursor:pointer;
+}
+.ConEs{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin: auto;
+}
+.ConEs :hover{
+	border: 2px solid white;
+}
+#imgEs{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.munic{
+	width:154px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 35px;
+    margin-left: 20%;
+
+    background: transparent;
+	cursor:pointer;
+}
+.ConMun{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin-left: 2px;
+	margin-top: 2px;
+}
+.ConMun:hover{
+	border: 2px solid white;
+}
+#imgMun{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.agua{
+	width:154px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 35px;
+    margin-left: 10%;
+
+    background: transparent;
+	cursor:pointer;
+}
+.ConAg{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin: auto;
+}
+.ConAg :hover{
+	border: 2px solid white;
+}
+#imgAg{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.planeta{
+	width:30%;
+	height: 280px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-left: 65%;
+    margin-top: -600px;
+
+    background: transparent;
+}
+
+.desc1{
+	width:350px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 230px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+
+.desc2{
+	width:350px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 230px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+
+.desc3{
+	width:350px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 230px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+
+.desc4{
+	width:350px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 230px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+}
+/* RESPONSIVE > 650px---------------------------------------------*/
