@@ -321,32 +321,8 @@ var desc4 = false;
 			$('.ConDesTres').css({"opacity":"0"})
 			$('.ConDesQuatro').css({"opacity":"0"})	
 
-		    repUm = true;
-		}
-		else{
-			$('.repDes1').hide(100);
-		    $('.ConProb').hide(100);
-
-		    $('#imgRepDois').css({"opacity":"1"})
-			$('#imgRepTres').css({"opacity":"1"})
-			$('#imgRepQuatro').css({"opacity":"1"})
-			$('.ConDesDois').css({"opacity":"1"})
-			$('.ConDesTres').css({"opacity":"1"})	
-			$('.ConDesQuatro').css({"opacity":"1"})	
-		    repUm = false;
-		}
-	});    
-	$(".ConDesUm").click(function(){
-		if (!repUm){
-		    $('.repDes1').fadeIn(300);
-		    $('.ConProb').fadeIn(300);
-
-		    $('#imgRepDois').css({"opacity":"0"})
-			$('#imgRepTres').css({"opacity":"0"})
-			$('#imgRepQuatro').css({"opacity":"0"})
-			$('.ConDesDois').css({"opacity":"0"})	
-			$('.ConDesTres').css({"opacity":"0"})
-			$('.ConDesQuatro').css({"opacity":"0"})		
+			$('.btMessUm').css({"opacity":"0"});	
+			$('.btMessUmDois').css({"opacity":"0"});
 
 		    repUm = true;
 		}
@@ -360,6 +336,42 @@ var desc4 = false;
 			$('.ConDesDois').css({"opacity":"1"})
 			$('.ConDesTres').css({"opacity":"1"})	
 			$('.ConDesQuatro').css({"opacity":"1"})	
+
+			$('.btMessUm').css({"opacity":"1"});	
+			$('.btMessUmDois').css({"opacity":"1"});
+		    repUm = false;
+		}
+	});    
+	$(".ConDesUm").click(function(){
+		if (!repUm){
+		    $('.repDes1').fadeIn(300);
+		    $('.ConProb').fadeIn(300);
+
+		    $('#imgRepDois').css({"opacity":"0"})
+			$('#imgRepTres').css({"opacity":"0"})
+			$('#imgRepQuatro').css({"opacity":"0"})
+			$('.ConDesDois').css({"opacity":"0"})	
+			$('.ConDesTres').css({"opacity":"0"})
+			$('.ConDesQuatro').css({"opacity":"0"})
+
+			$('.btMessUm').css({"opacity":"0"});	
+			$('.btMessUmDois').css({"opacity":"0"});		
+
+		    repUm = true;
+		}
+		else{
+			$('.repDes1').fadeOut(100);
+		    $('.ConProb').fadeOut(100);
+
+		    $('#imgRepDois').css({"opacity":"1"})
+			$('#imgRepTres').css({"opacity":"1"})
+			$('#imgRepQuatro').css({"opacity":"1"})
+			$('.ConDesDois').css({"opacity":"1"})
+			$('.ConDesTres').css({"opacity":"1"})	
+			$('.ConDesQuatro').css({"opacity":"1"})	
+
+			$('.btMessUm').css({"opacity":"1"});	
+			$('.btMessUmDois').css({"opacity":"1"});
 
 		    repUm = false;
 		}
@@ -378,6 +390,9 @@ var desc4 = false;
 			$('.ConDesTres').css({"opacity":"0"})	
 			$('.ConDesQuatro').css({"opacity":"0"})	
 
+			$('.btMessUm').css({"opacity":"0"});	
+			$('.btMessUmDois').css({"opacity":"0"});
+
 		    repDois = true;
 		}
 		else{
@@ -390,6 +405,9 @@ var desc4 = false;
 			$('.ConDesUm').css({"opacity":"1"})
 			$('.ConDesTres').css({"opacity":"1"})
 			$('.ConDesQuatro').css({"opacity":"1"})	
+
+			$('.btMessUm').css({"opacity":"1"});	
+			$('.btMessUmDois').css({"opacity":"1"});
 		    repDois = false;
 		}
 	});    
@@ -405,6 +423,9 @@ var desc4 = false;
 			$('.ConDesTres').css({"opacity":"0"})	
 			$('.ConDesQuatro').css({"opacity":"0"})
 
+			$('.btMessUm').css({"opacity":"0"});	
+			$('.btMessUmDois').css({"opacity":"0"});
+
 		    repDois = true;
 		}
 		else{
@@ -416,7 +437,10 @@ var desc4 = false;
 			$('#imgRepQuatro').css({"opacity":"1"})
 			$('.ConDesUm').css({"opacity":"1"})
 			$('.ConDesTres').css({"opacity":"1"})
-			$('.ConDesQuatro').css({"opacity":"1"})	
+			$('.ConDesQuatro').css({"opacity":"1"})
+
+			$('.btMessUm').css({"opacity":"1"});	
+			$('.btMessUmDois').css({"opacity":"1"});	
 
 		    repDois = false;
 		}
@@ -435,6 +459,9 @@ var desc4 = false;
 			$('.ConDesDois').css({"opacity":"0"})
 			$('.ConDesQuatro').css({"opacity":"0"})
 
+			$('.btMessUm').css({"opacity":"0"});	
+			$('.btMessUmDois').css({"opacity":"0"});
+
 		    repTres = true;
 		}
 		else{
@@ -447,6 +474,9 @@ var desc4 = false;
 			$('.ConDesUm').css({"opacity":"1"})
 			$('.ConDesDois').css({"opacity":"1"})	
 			$('.ConDesQuatro').css({"opacity":"1"})
+
+			$('.btMessUm').css({"opacity":"1"});	
+			$('.btMessUmDois').css({"opacity":"1"});	
 	
 		    repTres = false;
 		}
@@ -463,6 +493,9 @@ var desc4 = false;
 			$('.ConDesDois').css({"opacity":"0"})
 			$('.ConDesQuatro').css({"opacity":"0"})
 
+			$('.btMessUm').css({"opacity":"0"});	
+			$('.btMessUmDois').css({"opacity":"0"});
+
 		    repTres = true;
 		}
 		else{
@@ -475,6 +508,9 @@ var desc4 = false;
 			$('.ConDesUm').css({"opacity":"1"})
 			$('.ConDesDois').css({"opacity":"1"})	
 			$('.ConDesQuatro').css({"opacity":"1"})	
+
+			$('.btMessUm').css({"opacity":"1"});	
+			$('.btMessUmDois').css({"opacity":"1"});
 
 		    repTres = false;
 		}
@@ -493,6 +529,9 @@ var desc4 = false;
 			$('.ConDesDois').css({"opacity":"0"})	
 			$('.ConDesTres').css({"opacity":"0"})
 
+			$('.btMessUm').css({"opacity":"0"});	
+			$('.btMessUmDois').css({"opacity":"0"});
+
 		    repQuatro = true;
 		}
 		else{
@@ -504,7 +543,10 @@ var desc4 = false;
 			$('#imgRepTres').css({"opacity":"1"})	
 			$('.ConDesUm').css({"opacity":"1"})	
 			$('.ConDesDois').css({"opacity":"1"})		
-			$('.ConDesTres').css({"opacity":"1"})		
+			$('.ConDesTres').css({"opacity":"1"})	
+
+			$('.btMessUm').css({"opacity":"1"});	
+			$('.btMessUmDois').css({"opacity":"1"});	
 	
 		    repQuatro = false;
 		}
@@ -521,6 +563,9 @@ var desc4 = false;
 			$('.ConDesDois').css({"opacity":"0"})	
 			$('.ConDesTres').css({"opacity":"0"})
 
+			$('.btMessUm').css({"opacity":"0"});	
+			$('.btMessUmDois').css({"opacity":"0"});
+
 		    repQuatro = true;
 		}
 		else{
@@ -533,6 +578,9 @@ var desc4 = false;
 			$('.ConDesUm').css({"opacity":"1"})	
 			$('.ConDesDois').css({"opacity":"1"})		
 			$('.ConDesTres').css({"opacity":"1"})
+
+			$('.btMessUm').css({"opacity":"1"});	
+			$('.btMessUmDois').css({"opacity":"1"});
 
 		    repQuatro = false;
 		}
@@ -560,6 +608,9 @@ var desc4 = false;
 			$('.ConDesDois').css({"opacity":"1"})		
 			$('.ConDesTres').css({"opacity":"1"})
 			$('.ConDesQuatro').css({"opacity":"1"})
+
+			$('.btMessUm').css({"opacity":"1"});	
+			$('.btMessUmDois').css({"opacity":"1"});
 		});
 
 		$('.repQuatro').click(function(event){
@@ -1005,7 +1056,7 @@ var desc4 = false;
 		<div class="sliTres">
 			<div class="messTres">
 				<div class="txMessTres">
-					<p>Serviços SPERO para profssionais</p>
+					<p>Serviços SPERO para profissionais</p>
 				</div>
 			</div>
 
