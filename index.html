@@ -39,7 +39,7 @@
                     // How zoomed in you want the map to start at (always required)
                     zoom: 13,
 
-                    draggable: false,zoomControl: false, scrollwheel: false,disableDoubleClickZoom: true,
+                    draggable: false,zoomControl: false, scrollwheel: false,disableDoubleClickZoom: true, scrolling: false,
 
                     // The latitude and longitude to center the map (always required)
                     center: new google.maps.LatLng(40.9900, -73.9900), // New York
@@ -92,8 +92,8 @@
 								}, 100);
 
 	                            $(".numUm").css({"background":"rgba(52, 152, 219, 0.9)"})
-	                            $(".numDois").css({"background":"rgba(39, 174, 96, 0.9)"})
-	                            $(".numTres").css({"background":"rgba(39, 174, 96, 0.9)"})
+	                            $(".numDois").css({"background":"rgba(46, 204, 113,0.8)"})
+	                            $(".numTres").css({"background":"rgba(46, 204, 113,0.8)"})
 	                            if (count){counter++;} 
 	                            return;
 	                            }
@@ -105,8 +105,8 @@
 	                            }, 100);
 
 	                            $(".numDois").css({"background":"rgba(52, 152, 219, 0.9)"})
-	                            $(".numUm").css({"background":"rgba(39, 174, 96, 0.9)"})
-	                            $(".numTres").css({"background":"rgba(39, 174, 96, 0.9)"})
+	                            $(".numUm").css({"background":"rgba(46, 204, 113,0.8)"})
+	                            $(".numTres").css({"background":"rgba(46, 204, 113,0.8)"})
 	                            }
 
 	            if(counter==2) {$(".ConT1").hide(10);
@@ -117,8 +117,8 @@
 	                            }, 100);
 
 	                            $(".numTres").css({"background":"rgba(52, 152, 219, 0.9)"})
-	                            $(".numDois").css({"background":"rgba(39, 174, 96, 0.9)"})
-	                            $(".numUm").css({"background":"rgba(39, 174, 96, 0.9)"})
+	                            $(".numDois").css({"background":"rgba(46, 204, 113,0.8)"})
+	                            $(".numUm").css({"background":"rgba(46, 204, 113,0.8)"})
 
 	                            count = false;
 	                            }
@@ -149,7 +149,7 @@
           $(document).ready(function (){
 				$('.btMessUm').click(function () {
                     $('html, body').animate({
-                       scrollTop: (($(".conAni").offset().top)-105)
+                       scrollTop: (($(".conAni").offset().top)-205)
                     }, 300);
 
                     start = true;
@@ -165,13 +165,13 @@
 
 				$('.btMessUmDois').click(function () {
                     $('html, body').animate({
-                       scrollTop: (($(".sliTres").offset().top)-105)
+                       scrollTop: (($(".sliTres").offset().top)-205)
                     }, 300);
 			    });
 
 			    $('.txMessDois').click(function () {
                     $('html, body').animate({
-                       scrollTop: (($(".sliTres").offset().top)-105)
+                       scrollTop: (($(".sliTres").offset().top)-205)
                     }, 300);
 			    });
 	
@@ -191,7 +191,7 @@
 
 			    $('.dois').click(function () {
 	                $('html, body').animate({
-	                    scrollTop: (($(".sliTres").offset().top)-105)
+	                    scrollTop: (($(".sliTres").offset().top)-205)
 	                }, 300);
 			    });
 /* -------------  MENU -------------------------------*/    
