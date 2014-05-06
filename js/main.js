@@ -55,11 +55,11 @@ app.setScroll = function() {
 		}
 		*/
 		var doisOffset = $(".sliDois").offset();
-		//var doisOffset2 = $(".servi").offset();
+		var doisOffset2 = $(".servi").offset();
 		
 		//var dPos = (doisOffset.top - 400);
 		var dPos2 = (doisOffset.top - 200);
-		//var dPos3 = (doisOffset2.top - 400);
+		var dPos3 = (doisOffset2.top - 400);
 
 		/*if (scroll >= dPos) {
 			$(".menu").show(300);
@@ -67,11 +67,11 @@ app.setScroll = function() {
 		} else {
 			$(".menu").hide(10);
 			$(".logotipo").show(300);
-		}
+		}*/
 
 		if (scroll >= dPos3) {
 			$('.planeta').addClass('animated tada');
-		}*/
+		}
 
 		if (scroll >= dPos2) {
 			if (!self.start) {
@@ -1082,7 +1082,7 @@ app.initMaps = function() {
 	});
 }
 
-// When the window has finished loading create our google map below
+
 $(document).ready(function() {
 	app.setScroll();
 	app.initMaps();
