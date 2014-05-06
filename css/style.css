@@ -49,7 +49,7 @@ table {
 }
 
 html, body {
-	height: 2530px;
+	height: 2330px;
 }
 
 @font-face
@@ -623,32 +623,22 @@ body{
 	background: transparent;
 }
 .repUm:hover > .ConDesUm{
-	width:190px;
-	margin-left: -10px;
+	text-decoration: underline;
 }
+
 .ConDesUm{
-	width:170px;
-	height: 35px;
-	display:block; 
-    position:relative;
-    overflow:hidden;
-
-    margin: auto;
-
-    background: transparent;
-
-    z-index: 1000;
-
-    display:none;
-
-    cursor: pointer;
+	width:150px;
+	height: 15px;
+	background: rgba(192, 57, 43, 0.8);
+	font-family: Ssemi;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	display:none;
 }
-#imgDesUm{
-	position:absolute;
-    top:0;
-    left:0; 
-    width:100%;
-}
+
 .ConRepUm{
 	width:40px;
 	height: 80px;
@@ -682,31 +672,21 @@ body{
 	background: transparent;
 }
 .repDois:hover > .ConDesDois{
-	width:180px;
-	margin-left: -10px;
+	text-decoration: underline;
 }
 .ConDesDois{
-	width:160px;
-	height: 35px;
-	display:block; 
-    position:relative;
-    overflow:hidden;
-
-    margin: auto;
-
-    background: transparent;
-
-    z-index: 1000;
-    display:none;
-
-     cursor: pointer;
+	width:150px;
+	height: 15px;
+	background: rgba(192, 57, 43, 0.8);
+	font-family: Ssemi;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	display:none;
 }
-#imgDesDois{
-	position:absolute;
-    top:0;
-    left:0; 
-    width:100%;
-}
+
 .ConRepDois{
 	width:40px;
 	height: 80px;
@@ -742,31 +722,21 @@ body{
 	background: transparent;
 }
 .repTres:hover > .ConDesTres{
-	width:230px;
-	margin-left: -10px;
+	text-decoration: underline;
 }
 .ConDesTres{
-	width:210px;
-	height: 35px;
-	display:block; 
-    position:relative;
-    overflow:hidden;
-
-    margin: auto;
-
-    background: transparent;
-
-    z-index: 1000;
-    display:none;
-
-    cursor: pointer;
+	width:200px;
+	height: 15px;
+	background: rgba(192, 57, 43, 0.8);
+	font-family: Ssemi;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	display:none;
 }
-#imgDesTres{
-	position:absolute;
-    top:0;
-    left:0; 
-    width:100%;
-}
+
 .ConRepTres{
 	width:40px;
 	height: 80px;
@@ -803,24 +773,19 @@ body{
 	background: transparent;
 }
 .repQuatro:hover > .ConDesQuatro{
-	width:170px;
-	margin-left: -10px;
+	text-decoration: underline;
 }
 .ConDesQuatro{
 	width:150px;
-	height: 35px;
-	display:block; 
-    position:relative;
-    overflow:hidden;
-
-    margin: auto;
-
-    background: transparent;
-
-    z-index: 1000;
-    display:none;
-
-     cursor: pointer;
+	height: 15px;
+	background: rgba(192, 57, 43, 0.8);
+	font-family: Ssemi;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	display:none;
 }
 #imgDesQuatro{
 	position:absolute;
@@ -1498,7 +1463,7 @@ body{
 /* IMG PLANETA -----------------*/
 .planeta{
 	width:30%;
-	height: 280px;
+	height: 340px;
 	display:block; 
     position:relative;
     overflow:hidden;
@@ -2518,7 +2483,7 @@ body{
 }
 
 .repUm{
-	width:140px;
+	width:160px;
 	height: 150px;
 	position: absolute;
 	margin-top: 0px;
@@ -2544,26 +2509,20 @@ body{
 }
 
 .ConDesUm{
-	width:140px;
-	height: 35px;
-	display:block; 
-    position:relative;
-    overflow:hidden;
-
-    margin: auto;
-
-    background: transparent;
-
-    z-index: 1000;
-
-    display:none;
-
-    cursor: pointer;
+	width:150px;
+	height: 15px;
+	background: rgba(192, 57, 43, 0.8);
+	font-family: Ssemi;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	display:none;
 }
 
 .repUm:hover > .ConDesUm{
-	width:160px;
-	margin-left: -10px;
+	text-decoration: underline;
 }
 
 .repDes1{

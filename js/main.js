@@ -699,7 +699,7 @@ app.events = function() {
 
 	$('.btMessUm').click(function() {
 		$('html, body').animate({
-			scrollTop: (($(".conAni").offset().top) - 110)
+			scrollTop: (($(".conAni").offset().top) - 150)
 		}, 300);
 
 		self.start = true;
@@ -715,13 +715,13 @@ app.events = function() {
 
 	$('.btMessUmDois').click(function() {
 		$('html, body').animate({
-			scrollTop: (($(".sliTres").offset().top) - 205)
+			scrollTop: (($(".sliTres").offset().top) - 140)
 		}, 300);
 	});
 
 	$('.txMessDois').click(function() {
 		$('html, body').animate({
-			scrollTop: (($(".sliTres").offset().top) - 205)
+			scrollTop: (($(".sliTres").offset().top) - 40)
 		}, 300);
 	});
 
@@ -817,11 +817,11 @@ app.events = function() {
 
 			self.desc1 = true;
 		} else {
-			$('.desc1').hide(1);
+			$('.desc1').fadeOut(100);
 
-			$('.estr').fadeIn(100);
-			$('.munic').fadeIn(100);
-			$('.agua').fadeIn(100);
+			$('.estr').fadeIn(300);
+			$('.munic').fadeIn(300);
+			$('.agua').fadeIn(300);
 			$('.planeta').css({
 				"opacity": "1"
 			})
@@ -843,11 +843,11 @@ app.events = function() {
 
 			self.desc2 = true;
 		} else {
-			$('.desc2').hide(1);
+			$('.desc2').fadeOut(100);
 
-			$('.edif').fadeIn(100);
-			$('.munic').fadeIn(100);
-			$('.agua').fadeIn(100);
+			$('.edif').fadeIn(300);
+			$('.munic').fadeIn(300);
+			$('.agua').fadeIn(300);
 			$('.planeta').css({
 				"opacity": "1"
 			})
@@ -875,11 +875,11 @@ app.events = function() {
 
 			self.desc3 = true;
 		} else {
-			$('.desc3').hide(1);
+			$('.desc3').fadeOut(100);
 
-			$('.estr').fadeIn(100);
-			$('.edif').fadeIn(100);
-			$('.agua').fadeIn(100);
+			$('.estr').fadeIn(300);
+			$('.edif').fadeIn(300);
+			$('.agua').fadeIn(300);
 			$('.planeta').css({
 				"opacity": "1"
 			})
@@ -910,11 +910,11 @@ app.events = function() {
 
 			self.desc4 = true;
 		} else {
-			$('.desc4').hide(1);
+			$('.desc4').fadeOut(100);
 
-			$('.estr').fadeIn(100);
-			$('.edif').fadeIn(100);
-			$('.munic').fadeIn(100);
+			$('.estr').fadeIn(300);
+			$('.edif').fadeIn(300);
+			$('.munic').fadeIn(300);
 			$('.planeta').css({
 				"opacity": "1"
 			})
@@ -932,15 +932,15 @@ app.events = function() {
 
 	$('html').click(function() {
 		if (self.fora == 1) {
-			$('.desc1').hide(1);
-			$('.desc2').hide(1);
-			$('.desc3').hide(1);
-			$('.desc4').hide(1);
+			$('.desc1').fadeOut(100);
+			$('.desc2').fadeOut(100);
+			$('.desc3').fadeOut(100);
+			$('.desc4').fadeOut(100);
 
-			$('.estr').fadeIn(100);
-			$('.edif').fadeIn(100);
-			$('.munic').fadeIn(100);
-			$('.agua').fadeIn(100);
+			$('.estr').fadeIn(300);
+			$('.edif').fadeIn(300);
+			$('.munic').fadeIn(300);
+			$('.agua').fadeIn(300);
 			$('.planeta').css({
 				"opacity": "1"
 			})
