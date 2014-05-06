@@ -149,7 +149,7 @@
           $(document).ready(function (){
 				$('.btMessUm').click(function () {
                     $('html, body').animate({
-                       scrollTop: (($(".conAni").offset().top)-205)
+                       scrollTop: (($(".conAni").offset().top)-110)
                     }, 300);
 
                     start = true;
@@ -751,35 +751,58 @@ var desc4 = false;
 
 
 /* -------------  CLICK FORA ------------*/ 
+var fora = 0;
+
 		$('html').click(function() {
-			$('.desc1').hide(1);
-			$('.desc2').hide(1);
-			$('.desc3').hide(1);
-			$('.desc4').hide(1);
+			if (fora == 1){
+				$('.desc1').hide(1);
+				$('.desc2').hide(1);
+				$('.desc3').hide(1);
+				$('.desc4').hide(1);
 
-			$('.estr').fadeIn(100);
-			$('.edif').fadeIn(100);
-			$('.munic').fadeIn(100);
-			$('.agua').fadeIn(100);
-			$('.planeta').css({"opacity":"1"})
+				$('.estr').fadeIn(100);
+				$('.edif').fadeIn(100);
+				$('.munic').fadeIn(100);
+				$('.agua').fadeIn(100);
+				$('.planeta').css({"opacity":"1"})
 
-			$(".munic").css({"margin-left":"20%"})
-			$(".agua").css({"margin-left":"margin-left:10%"})
+				$(".munic").css({"margin-left":"20%"})
+				$(".agua").css({"margin-left":"margin-left:10%"})
+			}	
 		});
 
 		$('.edif').click(function(event){
 		    event.stopPropagation();
+		    fora = 1;
 		});
 		$('.estr').click(function(event){
 		    event.stopPropagation();
+		    fora = 1;
 		});
 		$('.munic').click(function(event){
 		    event.stopPropagation();
+		    fora = 1;
 		});
 		$('.agua').click(function(event){
 		    event.stopPropagation();
+		    fora = 1;
 		});
 /* -------------  CLICK FORA ------------*/ 
+
+
+
+
+
+
+
+/* -------------- CORTE NO MAPA ----------*/
+$(document).ready(function (){
+	var width = $(window).width(); 
+	$('#mapa').css({"max-width":"" + width + ""});
+	$('#mapa').css({"overflow-x":"hidden"});
+	//alert("oi" + width);	
+});	
+/* -------------- CORTE NO MAPA ----------*/
 
 
 
@@ -985,13 +1008,13 @@ var desc4 = false;
 		<div class="sliDois">
 			<div class="conAni">
 				<div class="ConT1">
-					<img id="imgT" src="img/tele.svg" />
+					<img id="imgT" src="img/tele.png" />
 				</div>
 				<div class="ConT2">
-					<img id="imgT" src="img/tele2.svg" />
+					<img id="imgT" src="img/tele2.png" />
 				</div>
 				<div class="ConT3">
-					<img id="imgT" src="img/tele3.svg" />
+					<img id="imgT" src="img/tele3.png" />
 				</div>
 
 				<div class="numeros">
