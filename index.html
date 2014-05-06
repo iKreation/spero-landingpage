@@ -1,1129 +1,328 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
     <title>SPERO</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen, handheld" />
-
-	<link rel="stylesheet" href="animate.css">
-
-<script src="jquery-latest.js" type="text/javascript"></script>
-
-
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
-<script src="jquery-latest.js" type="text/javascript"></script>
-
-
-
-
-
-
-
-<script type="text/javascript">
-            // When the window has finished loading create our google map below
-            google.maps.event.addDomListener(window, 'load', init);
-        
-            function init() {
-                // Basic options for a simple Google Map
-                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-                var mapOptions = {
-                    // How zoomed in you want the map to start at (always required)
-                    zoom: 13,
-
-                    draggable: false,zoomControl: false, scrollwheel: false,disableDoubleClickZoom: true, scrolling: false,
-
-                    // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(40.9900, -73.9900), // New York
-                    /*center: new google.maps.LatLng(40.2035444,-8.4111983),*/
-
-                    // How you would like to style the map. 
-                    // This is where you would paste any style found on Snazzy Maps.
-                    styles: [{"elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"color":"#f5f5f2"},{"visibility":"on"}]},{"featureType":"administrative","stylers":[{"visibility":"off"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"poi.attraction","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.place_of_worship","stylers":[{"visibility":"off"}]},{"featureType":"poi.school","stylers":[{"visibility":"off"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#ffffff"},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"visibility":"simplified"},{"color":"#ffffff"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"color":"#ffffff"},{"visibility":"on"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"visibility":"on"}]},{"featureType":"road.arterial","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","stylers":[{"color":"#000000"}]},{"featureType":"poi.park","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#05E9FF"}]},{"featureType":"landscape","stylers":[{"color":"#e5e8e7"}]},{"featureType":"poi.park","stylers":[{"color":"#8ba129"}]},{"featureType":"road","stylers":[{"color":"#FAFAFA"}]},{"featureType":"poi.sports_complex","elementType":"geometry","stylers":[{"color":"#c7c7c7"},{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#05E9FF"}]},{"featureType":"poi.park","stylers":[{"color":"#1abc9c"}]},{"featureType":"poi.park","stylers":[{"gamma":1.51}]},{"featureType":"road.local","stylers":[{"visibility":"on"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"poi.government","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"landscape","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","stylers":[{"visibility":"simplified"}]},{"featureType":"road"},{"featureType":"road"},{},{"featureType":"road.highway"},{"elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"color":"#8C8C8C"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]}]
-                };
-
-                // Get the HTML DOM element that will contain your map 
-                // We are using a div with id="map" seen below in the <body>
-                var mapElement = document.getElementById('map');
-
-                // Create the Google Map using out element and options defined above
-                var map = new google.maps.Map(mapElement, mapOptions);
-            }
-</script>
-
-
-
-
-
-
-
-
-<script type="text/javascript">
-
-
-
-    $(function() {
-        var timer = setInterval( slide, 1600);
-
-    	var counter = 0; 
-    	var count = true;
-
-        var showN = 0;
-
-        var start = false;
-
-
-        function slide() {
-        	if (start){ 
-
-	            if(counter==0) {$(".ConT3").hide(10);
-	            				$(".ConT2").hide(10);
-
-	                            setTimeout(function() {
-	                            	$(".ConT1").fadeIn(300);
-								}, 100);
-
-	                            $(".numUm").css({"background":"rgba(52, 152, 219, 0.9)"})
-	                            $(".numDois").css({"background":"rgba(46, 204, 113,0.8)"})
-	                            $(".numTres").css({"background":"rgba(46, 204, 113,0.8)"})
-	                            if (count){counter++;} 
-	                            return;
-	                            }
-	            if(counter==1) {$(".ConT1").hide(10);
-	                            $(".ConT3").hide(10);
-
-	                            setTimeout(function() {
-	                            	$(".ConT2").fadeIn(300);
-	                            }, 100);
-
-	                            $(".numDois").css({"background":"rgba(52, 152, 219, 0.9)"})
-	                            $(".numUm").css({"background":"rgba(46, 204, 113,0.8)"})
-	                            $(".numTres").css({"background":"rgba(46, 204, 113,0.8)"})
-	                            }
-
-	            if(counter==2) {$(".ConT1").hide(10);
-	                            $(".ConT2").hide(10);
-
-	                            setTimeout(function() {
-	                            	$(".ConT3").fadeIn(300);
-	                            }, 100);
-
-	                            $(".numTres").css({"background":"rgba(52, 152, 219, 0.9)"})
-	                            $(".numDois").css({"background":"rgba(46, 204, 113,0.8)"})
-	                            $(".numUm").css({"background":"rgba(46, 204, 113,0.8)"})
-
-	                            count = false;
-	                            }
-	            
-	            counter == 2? counter = 2 : counter = 2;
-        	}
-
-        }
-
-        $(".numUm").click(function(){ 
-            counter = 0;
-        });
-
-        $(".numDois").click(function(){ 
-            counter = 1;
-        });
-
-        $(".numTres").click(function(){ 
-            counter = 2;
-        });
-
-
-
-
-
-
-
-          $(document).ready(function (){
-				$('.btMessUm').click(function () {
-                    $('html, body').animate({
-                       scrollTop: (($(".conAni").offset().top)-110)
-                    }, 300);
-
-                    start = true;
-			    });
-
-			    $('.repDes4').click(function () {
-                    $('html, body').animate({
-                       scrollTop: (($(".conAni").offset().top)-105)
-                    }, 300);
-
-                    start = true;
-			    });
-
-				$('.btMessUmDois').click(function () {
-                    $('html, body').animate({
-                       scrollTop: (($(".sliTres").offset().top)-205)
-                    }, 300);
-			    });
-
-			    $('.txMessDois').click(function () {
-                    $('html, body').animate({
-                       scrollTop: (($(".sliTres").offset().top)-205)
-                    }, 300);
-			    });
-	
-/* -------------  MENU -------------------------------*/    			    
-			    $('.tres').click(function () {
-	                    $('html, body').animate({
-	                       scrollTop: (($(".conAni").offset().top)-105)
-	                    }, 300);
-	                start = true;    
-			    });
-
-			    $('.tres2').click(function () {
-	                $('html, body').animate({
-	                    scrollTop: (($(".sliUm").offset().top)-105)
-	                }, 300);
-			    });
-
-			    $('.dois').click(function () {
-	                $('html, body').animate({
-	                    scrollTop: (($(".sliTres").offset().top)-205)
-	                }, 300);
-			    });
-/* -------------  MENU -------------------------------*/    
-     		}); 
-
-
-
-
-
-
-    $(document).scroll(function(){
-    	var scroll = $(window).scrollTop();
-
-    	
-		/* -----------MENU ------------------------*/
-			var bt12 = $(".btMessUmDois").offset();
-			var slide2 = (bt12.top + 500);
-
-			var bt2 = $(".btMessDois").offset();
-			var slide3 = (bt2.top + 300);
-
-			if (scroll >= slide2){
-				$(".tres").css({"display":"none"})
-	            $(".tres2").css({"display":"block"})
-			}
-
-			if (scroll >= slide3){
-				$(".tres").css({"display":"block"})
-	            $(".tres2").css({"display":"none"})
-			}
-			else{
-				$(".tres").css({"display":"none"})
-	            $(".tres2").css({"display":"block"})
-			}
-		/* -----------MENU ------------------------*/
-			
-			var doisOffset = $(".sliDois").offset();
-			var doisOffset2 = $(".servi").offset();
-
-			var dPos = (doisOffset.top -400);
-			var dPos2 = (doisOffset.top -200);
-			var dPos3 = (doisOffset2.top -400);
-
-			
-
-
-			if(scroll >= dPos){
-				$(".menu").show(300);
-				$(".logotipo").hide(10);
-			}
-			else{
-				$(".menu").hide(10);
-				$(".logotipo").show(300);
-			}
-
-
-			if(scroll >= dPos3){
-				$('.planeta').addClass('animated tada');
-			}
-
-			if(scroll >= dPos2){
-				start = true;
-			}
-
-		});
-	});
-
-
-
-/* -------------  ANIMAÇÕES PAG 1 -------------------------------*/ 
-
-$(document).ready(function (){
-	$('.ConRepUm').addClass('animated bounceInDown');
-	$('.ConRepDois').addClass('animated bounceInDown');
-	$('.ConRepTres').addClass('animated bounceInDown');
-	$('.ConRepQuatro').addClass('animated bounceInDown');	
-
-	$('.messUm').addClass('animated fadeInUp');
-	$('.messUmDois').addClass('animated fadeInUp');
-});
-
-
-setTimeout(function() {
-	$('.ConDesUm').show(300);
-}, 2500);
-
-setTimeout(function() {
-	$('.ConDesDois').show(300);	
-}, 3500);
-
-setTimeout(function() {	
-	$('.ConDesTres').show(300);	
-}, 4500);
-
-setTimeout(function() {
-	$('.ConDesQuatro').show(300);	
-}, 5500);
-
-/* -------------  ANIMAÇÕES PAG 1 -------------------------------*/ 
-
-
-
-
-
-
-/* -------------  HIDE/SHOW DESCRIÇÕES PAG 1 -------------------------------*/ 
-$(document).ready(function(){
-var repUm = false;
-var repDois = false;
-var repTres = false;
-var repQuatro = false;
-
-var desc1 = false;
-var desc2 = false;
-var desc3 = false;
-var desc4 = false;
-
-    $(".ConRepUm").click(function(){
-    	if (!repUm){
-		    $('.repDes1').fadeIn(300);
-		    $('.ConProb').fadeIn(300);
-
-		    $('#imgRepDois').css({"opacity":"0"})
-			$('#imgRepTres').css({"opacity":"0"})
-			$('#imgRepQuatro').css({"opacity":"0"})
-			$('.ConDesDois').css({"opacity":"0"})	
-			$('.ConDesTres').css({"opacity":"0"})
-			$('.ConDesQuatro').css({"opacity":"0"})	
-
-			$('.btMessUm').css({"opacity":"0"});	
-			$('.btMessUmDois').css({"opacity":"0"});
-
-		    repUm = true;
-		}
-		else{
-			$('.repDes1').fadeOut(100);
-		    $('.ConProb').fadeOut(100);
-
-		    $('#imgRepDois').css({"opacity":"1"})
-			$('#imgRepTres').css({"opacity":"1"})
-			$('#imgRepQuatro').css({"opacity":"1"})
-			$('.ConDesDois').css({"opacity":"1"})
-			$('.ConDesTres').css({"opacity":"1"})	
-			$('.ConDesQuatro').css({"opacity":"1"})	
-
-			$('.btMessUm').css({"opacity":"1"});	
-			$('.btMessUmDois').css({"opacity":"1"});
-		    repUm = false;
-		}
-	});    
-	$(".ConDesUm").click(function(){
-		if (!repUm){
-		    $('.repDes1').fadeIn(300);
-		    $('.ConProb').fadeIn(300);
-
-		    $('#imgRepDois').css({"opacity":"0"})
-			$('#imgRepTres').css({"opacity":"0"})
-			$('#imgRepQuatro').css({"opacity":"0"})
-			$('.ConDesDois').css({"opacity":"0"})	
-			$('.ConDesTres').css({"opacity":"0"})
-			$('.ConDesQuatro').css({"opacity":"0"})
-
-			$('.btMessUm').css({"opacity":"0"});	
-			$('.btMessUmDois').css({"opacity":"0"});		
-
-		    repUm = true;
-		}
-		else{
-			$('.repDes1').fadeOut(100);
-		    $('.ConProb').fadeOut(100);
-
-		    $('#imgRepDois').css({"opacity":"1"})
-			$('#imgRepTres').css({"opacity":"1"})
-			$('#imgRepQuatro').css({"opacity":"1"})
-			$('.ConDesDois').css({"opacity":"1"})
-			$('.ConDesTres').css({"opacity":"1"})	
-			$('.ConDesQuatro').css({"opacity":"1"})	
-
-			$('.btMessUm').css({"opacity":"1"});	
-			$('.btMessUmDois').css({"opacity":"1"});
-
-		    repUm = false;
-		}
-	}); 
-
-
-	$(".ConRepDois").click(function(){
-    	if (!repDois){
-		    $('.repDes2').fadeIn(300);
-		    $('.ConProb2').fadeIn(300);
-
-		    $('#imgRepUm').css({"opacity":"0"})
-			$('#imgRepTres').css({"opacity":"0"})
-			$('#imgRepQuatro').css({"opacity":"0"})
-			$('.ConDesUm').css({"opacity":"0"})	
-			$('.ConDesTres').css({"opacity":"0"})	
-			$('.ConDesQuatro').css({"opacity":"0"})	
-
-			$('.btMessUm').css({"opacity":"0"});	
-			$('.btMessUmDois').css({"opacity":"0"});
-
-		    repDois = true;
-		}
-		else{
-			$('.repDes2').fadeOut(100);
-		    $('.ConProb2').fadeOut(100);
-
-		    $('#imgRepUm').css({"opacity":"1"})
-			$('#imgRepTres').css({"opacity":"1"})
-			$('#imgRepQuatro').css({"opacity":"1"})
-			$('.ConDesUm').css({"opacity":"1"})
-			$('.ConDesTres').css({"opacity":"1"})
-			$('.ConDesQuatro').css({"opacity":"1"})	
-
-			$('.btMessUm').css({"opacity":"1"});	
-			$('.btMessUmDois').css({"opacity":"1"});
-		    repDois = false;
-		}
-	});    
-	$(".ConDesDois").click(function(){
-		if (!repDois){
-		    $('.repDes2').fadeIn(300);
-		    $('.ConProb2').fadeIn(300);
-
-		    $('#imgRepUm').css({"opacity":"0"})
-			$('#imgRepTres').css({"opacity":"0"})
-			$('#imgRepQuatro').css({"opacity":"0"})
-			$('.ConDesUm').css({"opacity":"0"})	
-			$('.ConDesTres').css({"opacity":"0"})	
-			$('.ConDesQuatro').css({"opacity":"0"})
-
-			$('.btMessUm').css({"opacity":"0"});	
-			$('.btMessUmDois').css({"opacity":"0"});
-
-		    repDois = true;
-		}
-		else{
-			$('.repDes2').fadeOut(100);
-		    $('.ConProb2').fadeOut(100);
-
-		    $('#imgRepUm').css({"opacity":"1"})
-			$('#imgRepTres').css({"opacity":"1"})
-			$('#imgRepQuatro').css({"opacity":"1"})
-			$('.ConDesUm').css({"opacity":"1"})
-			$('.ConDesTres').css({"opacity":"1"})
-			$('.ConDesQuatro').css({"opacity":"1"})
-
-			$('.btMessUm').css({"opacity":"1"});	
-			$('.btMessUmDois').css({"opacity":"1"});	
-
-		    repDois = false;
-		}
-	}); 
-
-
-	$(".ConRepTres").click(function(){
-    	if (!repTres){
-		    $('.repDes3').fadeIn(300);
-		    $('.ConProb3').fadeIn(300);
-
-		    $('#imgRepUm').css({"opacity":"0"})
-			$('#imgRepDois').css({"opacity":"0"})
-			$('#imgRepQuatro').css({"opacity":"0"})
-			$('.ConDesUm').css({"opacity":"0"})	
-			$('.ConDesDois').css({"opacity":"0"})
-			$('.ConDesQuatro').css({"opacity":"0"})
-
-			$('.btMessUm').css({"opacity":"0"});	
-			$('.btMessUmDois').css({"opacity":"0"});
-
-		    repTres = true;
-		}
-		else{
-			$('.repDes3').fadeOut(100);
-		    $('.ConProb3').fadeOut(100);
-
-		    $('#imgRepUm').css({"opacity":"1"})
-			$('#imgRepDois').css({"opacity":"1"})
-			$('#imgRepQuatro').css({"opacity":"1"})
-			$('.ConDesUm').css({"opacity":"1"})
-			$('.ConDesDois').css({"opacity":"1"})	
-			$('.ConDesQuatro').css({"opacity":"1"})
-
-			$('.btMessUm').css({"opacity":"1"});	
-			$('.btMessUmDois').css({"opacity":"1"});	
-	
-		    repTres = false;
-		}
-	});    
-	$(".ConDesTres").click(function(){
-		if (!repTres){
-		    $('.repDes3').fadeIn(300);
-		    $('.ConProb3').fadeIn(300);
-
-		     $('#imgRepUm').css({"opacity":"0"})
-			$('#imgRepDois').css({"opacity":"0"})
-			$('#imgRepQuatro').css({"opacity":"0"})
-			$('.ConDesUm').css({"opacity":"0"})	
-			$('.ConDesDois').css({"opacity":"0"})
-			$('.ConDesQuatro').css({"opacity":"0"})
-
-			$('.btMessUm').css({"opacity":"0"});	
-			$('.btMessUmDois').css({"opacity":"0"});
-
-		    repTres = true;
-		}
-		else{
-			$('.repDes3').fadeOut(100);
-		    $('.ConProb3').fadeOut(100);
-
-		    $('#imgRepUm').css({"opacity":"1"})
-			$('#imgRepDois').css({"opacity":"1"})
-			$('#imgRepQuatro').css({"opacity":"1"})
-			$('.ConDesUm').css({"opacity":"1"})
-			$('.ConDesDois').css({"opacity":"1"})	
-			$('.ConDesQuatro').css({"opacity":"1"})	
-
-			$('.btMessUm').css({"opacity":"1"});	
-			$('.btMessUmDois').css({"opacity":"1"});
-
-		    repTres = false;
-		}
-	});
-
-
-	$(".ConRepQuatro").click(function(){
-    	if (!repQuatro){
-		    $('.repDes4').fadeIn(300);
-		    $('.ConProb4').fadeIn(300);
-
-		    $('#imgRepUm').css({"opacity":"0"})
-			$('#imgRepDois').css({"opacity":"0"})
-			$('#imgRepTres').css({"opacity":"0"})
-			$('.ConDesUm').css({"opacity":"0"})	
-			$('.ConDesDois').css({"opacity":"0"})	
-			$('.ConDesTres').css({"opacity":"0"})
-
-			$('.btMessUm').css({"opacity":"0"});	
-			$('.btMessUmDois').css({"opacity":"0"});
-
-		    repQuatro = true;
-		}
-		else{
-			$('.repDes4').fadeOut(100);
-		    $('.ConProb4').fadeOut(100);
-
-		    $('#imgRepUm').css({"opacity":"1"})	
-			$('#imgRepDois').css({"opacity":"1"})	
-			$('#imgRepTres').css({"opacity":"1"})	
-			$('.ConDesUm').css({"opacity":"1"})	
-			$('.ConDesDois').css({"opacity":"1"})		
-			$('.ConDesTres').css({"opacity":"1"})	
-
-			$('.btMessUm').css({"opacity":"1"});	
-			$('.btMessUmDois').css({"opacity":"1"});	
-	
-		    repQuatro = false;
-		}
-	});    
-	$(".ConDesQuatro").click(function(){
-		if (!repQuatro){
-		    $('.repDes4').fadeIn(300);
-		    $('.ConProb4').fadeIn(300);
-
-		    $('#imgRepUm').css({"opacity":"0"})
-			$('#imgRepDois').css({"opacity":"0"})
-			$('#imgRepTres').css({"opacity":"0"})
-			$('.ConDesUm').css({"opacity":"0"})	
-			$('.ConDesDois').css({"opacity":"0"})	
-			$('.ConDesTres').css({"opacity":"0"})
-
-			$('.btMessUm').css({"opacity":"0"});	
-			$('.btMessUmDois').css({"opacity":"0"});
-
-		    repQuatro = true;
-		}
-		else{
-			$('.repDes4').fadeOut(100);
-		    $('.ConProb4').fadeOut(100);
-
-		    $('#imgRepUm').css({"opacity":"1"})	
-			$('#imgRepDois').css({"opacity":"1"})	
-			$('#imgRepTres').css({"opacity":"1"})	
-			$('.ConDesUm').css({"opacity":"1"})	
-			$('.ConDesDois').css({"opacity":"1"})		
-			$('.ConDesTres').css({"opacity":"1"})
-
-			$('.btMessUm').css({"opacity":"1"});	
-			$('.btMessUmDois').css({"opacity":"1"});
-
-		    repQuatro = false;
-		}
-	});
-
-/* -------------  CLICK FORA ------------*/ 
-		$('html').click(function() {
-			$('.repDes1').fadeOut(100);
-		    $('.ConProb').fadeOut(100);
-
-			$('.repDes2').fadeOut(100);
-		    $('.ConProb2').fadeOut(100);
-
-			$('.repDes3').fadeOut(100);
-		    $('.ConProb3').fadeOut(100);
-
-			$('.repDes4').fadeOut(100);
-		    $('.ConProb4').fadeOut(100);
-
-		    $('#imgRepUm').css({"opacity":"1"})	
-			$('#imgRepDois').css({"opacity":"1"})	
-			$('#imgRepTres').css({"opacity":"1"})
-			$('#imgRepQuatro').css({"opacity":"1"})	
-			$('.ConDesUm').css({"opacity":"1"})	
-			$('.ConDesDois').css({"opacity":"1"})		
-			$('.ConDesTres').css({"opacity":"1"})
-			$('.ConDesQuatro').css({"opacity":"1"})
-
-			$('.btMessUm').css({"opacity":"1"});	
-			$('.btMessUmDois').css({"opacity":"1"});
-		});
-
-		$('.repQuatro').click(function(event){
-		    event.stopPropagation();
-		});
-		$('.repTres').click(function(event){
-		    event.stopPropagation();
-		});
-		$('.repDois').click(function(event){
-		    event.stopPropagation();
-		});
-		$('.repUm').click(function(event){
-		    event.stopPropagation();
-		});
-/* -------------  CLICK FORA ------------*/ 
-		
-
-/* -------------  HIDE/SHOW DESCRIÇÕES PAG 1 -------------------------------*/ 
-
-
-
-
-/* -------------  HIDE/SHOW PÁGINA 3 -------------------------------*/ 
- 
-	$(".edif").click(function(){
-		if (!desc1){
-		    $('.desc1').show(300);
-
-		    $('.estr').fadeOut(100);
-			$('.munic').fadeOut(100);
-			$('.agua').fadeOut(100);
-			$('.planeta').css({"opacity":"0"})	
-
-		    desc1 = true;
-		}
-		else{
-			$('.desc1').hide(1);
-
-		    $('.estr').fadeIn(100);
-			$('.munic').fadeIn(100);
-			$('.agua').fadeIn(100);
-			$('.planeta').css({"opacity":"1"})	
-
-		    desc1 = false;
-		}
-	}); 
-
-
-
-
-	$(".estr").click(function(){
-		if (!desc2){
-		    $('.desc2').show(300);
-
-		    $('.edif').fadeOut(100);
-			$('.munic').fadeOut(100);
-			$('.agua').fadeOut(100);
-			$('.planeta').css({"opacity":"0"})		
-
-		    desc2 = true;
-		}
-		else{
-			$('.desc2').hide(1);
-
-		    $('.edif').fadeIn(100);
-			$('.munic').fadeIn(100);
-			$('.agua').fadeIn(100);
-			$('.planeta').css({"opacity":"1"})	
-
-		    desc2 = false;
-		}
-	}); 
-
-
-
-	$(".munic").click(function(){
-		if (!desc3){
-		    $('.desc3').show(300);
-
-		    $('.estr').fadeOut(100);
-			$('.edif').fadeOut(100);
-			$('.agua').fadeOut(100);
-			$('.planeta').css({"opacity":"0"})		
-
-			setTimeout(function() {
-			$(".munic").css({"margin-left":"10%"})
-			}, 100);
-
-		    desc3 = true;
-		}
-		else{
-			$('.desc3').hide(1);
-
-		    $('.estr').fadeIn(100);
-			$('.edif').fadeIn(100);
-			$('.agua').fadeIn(100);
-			$('.planeta').css({"opacity":"1"})	
-			
-			$(".munic").css({"margin-left":"20%"})
-			
-		    desc3 = false;
-		}
-	});
-
-
-
-
-	$(".agua").click(function(){
-		if (!desc4){
-		    $('.desc4').show(300);
-
-		    $('.estr').fadeOut(100);
-			$('.edif').fadeOut(100);
-			$('.munic').fadeOut(100);
-			$('.planeta').css({"opacity":"0"})
-
-			setTimeout(function() {
-			$(".agua").css({"margin-left":"10%"})
-			}, 200);
-
-		    desc4 = true;
-		}
-		else{
-			$('.desc4').hide(1);
-
-		    $('.estr').fadeIn(100);
-			$('.edif').fadeIn(100);
-			$('.munic').fadeIn(100);
-			$('.planeta').css({"opacity":"1"})	
-
-			$(".munic").css({"margin-left":"20%"})
-			$(".agua").css({"margin-left":"10%"})
-
-		    desc4 = false;
-		}
-	});
-
-
-
-/* -------------  CLICK FORA ------------*/ 
-var fora = 0;
-
-		$('html').click(function() {
-			if (fora == 1){
-				$('.desc1').hide(1);
-				$('.desc2').hide(1);
-				$('.desc3').hide(1);
-				$('.desc4').hide(1);
-
-				$('.estr').fadeIn(100);
-				$('.edif').fadeIn(100);
-				$('.munic').fadeIn(100);
-				$('.agua').fadeIn(100);
-				$('.planeta').css({"opacity":"1"})
-
-				$(".munic").css({"margin-left":"20%"})
-				$(".agua").css({"margin-left":"margin-left:10%"})
-			}	
-		});
-
-		$('.edif').click(function(event){
-		    event.stopPropagation();
-		    fora = 1;
-		});
-		$('.estr').click(function(event){
-		    event.stopPropagation();
-		    fora = 1;
-		});
-		$('.munic').click(function(event){
-		    event.stopPropagation();
-		    fora = 1;
-		});
-		$('.agua').click(function(event){
-		    event.stopPropagation();
-		    fora = 1;
-		});
-/* -------------  CLICK FORA ------------*/ 
-
-
-
-
-
-
-
-/* -------------- CORTE NO MAPA ----------*/
-$(document).ready(function (){
-	var width = $(window).width(); 
-	$('#mapa').css({"max-width":"" + width + ""});
-	$('#mapa').css({"overflow-x":"hidden"});
-	//alert("oi" + width);	
-});	
-/* -------------- CORTE NO MAPA ----------*/
-
-
-
-
-/* -------------  HIDE/SHOW PÁGINA 3 -------------------------------*/ 
-
-
-
-
-});
-</script>
-
-
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	<!-- CSS at the top -->
+    <!-- for testing -->
+    <!--<link rel="stylesheet" type="text/css" href="css/style.css" media="screen, handheld" />
+	<link rel="stylesheet" type="text/css" href="css/animate.css">-->
+
+	<!-- for production -->
+	<link rel="stylesheet" type="text/css" href="css/combined.min.css">
+
+	<!-- Google maps api -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 </head>
 
 
 <body>
-
-
-
-	
-
-
-
+	<!-- Map canvas -->
+	<div id="map" class="fullWidth"></div>
 	<div class="logotipo">
 		<div class="conLog">
 			<img id="imgLog" src="img/logo.svg" />
 		</div>	
-	</div>
+	</div><!-- logotipo -->
 
+	<!-- Content container -->
+	<div class="content-container">
 
-
-	<div class="menu">
-			<div class="um" style="cursor: pointer">
-				<div class="conSpe">
-					<img id="imgSpe" src="img/sper.png" />
-				</div>	
-			</div>
-
-			<div class="dois" style="cursor: pointer">
-				<div class="setBaixo">
-					<img id="imgBaixo" src="img/baixo.png" />
-				</div>
-			</div>
-
-			<div class="tres" style="cursor: pointer">
-				<div class="setCima">
-					<img id="imgCima" src="img/cima.png" />
-				</div>
-			</div>
-
-			<div class="tres tres2" style="cursor: pointer">
-				<div class="setCima">
-					<img id="imgCima" src="img/cima.png" />
-				</div>
-			</div>
-	</div>
-
-
-
-<div class="conWrap">
-	<div class="wrap">
-
-		<div class="sliUm">
-
-			<div class="ConRep">
-
-				<div class="repUm">
-					<div class="ConDesUm">
-						<img id="imgDesUm" src="img/prob1.png" />
-					</div>
-					<div class="ConRepUm">
-						<img id="imgRepUm" src="img/report.png" />
-					</div>
-				</div>
-
-				<div class="ConProb">
-					<img id="imgProb" src="img/buraco.png" />
-				</div>
-				<div class="repDes1"> 
-					<div class="txDes">
-						<p>Este é o buraco na estrada pelo qual passas todos os dias. Agora profissionais saberão que este problema existe.</p>
-						<br>
-						<p>Partilha-o também nas redes sociais.</p> 
-					</div>
-
-					<div class="ConSoc2">
-						<img id="imgSoc2" src="img/face.png" />
-					</div>
-					<div class="ConSoc3">
-						<img id="imgSoc3" src="img/twit.png" />
-					</div>
-				</div>
-
-
-				<div class="ConProb2">
-					<img id="imgProb2" src="img/passeio.jpg" />
-				</div>
-				<div class="repDes2"> 
-					<div class="txDes1">
-						<p>Este é o passeio no qual tropessas todos os dias. Agora profissionais saberão que este problema existe.</p>
-						<br>
-						<p>Partilha-o também nas redes sociais.</p> 
-					</div>
-
-					<div class="ConSoc2">
-						<img id="imgSoc2" src="img/face.png" />
-					</div>
-					<div class="ConSoc3">
-						<img id="imgSoc3" src="img/twit.png" />
-					</div>
-				</div>
-				<div class="repDois">
-					<div class="ConDesDois">
-						<img id="imgDesDois" src="img/prob2.png" />
-					</div>
-					<div class="ConRepDois">
-						<img id="imgRepDois" src="img/report.png" />
+		<!-- Menu -->
+		<div class="menu">
+				<div class="um" style="cursor: pointer">
+					<div class="conSpe">
+						<img id="imgSpe" src="img/sper.png" />
 					</div>	
 				</div>
 
-
-				<div class="ConProb3">
-					<img id="imgProb3" src="img/sin.jpg" />
-				</div>
-				<div class="repDes3"> 
-					<div class="txDes3">
-						<p>Este é o sinal que te faz confusão todos os dias. Agora profissionais saberão que este problema existe.</p>
-						<br>
-						<p>Partilha-o também nas redes sociais.</p> 
-					</div>
-
-					<div class="ConSoc2">
-						<img id="imgSoc2" src="img/face.png" />
-					</div>
-					<div class="ConSoc3">
-						<img id="imgSoc3" src="img/twit.png" />
-					</div>
-				</div>
-				<div class="repTres">
-					<div class="ConDesTres">
-						<img id="imgDesTres" src="img/prob3.png" />
-					</div>
-					<div class="ConRepTres">
-						<img id="imgRepTres" src="img/report.png" />
-					</div>	
-				</div>
-
-
-				<div class="repDes4"> 
-					<div class="txDes4">
-						<p>Queres ser das primeiras pessoas a intervir?</p>
-						<p><b>Deixa-nos o teu e-mail.</b></p>
-					</div>
-					<div class="triDes4">
-						<div class="tri4">
-							<img id="imgTri4" src="img/tri3.png" />
-						</div>
-					</div>
-				</div>
-				<div class="repQuatro">
-					<div class="ConDesQuatro">
-						<img id="imgDesQuatro" src="img/prob4.png" />
-					</div>
-					<div class="ConRepQuatro">
-						<img id="imgRepQuatro" src="img/report.png" />
-					</div>	
-				</div>	
-			</div>
-
-			<div class="messUm">
-				<div class="btMessUm" style="cursor: pointer">
-					<div class="txMessUm">
-						<p>Agora podes intervir</p>
-						<p>melhorando a tua cidade</p>
-					</div>	
-					<div class="triUm">
-						<div class="Contri">
-							<img id="imgTri" src="img/tri.png" />
-						</div>
-					</div>
-				</div>	
-			</div>
-
-			<div class="messUmDois">
-				<div class="btMessUmDois" style="cursor: pointer">
-					<div class="txMessUmDois">
-						<p>Serviços SPERO</p>
-						<p>para profissionais</p>
-					</div>
-
-					<div class="triUmDois">
-						<div class="triangulo2">
-							<img id="imgTri" src="img/tri2.png" />
-						</div>
-					</div>
-				</div>	
-			</div>
-		</div>
-
-
-
-		<div class="sliDois">
-			<div class="conAni">
-				<div class="ConT1">
-					<img id="imgT" src="img/tele.png" />
-				</div>
-				<div class="ConT2">
-					<img id="imgT" src="img/tele2.png" />
-				</div>
-				<div class="ConT3">
-					<img id="imgT" src="img/tele3.png" />
-				</div>
-
-				<div class="numeros">
-					<div class="numUm" style="cursor: pointer">
-						<p>1</p>
-					</div>
-
-					<div class="numDois" style="cursor: pointer">
-						<p>2</p>
-					</div>
-
-					<div class="numTres" style="cursor: pointer">
-						<p>3</p>
-					</div>
-				</div>	
-			</div>	
-
-			<div class="afeWrap">
-				<div class="conAfe">
-					<div class="afect">
-						<div class="ConEx">
-							<img id="imgEx" src="img/exclama.png" />
-						</div>
-
-						<div class="exMess">
-							<p>Diz que problemas também te</p>
-							<p>afectam e partilha-os!</p>
-						</div>
-
-						<div class="ConSoc">
-							<img id="imgSoc" src="img/soci.png" />
-						</div>
+				<div class="dois" style="cursor: pointer">
+					<div class="setBaixo">
+						<img id="imgBaixo" src="img/baixo.png" />
 					</div>
 				</div>
 
-				<div class="news">
-					<form id="nIn" method="get" action=" ">
-						<div class="per">Queres saber mais?</div>
-					    <input type="text" class="rect" placeholder="  Deixa o teu e-mail..." value="" name="q" size="21" maxlength="120">
-					     <input type="submit" class="but" value="SUBMETER">
-					</form>
+				<div class="tres" style="cursor: pointer">
+					<div class="setCima">
+						<img id="imgCima" src="img/cima.png" />
+					</div>
 				</div>
 
-				<div class="messDois">
-					<div class="btMessDois" style="cursor: pointer">
-						<div class="txMessDois">
-							<p>Profissionais vão estar atentos</p>
-							<p>para resolver os problemas</p>
-						</div>
-						<div class="triDois">
-							<div class="ConTriDois">
-								<img id="imgTriDois" src="img/tri2.png" />
+				<div class="tres tres2" style="cursor: pointer">
+					<div class="setCima">
+						<img id="imgCima" src="img/cima.png" />
+					</div>
+				</div>
+		</div><!-- menu -->
+
+		<div class="conWrap">
+			<!-- Wrap -->
+			<div class="wrap">
+				<div class="sliUm">
+					<div class="ConRep">
+						<div class="repUm">
+							<div class="ConDesUm">
+								<img id="imgDesUm" src="img/prob1.png" />
+							</div>
+							<div class="ConRepUm">
+								<img id="imgRepUm" src="img/report.png" />
 							</div>
 						</div>
+
+						<div class="ConProb">
+							<img id="imgProb" src="img/buraco.png" />
+						</div>
+
+						<div class="repDes1"> 
+							<div class="txDes">
+								<p>Este é o buraco na estrada pelo qual passas todos os dias. Agora profissionais saberão que este problema existe.</p>
+								<br>
+								<p>Partilha-o também nas redes sociais.</p> 
+							</div>
+
+							<div class="ConSoc2">
+								<img id="imgSoc2" src="img/face.png" />
+							</div>
+							<div class="ConSoc3">
+								<img id="imgSoc3" src="img/twit.png" />
+							</div>
+						</div>
+
+						<div class="ConProb2">
+							<img id="imgProb2" src="img/passeio.jpg" />
+						</div>
+
+						<div class="repDes2"> 
+							<div class="txDes1">
+								<p>Este é o passeio no qual tropessas todos os dias. Agora profissionais saberão que este problema existe.</p>
+								<br>
+								<p>Partilha-o também nas redes sociais.</p> 
+							</div>
+
+							<div class="ConSoc2">
+								<img id="imgSoc2" src="img/face.png" />
+							</div>
+							<div class="ConSoc3">
+								<img id="imgSoc3" src="img/twit.png" />
+							</div>
+						</div>
+
+						<div class="repDois">
+							<div class="ConDesDois">
+								<img id="imgDesDois" src="img/prob2.png" />
+							</div>
+							<div class="ConRepDois">
+								<img id="imgRepDois" src="img/report.png" />
+							</div>	
+						</div>
+
+						<div class="ConProb3">
+							<img id="imgProb3" src="img/sin.jpg" />
+						</div>
+
+						<div class="repDes3"> 
+							<div class="txDes3">
+								<p>Este é o sinal que te faz confusão todos os dias. Agora profissionais saberão que este problema existe.</p>
+								<br>
+								<p>Partilha-o também nas redes sociais.</p> 
+							</div>
+
+							<div class="ConSoc2">
+								<img id="imgSoc2" src="img/face.png" />
+							</div>
+							<div class="ConSoc3">
+								<img id="imgSoc3" src="img/twit.png" />
+							</div>
+						</div>
+
+						<div class="repTres">
+							<div class="ConDesTres">
+								<img id="imgDesTres" src="img/prob3.png" />
+							</div>
+							<div class="ConRepTres">
+								<img id="imgRepTres" src="img/report.png" />
+							</div>	
+						</div>
+
+						<div class="repDes4"> 
+							<div class="txDes4">
+								<p>Queres ser das primeiras pessoas a intervir?</p>
+								<p><b>Deixa-nos o teu e-mail.</b></p>
+							</div>
+							<div class="triDes4">
+								<div class="tri4">
+									<img id="imgTri4" src="img/tri3.png" />
+								</div>
+							</div>
+						</div>
+						<div class="repQuatro">
+							<div class="ConDesQuatro">
+								<img id="imgDesQuatro" src="img/prob4.png" />
+							</div>
+							<div class="ConRepQuatro">
+								<img id="imgRepQuatro" src="img/report.png" />
+							</div>	
+						</div>	
 					</div>
-				</div>	
-			</div>	
-		</div>
 
-
-
-		<div class="sliTres">
-			<div class="messTres">
-				<div class="txMessTres">
-					<p>Serviços SPERO para profissionais</p>
-				</div>
-			</div>
-
-			<div class="servi">
-				<div class="desc1"></div>
-				<div class="edif">
-					<div class="ConEd">
-						<img id="imgEd" src="img/edi.png" />
+					<div class="messUm">
+						<div class="btMessUm" style="cursor: pointer">
+							<div class="txMessUm">
+								<p>Agora podes intervir</p>
+								<p>melhorando a tua cidade</p>
+							</div>	
+							<div class="triUm">
+								<div class="Contri">
+									<img id="imgTri" src="img/tri.png" />
+								</div>
+							</div>
+						</div>	
 					</div>
-				</div>
 
-				<div class="desc2"></div>
-				<div class="estr">
-					<div class="ConEs">
-						<img id="imgEs" src="img/estr.png" />
+					<div class="messUmDois">
+						<div class="btMessUmDois" style="cursor: pointer">
+							<div class="txMessUmDois">
+								<p>Serviços SPERO</p>
+								<p>para profissionais</p>
+							</div>
+
+							<div class="triUmDois">
+								<div class="triangulo2">
+									<img id="imgTri" src="img/tri2.png" />
+								</div>
+							</div>
+						</div>	
 					</div>
-				</div>
+				</div><!-- sliUm -->
 
-				<div class="desc3"></div>
-				<div class="munic">
-					<div class="ConMun">
-						<img id="imgMun" src="img/mun.png" />
+				<div class="sliDois">
+					<div class="conAni">
+						<div class="ConT1">
+							<img id="imgT" src="img/tele.png" />
+						</div>
+						<div class="ConT2">
+							<img id="imgT" src="img/tele2.png" />
+						</div>
+						<div class="ConT3">
+							<img id="imgT" src="img/tele3.png" />
+						</div>
+
+						<div class="numeros">
+							<div class="numUm" style="cursor: pointer">
+								<p>1</p>
+							</div>
+
+							<div class="numDois" style="cursor: pointer">
+								<p>2</p>
+							</div>
+
+							<div class="numTres" style="cursor: pointer">
+								<p>3</p>
+							</div>
+						</div>	
+					</div><!-- conAni -->
+
+					<div class="afeWrap">
+						<div class="conAfe">
+							<div class="afect">
+								<div class="ConEx">
+									<img id="imgEx" src="img/exclama.png" />
+								</div>
+
+								<div class="exMess">
+									<p>Diz que problemas também te</p>
+									<p>afectam e partilha-os!</p>
+								</div>
+
+								<div class="ConSoc">
+									<img id="imgSoc" src="img/soci.png" />
+								</div>
+							</div>
+						</div>
+
+						<div class="news">
+							<form id="nIn" method="get" action=" ">
+								<div class="per">Queres saber mais?</div>
+							    <input type="text" class="rect" placeholder="  Deixa o teu e-mail..." value="" name="q" size="21" maxlength="120">
+							     <input type="submit" class="but" value="SUBMETER">
+							</form>
+						</div>
+
+						<div class="messDois">
+							<div class="btMessDois" style="cursor: pointer">
+								<div class="txMessDois">
+									<p>Profissionais vão estar atentos</p>
+									<p>para resolver os problemas</p>
+								</div>
+								<div class="triDois">
+									<div class="ConTriDois">
+										<img id="imgTriDois" src="img/tri2.png" />
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div><!-- afeWrap -->	
+				</div><!-- sliDois -->
+
+				<div class="sliTres">
+					<div class="messTres">
+						<div class="txMessTres">
+							<p>Serviços SPERO para profissionais</p>
+						</div>
 					</div>
-				</div>	
 
-				<div class="desc4"></div>
-				<div class="agua"> 
-					<div class="ConAg">
-						<img id="imgAg" src="img/agu.png" />
+					<div class="servi">
+						<div class="desc1"></div>
+						<div class="edif">
+							<div class="ConEd">
+								<img id="imgEd" src="img/edi.png" />
+							</div>
+						</div>
+
+						<div class="desc2"></div>
+						<div class="estr">
+							<div class="ConEs">
+								<img id="imgEs" src="img/estr.png" />
+							</div>
+						</div>
+
+						<div class="desc3"></div>
+						<div class="munic">
+							<div class="ConMun">
+								<img id="imgMun" src="img/mun.png" />
+							</div>
+						</div>	
+
+						<div class="desc4"></div>
+						<div class="agua"> 
+							<div class="ConAg">
+								<img id="imgAg" src="img/agu.png" />
+							</div>
+						</div>	
+					</div><!-- servi -->
+
+					<div class="planeta">
+						<img id="imgP" src="img/planet.png" />
 					</div>
-				</div>	
-			</div>	
+				</div><!-- sliTres -->
 
-			<div class="planeta">
-				<img id="imgP" src="img/planet.png" />
-			</div>
-		</div>
+			</div><!-- wrap -->
+		</div><!-- conWrap -->
+	</div><!-- content container -->
+	
+	<!-- Javascript at the bottom -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-	</div>	
-</div>
+	<!-- for testing -->
+	<!--<script type="text/javascript" src="js/scrollto.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>-->
 
-	<div class="conMap">
-		<div id="map"></div>
-	</div>
-
+	<!-- for production -->
+	<script type="text/javascript" src="js/c060514.js"></script>
 </body>
 </html>

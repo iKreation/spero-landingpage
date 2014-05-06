@@ -11,80 +11,68 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-margin: 0;
-padding: 0;
-border: 0;
-font-size: 100%;
-font: inherit;
-vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-display: block;
+	display: block;
 }
+
 body {
-line-height: 1;
+	line-height: 1;
 }
+
 ol, ul {
-list-style: none;
+	list-style: none;
 }
+
 blockquote, q {
-quotes: none;
+	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-content: '';
-content: none;
+	content: '';
+	content: none;
 }
+
 table {
-border-collapse: collapse;
-border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-
-
-b{
-	font-family: Sbold;
+html, body {
+	height: 2530px;
 }
 
-
-/*
-@font-face {
-    font-family: Sreg;
-    src: local(Source), url('SourceSansPro-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: Ssemi;
-    src: local(Source), url('SourceSansPro-Semibold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: Sbold;
-    src: local(Source), url('SourceSansPro-Bold.ttf') format('truetype');
-}
-*/
 @font-face
 {
   font-family: Sreg;
-  src: url('SourceSansPro-Regular.ttf');
+  src: url('../fonts/SourceSansPro-Regular.ttf');
 }
 
 @font-face
 {
   font-family: Ssemi;
-  src: url('SourceSansPro-Semibold.ttf');
+  src: url('../fonts/SourceSansPro-Semibold.ttf');
 }
 
 @font-face
 {
   font-family: Sbold;
-  src: url('SourceSansPro-Bold.ttf');
+  src: url('../fonts/SourceSansPro-Bold.ttf');
 }
 
-
-
+b {
+	font-family: Sbold;
+}
 
 
 .conP {
@@ -143,40 +131,30 @@ b{
   -webkit-animation-delay:5s;
 }
 
-
-
-
-
-
-
-
-
-
 html{
-	overflow: auto;
-	overflow-x:hidden; 
+	overflow: auto; 
 }
 
 body{
 	overflow: auto;
-	overflow-x:hidden; 
+	margin:0px;
 }
 
-
-.conMap{
-	width: 100%;
-	overflow-x:hidden; 
+.content-container {
+	display: none;
 }
+
+.fullWidth {
+    width: 100%;
+}
+
+#map img {
+	max-width: none;
+}
+
 #map {
-    width: 1900px;
-    height: 2530px;
-
-    left: -200px;
-    top: -200px; 
-    position: absolute;
+	min-height: 100%;
 }
-
-
 
 .conWrap{
 	width:85%;
@@ -192,11 +170,6 @@ body{
 	width: 100%;
 	background: transparent;
 }
-
-
-
-
-
 
 /*MENU --------------------------------------------------------*/
 .menu{
