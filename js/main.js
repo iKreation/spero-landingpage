@@ -22,6 +22,8 @@ app.setScroll = function() {
 	var self = this;
 	$(document).scroll(function() {
 		var scroll = $(window).scrollTop();
+		console.log("scroll" + scroll);
+
 		/*
 		var bt12 = $(".btMessUmDois").offset();
 		var slide2 = (bt12.top + 500);
@@ -57,16 +59,16 @@ app.setScroll = function() {
 		var doisOffset = $(".sliDois").offset();
 		var doisOffset2 = $(".servi").offset();
 		
-		//var dPos = (doisOffset.top - 400);
-		var dPos2 = (doisOffset.top - 200);
+		//var dPos = (doisOffset.top - 200);
+		var dPos2 = (doisOffset.top - 250);
 		var dPos3 = (doisOffset2.top - 400);
-
-		/*if (scroll >= dPos) {
-			$(".menu").show(300);
-			$(".logotipo").hide(10);
+/*
+		if (scroll >= dPos) {
+			$(".menu").fadeIn();
+			$(".logotipo").fadeOut();
 		} else {
-			$(".menu").hide(10);
-			$(".logotipo").show(300);
+			$(".menu").fadeIn();
+			$(".logotipo").fadeOut();
 		}*/
 
 		if (scroll >= dPos3) {
@@ -701,16 +703,12 @@ app.events = function() {
 		$('html, body').animate({
 			scrollTop: (($(".conAni").offset().top) - 150)
 		}, 300);
-
-		self.start = true;
 	});
 
 	$('.repDes4').click(function() {
 		$('html, body').animate({
 			scrollTop: (($(".conAni").offset().top) - 105)
 		}, 300);
-
-		self.start = true;
 	});
 
 	$('.btMessUmDois').click(function() {

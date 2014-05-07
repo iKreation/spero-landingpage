@@ -76,24 +76,26 @@ b {
 
 
 
-/*
-@-webkit-keyframes opacidade {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+
+@-webkit-keyframes opacidade{
+  0%   { background: rgba(192, 57, 43, 0.8); }
+  100% { background: rgba(192, 57, 43, 1); }
 }
-@-moz-keyframes opacidade{
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+@-moz-keyframes opacidade {
+  0%   { background: rgba(192, 57, 43, 0.8); }
+  100% { background: rgba(192, 57, 43, 1); }
 }
-@-o-keyframes opacidade{
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+@-o-keyframes opacidade {
+  0%   { background: rgba(192, 57, 43, 0.8); }
+  100% { background: rgba(192, 57, 43, 1); }
 }
 @keyframes opacidade {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+  0%   { background: rgba(192, 57, 43, 0.8); }
+  100% { background: rgba(192, 57, 43, 1); }
 }
-*/
+
+
+
 
 
 .conP {
@@ -644,7 +646,11 @@ body{
 	background: transparent;
 }
 .repUm:hover > .ConDesUm{
-	text-decoration: underline;
+  -webkit-animation: opacidade 1s;
+  -moz-animation: opacidade 1s;
+  -o-animation: opacidade 1s;
+  animation: opacidade 1s;
+  background: rgba(192, 57, 43, 1);
 }
 
 .ConDesUm{
@@ -695,7 +701,11 @@ body{
 	background: transparent;
 }
 .repDois:hover > .ConDesDois{
-	text-decoration: underline;
+  -webkit-animation: opacidade 1s;
+  -moz-animation: opacidade 1s;
+  -o-animation: opacidade 1s;
+  animation: opacidade 1s;
+  background: rgba(192, 57, 43, 1);
 }
 .ConDesDois{
 	position: absolute;
@@ -747,7 +757,11 @@ body{
 	background: transparent;
 }
 .repTres:hover > .ConDesTres{
-	text-decoration: underline;
+  -webkit-animation: opacidade 1s;
+  -moz-animation: opacidade 1s;
+  -o-animation: opacidade 1s;
+  animation: opacidade 1s;
+  background: rgba(192, 57, 43, 1);
 }
 .ConDesTres{
 	position: absolute;
@@ -800,7 +814,11 @@ body{
 	background: transparent;
 }
 .repQuatro:hover > .ConDesQuatro{
-	text-decoration: underline;
+  -webkit-animation: opacidade 1s;
+  -moz-animation: opacidade 1s;
+  -o-animation: opacidade 1s;
+  animation: opacidade 1s;
+  background: rgba(192, 57, 43, 1);
 }
 .ConDesQuatro{
 	position: absolute;
