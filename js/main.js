@@ -62,7 +62,8 @@ app.setScroll = function() {
 		//var dPos = (doisOffset.top - 200);
 		var dPos2 = (doisOffset.top - 250);
 		var dPos3 = (doisOffset2.top - 400);
-/*
+		
+		/*
 		if (scroll >= dPos) {
 			$(".menu").fadeIn();
 			$(".logotipo").fadeOut();
