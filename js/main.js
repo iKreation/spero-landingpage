@@ -91,19 +91,19 @@ app.animations = function() {
 	$('.messUmDois').addClass('animated fadeInUp');
 
 	setTimeout(function() {
-		$('.ConDesUm').show(300);
+		$('.ConDesUm').fadeIn(300);
 	}, 2500);
 
 	setTimeout(function() {
-		$('.ConDesDois').show(300);
+		$('.ConDesDois').fadeIn(300);
 	}, 3500);
 
 	setTimeout(function() {
-		$('.ConDesTres').show(300);
+		$('.ConDesTres').fadeIn(300);
 	}, 4500);
 
 	setTimeout(function() {
-		$('.ConDesQuatro').show(300);
+		$('.ConDesQuatro').fadeIn(300);
 	}, 5500);
 }
 

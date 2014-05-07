@@ -75,6 +75,27 @@ b {
 }
 
 
+
+/*
+@-webkit-keyframes opacidade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes opacidade{
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes opacidade{
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes opacidade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+*/
+
+
 .conP {
   -moz-animation-duration: 2s;
   -moz-animation-delay: 0s;
@@ -627,16 +648,18 @@ body{
 }
 
 .ConDesUm{
+	position: absolute;
+	margin-top: -30px;
 	width:150px;
 	height: 15px;
 	background: rgba(192, 57, 43, 0.8);
-	font-family: Ssemi;
+	font-family: Sreg;
 	color: white;
 	font-size: 16px;
 	text-align: center;
 	padding: 10px;
 	cursor: pointer;
-	display:none;
+	display: none;
 }
 
 .ConRepUm{
@@ -665,7 +688,7 @@ body{
 
 /*DOIS*/
 .repDois{
-	width:160px;
+	width:170px;
 	height: 150px;
 	position: absolute;
 	margin-left: 75%;
@@ -675,10 +698,12 @@ body{
 	text-decoration: underline;
 }
 .ConDesDois{
+	position: absolute;
+	margin-top: -30px;
 	width:150px;
 	height: 15px;
 	background: rgba(192, 57, 43, 0.8);
-	font-family: Ssemi;
+	font-family: Sreg;
 	color: white;
 	font-size: 16px;
 	text-align: center;
@@ -714,7 +739,7 @@ body{
 
 /*TRES*/
 .repTres{
-	width:210px;
+	width:220px;
 	height: 150px;
 	position: absolute;
 	margin-top: 70px;
@@ -725,10 +750,12 @@ body{
 	text-decoration: underline;
 }
 .ConDesTres{
+	position: absolute;
+	margin-top: -30px;
 	width:200px;
 	height: 15px;
 	background: rgba(192, 57, 43, 0.8);
-	font-family: Ssemi;
+	font-family: Sreg;
 	color: white;
 	font-size: 16px;
 	text-align: center;
@@ -765,7 +792,7 @@ body{
 
 /*QUATRO*/
 .repQuatro{
-	width:150px;
+	width:170px;
 	height: 150px;
 	position: absolute;
 	margin-top: 180px;
@@ -776,10 +803,12 @@ body{
 	text-decoration: underline;
 }
 .ConDesQuatro{
+	position: absolute;
+	margin-top: -40px;
 	width:150px;
 	height: 15px;
 	background: rgba(192, 57, 43, 0.8);
-	font-family: Ssemi;
+	font-family: Sreg;
 	color: white;
 	font-size: 16px;
 	text-align: center;
@@ -1697,7 +1726,7 @@ body{
 	width:100%;
 	height: 560px;
 
-	margin-top: 170px;
+	margin-top: 60px;
 	background: transparent;
 }
 
@@ -1720,32 +1749,29 @@ body{
 }
 
 .repQuatro{
-	width:140px;
+	width:170px;
 	height: 150px;
 	position: absolute;
-	margin-top: 130px;
-	margin-left: 40%;
+	margin-top: 180px;
+	margin-left: 35%;
 	background: transparent;
 }
 .repQuatro:hover > .ConDesQuatro{
-	width:160px;
-	margin-left: -10px;
+	text-decoration: underline;
 }
 .ConDesQuatro{
-	width:140px;
-	height: 35px;
-	display:block; 
-    position:relative;
-    overflow:hidden;
-
-    margin: auto;
-
-    background: transparent;
-
-    z-index: 1000;
-    display:none;
-
-     cursor: pointer;
+	position: absolute;
+	margin-top: -40px;
+	width:150px;
+	height: 15px;
+	background: rgba(192, 57, 43, 0.8);
+	font-family: Sreg;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	display:none;
 }
 #imgDesQuatro{
 	position:absolute;
@@ -2106,7 +2132,6 @@ body{
 }
 
 #map {
-    width: 1900px;
     height: 3100px;
     left: -200px;
     top: -200px; 
@@ -2407,8 +2432,7 @@ body{
 
 
 #map {
-    width: 1900px;
-    height: 3200px;
+    height: 3100px;
     left: -200px;
     top: -200px; 
     position: absolute;
@@ -2509,6 +2533,8 @@ body{
 }
 
 .ConDesUm{
+	position: absolute;
+	margin-top: -30px;
 	width:150px;
 	height: 15px;
 	background: rgba(192, 57, 43, 0.8);
@@ -2518,7 +2544,7 @@ body{
 	text-align: center;
 	padding: 10px;
 	cursor: pointer;
-	display:none;
+	display: none;
 }
 
 .repUm:hover > .ConDesUm{
