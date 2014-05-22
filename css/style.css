@@ -74,6 +74,19 @@ b {
 	font-family: Sbold;
 }
 
+h1{
+	font-family: Ssemi;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+a{
+	text-decoration: none;
+	color:white;
+}
+
+
+
 
 
 
@@ -98,60 +111,96 @@ b {
 
 
 
-.conP {
-  -moz-animation-duration: 2s;
-  -moz-animation-delay: 0s;
-  -webkit-animation-duration:3s;
-  -webkit-animation-delay:2s;
+
+@-webkit-keyframes opacidadeBt{
+  0%   { background: rgba(40, 40, 40, 0); }
+  100% { background: rgba(40, 40, 40, 0.8); }
+}
+@-moz-keyframes opacidadeBt {
+  0%   { background: rgba(40, 40, 40, 0); }
+  100% { background: rgba(40, 40, 40, 0.8); }
+}
+@-o-keyframes opacidadeBt {
+  0%   { background: rgba(40, 40, 40, 0); }
+  100% { background: rgba(40, 40, 40, 0.8); }
+}
+@keyframes opacidadeBt {
+  0%   { background: rgba(40, 40, 40, 0); }
+  100% { background: rgba(40, 40, 40, 0.8); }
 }
 
-.news {
-  -moz-animation-duration: 2s;
+
+
+@-webkit-keyframes opacidadeBtD{
+  0%   { background: rgba(80, 80, 80, 0); }
+  100% { background: rgba(80, 80, 80, 0.8); }
+}
+@-moz-keyframes opacidadeBtD {
+  0%   { background: rgba(80, 80, 80, 0); }
+  100% { background: rgba(80, 80, 80, 0.8); }
+}
+@-o-keyframes opacidadeBtD {
+  0%   { background: rgba(80, 80, 80, 0); }
+  100% { background: rgba(80, 80, 80, 0.8); }
+}
+@keyframes opacidadeBtD {
+  0%   { background: rgba(80, 80, 80, 0); }
+  100% { background: rgba(80, 80, 80, 0.8); }
+}
+
+
+
+
+
+
+
+.conP {
+  -moz-animation-duration: 4s;
   -moz-animation-delay: 0s;
-  -webkit-animation-duration:2s;
+  -webkit-animation-duration:4s;
   -webkit-animation-delay:0s;
 }
 
 .ConRepUm {
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 0s;
+  -webkit-animation-duration:1s;
+  -webkit-animation-delay:0s;
+}
+
+.ConRepDois {
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 0.5s;
+  -webkit-animation-duration:1s;
+  -webkit-animation-delay:0.5s;
+}
+
+.ConRepTres {
   -moz-animation-duration: 1s;
   -moz-animation-delay: 1s;
   -webkit-animation-duration:1s;
   -webkit-animation-delay:1s;
 }
 
-.ConRepDois {
-  -moz-animation-duration: 1s;
-  -moz-animation-delay: 2s;
-  -webkit-animation-duration:1s;
-  -webkit-animation-delay:2s;
-}
-
-.ConRepTres {
-  -moz-animation-duration: 1s;
-  -moz-animation-delay: 3s;
-  -webkit-animation-duration:1s;
-  -webkit-animation-delay:3s;
-}
-
 .ConRepQuatro {
   -moz-animation-duration: 1s;
-  -moz-animation-delay: 4s;
+  -moz-animation-delay: 1.5s;
   -webkit-animation-duration:1s;
-  -webkit-animation-delay:4s;
+  -webkit-animation-delay:1.5s;
 }
 
 .messUm {
   -moz-animation-duration: 1s;
-  -moz-animation-delay: 5s;
+  -moz-animation-delay: 2.5s;
   -webkit-animation-duration:1s;
-  -webkit-animation-delay:5s;
+  -webkit-animation-delay:2.5s;
 }
 
 .messUmDois {
   -moz-animation-duration: 1s;
-  -moz-animation-delay: 5s;
+  -moz-animation-delay: 2.5s;
   -webkit-animation-duration:1s;
-  -webkit-animation-delay:5s;
+  -webkit-animation-delay:2.5s;
 }
 
 html{
@@ -194,7 +243,10 @@ body{
 	background: transparent;
 }
 
+
+
 /*MENU --------------------------------------------------------*/
+
 .menu{
 	position: fixed;
 	top:30px;
@@ -202,51 +254,41 @@ body{
 	width: 650px;
 	height: 50px;
 	z-index: 999999999999;
+	margin-left: 230px;
+	width: 100px;
+	background: transparent;
+}
 
+.um, .quatro{
 	display: none;
 }
 
-.um{
-	background: black;
-	height: 35px;
-	width: 25%;
-	padding-top: 15;
-	float: left;
-}
-.conSpe{
-	width:50%;
-	height:100%;
-	display:block; 
-    position:relative;
-    overflow:hidden;
-    margin-top: 10px;
-    margin-left: 15px;
-}
-#imgSpe{
-	position:absolute;
-    top:0;
-    left:0; 
-    width:100%;
-    background: none;
+.um.rem{
+	display: none;
 }
 
-.dois{
-	font-family: Sreg;
-	font-size: 16px;
-	background: rgb(50,50,50);
+.quatro.rem{
+	display: none;
+}
+
+
+.um.fase2{
+	display: block;
+	-webkit-animation: opacidadeBt 0.5s;
+	-moz-animation: opacidadeBt 0.5s;
+	-o-animation: opacidadeBt 0.5s;
+	animation: opacidadeBt 0.5s;
+	background: rgba(40, 40, 40, 0.8);
 	float: left;
 	width: 50px;
-	height: 35px;
-	padding-top: 20;
-	padding-left: 20;
-	color:white;
+	height: 50px;
 }
-.setBaixo, .setCima{
+.seta{
 	width:15px;
 	height:15px;
 
-	margin-top: 10px;
-	margin-left: 17px;
+	margin-top: 20px;
+	margin-left: 18px;
 
 	display:block; 
     position:relative;
@@ -262,21 +304,22 @@ body{
     background: transparent;
 }
 
-.tres{
-	font-family: Sreg;
-	font-size: 16px;
-	background: rgb(80,80,80);
+.quatro.fase2{
+	display: block;
+	-webkit-animation: opacidadeBtD 0.5s;
+	-moz-animation: opacidadeBtD 0.5s;
+	-o-animation: opacidadeBtD 0.5s;
+	animation: opacidadeBtD 0.5s;
+	background: rgba(80, 80, 80, 0.8);
 	float: left;
 	width: 50px;
-	height: 35px;
-	padding-top: 20;
-	padding-left: 20;
-	color:white;
+	height: 50px;
 }
 
 .tres2{
 	display:none;
 }
+
 /*MENU --------------------------------------------------------*/
 
 
@@ -286,6 +329,7 @@ body{
 
 
 /*LOGO --------------------------------------------------------*/
+
 .logotipo{
 	width: 230px;
 	height: 50px;
@@ -295,7 +339,7 @@ body{
 	z-index: 999999999999;
 	position: fixed;
 
-	background: rgba(30,30,30,0.8);
+	background: rgba(0,0,0,0.8);
 }
 
 .conLog{
@@ -318,6 +362,50 @@ body{
     width:100%;
     background: transparent;
 }
+
+
+/*
+.logotipo.fase2{
+	-webkit-animation: widthLogo 0.1s;
+	-moz-animation: widthLogo 0.1s;
+	-o-animation: widthLogo 0.1s;
+	animation: widthLogo 0.1s;
+
+	-webkit-animation: heightLogo 0.1s;
+	-moz-animation: heightLogo 0.1s;
+	-o-animation: heightLogo 0.1s;
+	animation: heightLogo 0.1s;
+
+	width: 180px;
+	height: 40px;
+
+	top: 30px;
+	left: 30px;
+	z-index: 999999999999;
+	position: fixed;
+
+	background: rgba(0,0,0,0.8);
+}
+
+.conLog.fase2{
+	-webkit-animation: widthConlog 0.1s;
+	-moz-animation: widthConlog 0.1s;
+	-o-animation: widthConlog 0.1s;
+	animation: widthConlog 0.1s;
+
+	width:130px;
+	height:40px;
+
+	margin-top: 5px;
+	margin-left: calc(50% - 75px);
+
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+}
+*/
 /*LOGO --------------------------------------------------------*/
 
 
@@ -571,14 +659,13 @@ body{
 /* DESCRIÇÃO REPORTS 4---------------------------------------------*/
 .repDes4{
 	width:300px;
-	height: 120px;
+	height: 140px;
 	position: absolute;
 	z-index: 9999;
 	margin-left: 55%;
 	margin-top: 100px;
 	background: rgba(192, 57, 43, 0.9);
 	display: none;
-	cursor: pointer;
 }
 .txDes4{
 	width:240px;
@@ -589,6 +676,12 @@ body{
 	line-height: 130%;
 	margin-top: 20px;
 	margin-left: 20px;
+}
+.go{
+	font-family: Sbold;
+	cursor: pointer;
+	font-size: 26px;
+	width: 40px;
 }
 
 .tri4{
@@ -826,7 +919,7 @@ body{
 	width:150px;
 	height: 15px;
 	background: rgba(192, 57, 43, 0.8);
-	font-family: Sreg;
+	font-family: Ssemi;
 	color: white;
 	font-size: 16px;
 	text-align: center;
@@ -882,13 +975,13 @@ body{
 }
 
 .btMessUm{
-	width:350px;
+	width:270px;
 	margin-left: 15%;
 	float: left;
 }
 
 .txMessUm{
-	width:350px;
+	width:270px;
 
 	padding-top: 10px;
 	padding-bottom: 12px;
@@ -908,6 +1001,7 @@ body{
     margin-top: 15px;
 
     background: transparent;
+    z-index: 999999999;
 }
 #imgTri{
 	position:absolute;
@@ -920,8 +1014,9 @@ body{
 
 /* MENSAGEM UM DOIS-----------------*/
 .messUmDois{
-	width:100%;
+	width:50%;
 	height: 100px;
+	float: right;
 
 	line-height: 150%;
 	text-align: center;
@@ -930,13 +1025,16 @@ body{
 	color: white;
 
 	background: transparent;
+	z-index: 9999999;
 }
 
 .btMessUmDois{
 	width:350px;
-	margin-left: 55%;
-	margin-top: -130px;
+	margin-left: 0%;
+	margin-top: -60px;
 	float: left;
+	background: transparent;
+	z-index: 99999999;
 }
 
 .txMessUmDois{
@@ -1211,10 +1309,10 @@ body{
 }
 
 .but{
-	width:150px;
-	height: 40px;
+	width:50px;
+	height: 10px;
 	margin-top: 20px;
-	margin-left: calc(50% - 20px);
+	margin-left: calc(60% - 20px);
 
 	font-family: Sbold;
 	font-size: 26px;
@@ -1222,8 +1320,24 @@ body{
 
 	cursor: pointer;
 	border: none;
-	background-color:white; 
-	border:0.125em solid white;
+	background-color:transparent; 
+	border:0em solid white;
+}
+
+.but2{
+	position: absolute;
+	height: 35px;
+	width: 150px;
+	z-index: 10000;
+	background: white;
+	margin-top: -25px;
+	margin-left: calc(22% - 20px);
+	font-family: Sbold;
+	font-size: 26px;
+	color: rgb(64,212,126);
+	text-align: center;
+	padding-top: 10px;
+	cursor: pointer;
 }
 
 ::-webkit-input-placeholder {
@@ -1263,6 +1377,7 @@ body{
 	color: white;
 
 	background: rgba(52, 152, 219, 0.9);
+	z-index: 999999;
 }
 
 .btMessDois{
@@ -1509,7 +1624,7 @@ body{
 
 /* IMG PLANETA -----------------*/
 .planeta{
-	width:30%;
+	width:260px;
 	height: 340px;
 	display:block; 
     position:relative;
@@ -1550,6 +1665,23 @@ body{
 	background: rgba(52, 152, 219, 0.9);
 	display: none;
 }
+.titDesc1{
+	width: 95%;
+	margin: auto;
+	margin-top: 60px;
+	color:white;
+	font-family: Ssemi;
+	font-size: 20px;
+}
+.txDesc1{
+	width: 95%;
+	margin: auto;
+	margin-top: 20px;
+	color:white;
+	line-height: 140%;
+	font-family: Sreg;
+	display: none;
+}
 
 .desc2{
 	width:400px;
@@ -1559,6 +1691,23 @@ body{
 	margin-left: 300px;
 	margin-top: 30px;
 	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+.titDesc2{
+	width: 95%;
+	margin: auto;
+	margin-top: 60px;
+	color:white;
+	font-family: Ssemi;
+	font-size: 20px;
+}
+.txDesc2{
+	width: 95%;
+	margin: auto;
+	margin-top: 20px;
+	color:white;
+	line-height: 140%;
+	font-family: Sreg;
 	display: none;
 }
 
@@ -1572,6 +1721,23 @@ body{
 	background: rgba(52, 152, 219, 0.9);
 	display: none;
 }
+.titDesc3{
+	width: 95%;
+	margin: auto;
+	margin-top: 60px;
+	color:white;
+	font-family: Ssemi;
+	font-size: 20px;
+}
+.txDesc3{
+	width: 95%;
+	margin: auto;
+	margin-top: 20px;
+	color:white;
+	line-height: 140%;
+	font-family: Sreg;
+	display: none;
+}
 
 .desc4{
 	width:400px;
@@ -1583,7 +1749,23 @@ body{
 	background: rgba(52, 152, 219, 0.9);
 	display: none;
 }
-
+.titDesc4{
+	width: 95%;
+	margin: auto;
+	margin-top: 60px;
+	color:white;
+	font-family: Ssemi;
+	font-size: 20px;
+}
+.txDesc4{
+	width: 95%;
+	margin: auto;
+	margin-top: 20px;
+	color:white;
+	line-height: 140%;
+	font-family: Sreg;
+	display: none;
+}
 
 
 /* DESCRIÇÃO SERVIÇOS---------------------------------------------*/
@@ -1699,12 +1881,47 @@ body{
 .menu{
 	position: fixed;
 	top:20px;
-	left: 20px;
+	left: -40px;
 	width: 650px;
-	height: 50px;
+	height: 35px;
 	z-index: 999999999999;
+}
 
-	display: none;
+.um.fase2{
+	display: block;
+	-webkit-animation: opacidadeBt 0.5s;
+	-moz-animation: opacidadeBt 0.5s;
+	-o-animation: opacidadeBt 0.5s;
+	animation: opacidadeBt 0.5s;
+	background: rgba(40, 40, 40, 0.8);
+	float: left;
+	width: 35px;
+	height: 35px;
+}
+.quatro.fase2{
+	display: block;
+	-webkit-animation: opacidadeBtD 0.5s;
+	-moz-animation: opacidadeBtD 0.5s;
+	-o-animation: opacidadeBtD 0.5s;
+	animation: opacidadeBtD 0.5s;
+	background: rgba(80, 80, 80, 0.8);
+	float: left;
+	width: 35px;
+	height: 35px;
+}
+
+.seta{
+	width:15px;
+	height:15px;
+
+	margin-top: 10px;
+	margin-left: 10px;
+
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
 }
 
 .logotipo{
@@ -1716,7 +1933,7 @@ body{
 	z-index: 999999999999;
 	position: fixed;
 
-	background: rgba(30,30,30,0.8);
+	background: rgba(0,0,0,0.8);
 }
 
 .conLog{
@@ -1775,15 +1992,42 @@ body{
 	background: transparent;
 }
 .repQuatro:hover > .ConDesQuatro{
-	text-decoration: underline;
+  -webkit-animation: nop;
+  -moz-animation: nop;
+  -o-animation: nop;
+  animation: nop;
+  background: rgba(192, 57, 43, 1);;
 }
+
+.repUm:hover > .ConDesUm{
+  -webkit-animation: nop;
+  -moz-animation: nop;
+  -o-animation: nop;
+  animation: nop;
+  background: rgba(192, 57, 43, 1);
+}
+.repDois:hover > .ConDesDois{
+  -webkit-animation: nop;
+  -moz-animation: nop;
+  -o-animation: nop;
+  animation: nop;
+  background: rgba(192, 57, 43, 1);
+}
+.repTres:hover > .ConDesTres{
+  -webkit-animation: nop;
+  -moz-animation: nop;
+  -o-animation: nop;
+  animation: nop;
+  background: rgba(192, 57, 43, 1);
+}
+
 .ConDesQuatro{
 	position: absolute;
 	margin-top: -40px;
 	width:150px;
 	height: 15px;
 	background: rgba(192, 57, 43, 0.8);
-	font-family: Sreg;
+	font-family: Ssemi;
 	color: white;
 	font-size: 16px;
 	text-align: center;
@@ -1882,7 +2126,7 @@ body{
 }
 .repDes4{
 	width:300px;
-	height: 120px;
+	height: 150px;
 	position: absolute;
 	z-index: 9999;
 	margin-left: 35%;
@@ -1917,13 +2161,13 @@ body{
 }
 
 .btMessUm{
-	width:250px;
+	width:230px;
 	margin-left: 10%;
 	float: left;
 }
 
 .txMessUm{
-	width:270px;
+	width:230px;
 
 	padding-top: 10px;
 	padding-bottom: 12px;
@@ -2102,10 +2346,10 @@ body{
 }
 
 .but{
-	width:150px;
-	height: 40px;
-	margin-top: 10px;
-	margin-left: calc(50% - 20px);
+	width:50px;
+	height: 10px;
+	margin-top: 20px;
+	margin-left: calc(60% - 20px);
 
 	font-family: Sbold;
 	font-size: 26px;
@@ -2115,11 +2359,28 @@ body{
 	border: none;
 	background-color:white; 
 	border:0.125em solid white;
+	opacity: 0;
+}
+
+.but2{
+	position: absolute;
+	height: 35px;
+	width: 150px;
+	z-index: 10000;
+	background: white;
+	margin-top: -25px;
+	margin-left: calc(22% - 20px);
+	font-family: Sbold;
+	font-size: 26px;
+	color: rgb(64,212,126);
+	text-align: center;
+	padding-top: 10px;
+	cursor: pointer;
 }
 
 .messDois{
 	width:270px;
-	height: 100px;
+	height: 90px;
 
 	float: none;
 	margin-top: -50px;
@@ -2147,6 +2408,10 @@ body{
 	margin: auto;
 
 	background: transparent;
+}
+
+.triDois{
+	margin-top: -10px;
 }
 
 body {
@@ -2180,14 +2445,14 @@ body {
 }
 
 .servi{
-	width:100%;
+	width:95%;
 	height: 440px;	
 
 	margin-top: 170px;
 
 	float: left;
 
-	background: transparent;
+	background: yellow;
 }
 .edif{
 	width:154px;
@@ -2453,12 +2718,10 @@ body {
 .menu{
 	position: fixed;
 	top:10px;
-	left: 10px;
+	left: -50px;
 	width: 650px;
 	height: 50px;
 	z-index: 999999999999;
-
-	display: none;
 }
 
 .logotipo{
@@ -2470,7 +2733,7 @@ body {
 	z-index: 999999999999;
 	position: fixed;
 
-	background: rgba(30,30,30,0.8);
+	background: rgba(0,0,0,0.8);
 }
 
 .sliUm{
@@ -2618,13 +2881,13 @@ body {
 }
 
 .btMessUm{
-	width:200px;
+	width:170px;
 	margin-left: 5%;
 	float: left;
 }
 
 .txMessUm{
-	width:200px;
+	width:170px;
 
 	padding-top: 10px;
 	padding-bottom: 12px;
@@ -2691,7 +2954,9 @@ body {
 
 
 
-
+.triDois{
+	margin-top: 0px;
+}
 
 
 
@@ -2851,19 +3116,35 @@ body {
 }
 
 .but{
-	width:150px;
-	height: 40px;
-	margin-top: 10px;
-	margin-left: calc(30% - 20px);
+	width:50px;
+	height: 10px;
+	margin-top: 20px;
+	margin-left: calc(60% - 20px);
 
 	font-family: Sbold;
-	font-size: 22px;
+	font-size: 26px;
 	color: rgb(64,212,126);
 
 	cursor: pointer;
 	border: none;
 	background-color:white; 
 	border:0.125em solid white;
+}
+
+.but2{
+	position: absolute;
+	height: 35px;
+	width: 150px;
+	z-index: 10000;
+	background: white;
+	margin-top: -25px;
+	margin-left: calc(15% - 20px);
+	font-family: Sbold;
+	font-size: 26px;
+	color: rgb(64,212,126);
+	text-align: center;
+	padding-top: 10px;
+	cursor: pointer;
 }
 
 .messDois{
