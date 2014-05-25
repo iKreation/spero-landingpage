@@ -80,6 +80,12 @@ table {
   src: url('../fonts/SourceSansPro-Light.ttf');
 }
 
+@font-face
+{
+  font-family: SitD;
+  src: url('../fonts/SourceSansPro-It.otf');
+}
+
 b {
 	font-family: Sbold;
 }
@@ -206,7 +212,7 @@ body{
 #legenda{
 	width:180px;
 	margin: auto;
-	background: rgba(241, 196, 15, 0.8);
+	background: rgba(244, 208, 63, 0.8);
 	padding-top: 10px;
 	font-size: 18px;
 	text-align: center;
@@ -235,13 +241,15 @@ body{
 	outline: none;
 	width: 100%;
 	border: none;
-	background: rgba(241, 196, 15, 0.8);
+	background: rgba(244, 208, 63, 0.8);
 	height: 80px;
 	color:white;
-	font-family: Sit;
-	font-size: 20px;
+	font-family: Sreg;
+	font-size: 18px;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 190%;
 }
-
 #descRect{
 	height: 120px !important;
 }
@@ -258,7 +266,7 @@ body{
 	width:101%;
 	float: right;
 	height: 100%;
-	background: rgba(241, 196, 15, 0.8);
+	background: rgba(244, 208, 63, 0.8);
 }
 #titAss{
 	font-family: Sit;
@@ -269,17 +277,17 @@ body{
 }
 #listAss{
 	font-family: Sreg;
-	font-size: 16px;
+	font-size: 20px;
 	color:white;
 	margin-left: 15px;
-	margin-top: 10px;
+	margin-top: 20px;
 	line-height: 150%;
 }
 
 #submeter{
 	width:20%;
 	height: 150px;
-	background: rgba(241, 196, 15, 0.8);
+	background: rgba(244, 208, 63, 0.8);
 	float: left;
 	margin-left: 10px;
 	cursor: pointer;
@@ -350,30 +358,93 @@ body{
 
 
 
+label {  
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    padding-left: 40px;
+}  
+input[type=checkbox] {  
+    display: none;  
+}
+label:before {  
+    content: "";  
+    display: inline-block;  
+    width: 10px;  
+    height: 10px;  
+   	position: absolute;  
+   	margin-top: 10px;
+    left: 10px;    
+    border: 1px solid white;
+} 
+input[type=checkbox]:checked + label:before {  
+    background-color: white;
+}  
 
 
 
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    white;
+    font-family: Sit !important;
+	font-size: 20px;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    white;
+    opacity:  1;
+    font-family: Sit !important;
+	font-size: 20px;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    white;
+    opacity:  1;
+    font-family: Sit !important;
+	font-size: 20px;
+	line-height: 200%;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    white;
+    font-family: Sit !important;
+	font-size: 20px;
+}
+
+textarea {
+    resize: none;
+}
+
+
+/*
+@-moz-keyframes marge {
+  0%   { margin-left: 0px; }
+  50%   { margin-left: 20px; }
+  100% { margin-left: -20px; }
+}
+
+#seta1:hover{
+	-moz-animation: marge 1s;
+}
+*/
 
 @-webkit-keyframes corOp {
-  0%   { background: rgba(241, 196, 15, 0.8); }
-  100% { background: rgba(241, 196, 15, 1); }
+  0%   { background: rgba(244, 208, 63, 0.8); }
+  100% { background: rgba(244, 208, 63, 1); }
 }
 @-moz-keyframes corOp {
-  0%   { background: rgba(241, 196, 15, 0.8); }
-  100% { background: rgba(241, 196, 15, 1); }
+  0%   { background: rgba(244, 208, 63, 0.8); }
+  100% { background: rgba(244, 208, 63, 1); }
 }
 @-o-keyframes corOp {
-  0%   { background: rgba(241, 196, 15, 0.8); }
-  100% { background: rgba(241, 196, 15, 1);}
+  0%   { background: rgba(244, 208, 63, 0.8); }
+  100% { background: rgba(244, 208, 63, 1);}
 }
 @keyframes corOp {
-  0%   { background: rgba(241, 196, 15, 0.8); }
-  100% { background: rgba(241, 196, 15, 1);}
+  0%   { background: rgba(244, 208, 63, 0.8); }
+  100% { background: rgba(244, 208, 63, 1);}
 }
 #submeter:hover, #intAss:hover, #titRect:hover, #descRect:hover{
 	-webkit-animation: corOp 1s;
 	-moz-animation: corOp 1s;
 	-o-animation: corOp 1s;
 	animation: corOp 1s;
-	background: rgba(241, 196, 15, 1);
+	background: rgba(244, 208, 63, 1);
 }
