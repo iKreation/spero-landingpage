@@ -20,6 +20,7 @@ var app = {
 
 app.init = function() {
 	var self = this;
+	app.events();
 	$("#container").show();
 	$('#assunto').jScrollPane();
 }
@@ -55,6 +56,55 @@ app.initMaps = function() {
 }
 
 
+app.events = function() {
+	var self = this;
+	var foto = 1;
+
+	$("#seta1").click(function() {
+		if (foto == 1){
+			$("#conImg").css({"display":"none"}); 
+			$("#conImg3").fadeIn(300);
+			foto = 3;
+		}
+		else if (foto == 3){
+			$("#conImg3").css({"display":"none"}); 
+			$("#conImg2").fadeIn(300);
+			foto = 2;
+		}
+		else if (foto == 2){
+			$("#conImg2").css({"display":"none"}); 
+			$("#conImg").fadeIn(300);
+			foto = 1;
+		}
+	});
+
+	$("#seta2").click(function() {
+		if (foto == 1){
+			$("#conImg").css({"display":"none"}); 
+			$("#conImg2").fadeIn(300);
+			foto = 2;
+		}
+		else if (foto == 2){
+			$("#conImg2").css({"display":"none"}); 
+			$("#conImg3").fadeIn(300);
+			foto = 3;
+		}
+		else if (foto == 3){
+			$("#conImg3").css({"display":"none"}); 
+			$("#conImg").fadeIn(300);
+			foto = 1;
+		}
+	});
+}
+
+
 $(document).ready(function() {
 	app.initMaps();
 })
+
+
+
+
+
+
+

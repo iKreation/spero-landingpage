@@ -187,13 +187,16 @@ body{
 	float: left;
 	margin-left: calc(25% - 100px);
 }
-#conImg{
+#conImg, #conImg2, #conImg3{
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
 	background: transparent;
 	display:block; 
     position:relative;
+}
+#conImg2, #conImg3{
+	display: none;
 }
 #imgRep{
 	position:absolute;
@@ -368,9 +371,9 @@ body{
   100% { background: rgba(241, 196, 15, 1);}
 }
 #submeter:hover, #intAss:hover, #titRect:hover, #descRect:hover{
-	-webkit-animation: corOp 0.5s;
-	-moz-animation: corOp 0.5s;
-	-o-animation: corOp 0.5s;
-	animation: corOp 0.5s;
+	-webkit-animation: corOp 1s;
+	-moz-animation: corOp 1s;
+	-o-animation: corOp 1s;
+	animation: corOp 1s;
 	background: rgba(241, 196, 15, 1);
 }
