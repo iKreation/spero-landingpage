@@ -27,6 +27,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 ol, ul {
@@ -95,17 +96,13 @@ html, body {
 	height: 2330px;
 }
 
-html{
-	overflow: hidden; 
-}
 
 body{
 	height: 100%;
-	overflow: hidden;
 	margin:0px;
 }
 
-#container {
+#container, #container-pre {
 	display: none;
 }
 
@@ -167,7 +164,7 @@ body{
 	margin: auto;
 	position: absolute;
 	z-index: 100;
-	left: calc(50% - 45%);
+	left: calc(50% - 40%);
 	top: 50px;
 
 	background: transparent;
@@ -210,11 +207,11 @@ body{
     width:50%;
 }
 #legenda{
-	width:180px;
+	width:200px;
 	margin: auto;
 	background: rgba(244, 208, 63, 0.8);
 	padding-top: 10px;
-	font-size: 18px;
+	font-size: 20px;
 	text-align: center;
 	color:white;
 	font-family: Sit;
@@ -279,7 +276,7 @@ body{
 	font-family: Sreg;
 	font-size: 20px;
 	color:white;
-	margin-left: 15px;
+	margin-left: 10px;
 	margin-top: 20px;
 	line-height: 150%;
 }
@@ -362,9 +359,9 @@ label {
     display: inline-block;  
     cursor: pointer;  
     position: relative;  
-    padding-left: 40px;
+    padding-left: 30px;
 }  
-input[type=checkbox] {  
+input[type=radio] {  
     display: none;  
 }
 label:before {  
@@ -376,8 +373,9 @@ label:before {
    	margin-top: 10px;
     left: 10px;    
     border: 1px solid white;
+    border-radius: 8px; 
 } 
-input[type=checkbox]:checked + label:before {  
+input[type=radio]:checked + label:before {  
     background-color: white;
 }  
 
@@ -388,22 +386,23 @@ input[type=checkbox]:checked + label:before {
     color:    white;
     font-family: Sit !important;
 	font-size: 20px;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    white;
-    opacity:  1;
+    color: white;
+    opacity: 1;
     font-family: Sit !important;
 	font-size: 20px;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    white;
-    opacity:  1;
+    color: white;
+    opacity: 1;
     font-family: Sit !important;
 	font-size: 20px;
 	line-height: 200%;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    white;
+    color: white;
     font-family: Sit !important;
 	font-size: 20px;
 }
@@ -447,4 +446,231 @@ textarea {
 	-o-animation: corOp 1s;
 	animation: corOp 1s;
 	background: rgba(244, 208, 63, 1);
+}
+
+
+
+
+
+
+#container-pre{
+	width:100%;
+	position: absolute;
+	z-index: 100;
+	left: 0;
+	top: 50px;
+	margin-top: 60px;
+	height: 2100px;
+	z-index: 9999999999999;
+}
+
+#place{
+	width:200px;
+	margin-left: 10%;
+	background: rgba(244, 208, 63, 0.8);
+	padding-top: 10px;
+	font-size: 20px;
+	text-align: center;
+	color:white;
+	font-family: Sit;
+	-webkit-font-smoothing: subpixel-antialiased;
+	height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#container-pos{
+	width:100%;
+	position: absolute;
+	z-index: 100;
+	left: 0;
+	top: 50px;
+	margin-top: 60px;
+	display: none;
+	height: 2100px;
+}
+
+.marker{
+	width:30px;
+	height: 40px;
+	display:block; 
+    position:absolute;
+    overflow:hidden;
+    z-index: 1000;
+    cursor: pointer;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.marker2{
+	width:30px;
+	height: 40px;
+	display:block; 
+    position:absolute;
+    overflow:hidden;
+    z-index: 1000;
+    cursor: pointer;
+    margin-top: 400px;
+    margin-left: 500px;
+}
+.marker3{
+	width:30px;
+	height: 40px;
+	display:block; 
+    position:absolute;
+    overflow:hidden;
+    z-index: 1000;
+    cursor: pointer;
+    margin-top: 1000px;
+    margin-left: 200px;
+}
+#imgReport{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+
+
+
+
+.repDes1{
+	width:40%;
+	height: auto;
+	padding-bottom: 15px;
+	position: absolute;
+	z-index: 9999;
+	margin-top: 140px;
+    margin-left: 90px;
+	background: rgba(192, 57, 43, 0.8);
+	display: none;
+}
+.repDes2{
+	width:40%;
+	height: auto;
+	padding-bottom: 15px;
+	position: absolute;
+	z-index: 9999;
+	margin-top: 440px;
+    margin-left: 540px;
+	background: rgba(0,185,30, 0.8);
+	display: none;
+}
+.repDes3{
+	width:40%;
+	height: auto;
+	padding-bottom: 15px;
+	position: absolute;
+	z-index: 9999;
+	margin-top: 1040px;
+    margin-left: 240px;
+	background: rgba(241, 220, 15, 0.8);
+	display: none;
+}
+.estado{
+	width:90%;
+	height: auto;
+	padding-bottom: 10px;
+	font-size: 22px;
+	font-family: SitD;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.titDes{
+	width:90%;
+	height: auto;
+	padding-bottom: 10px;
+	font-size: 20px;
+	font-family: Ssemi;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.txDes{
+	width:90%;
+	height: auto;
+	padding-bottom: 10px;
+	font-size: 16px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.ConProb{
+	width:15%;
+	height: 300px;
+	display:block; 
+    position:absolute;
+    overflow:hidden;
+    z-index: 9999;
+    margin-left: 30%;
+    margin-top: 120px;
+
+    background: transparent;
+    display: none;
+}
+#imgProb{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+
+
+
+.ConSoc2{
+	width:35px;
+	height: 35px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-top: 50px;
+    margin-left: 20px;
+
+    background: transparent;
+}
+#imgSoc2{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+.ConSoc3{
+	width:35px;
+	height: 35px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-top: -35px;
+    margin-left: 70px;
+
+    background: transparent;
+}
+#imgSoc3{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
 }

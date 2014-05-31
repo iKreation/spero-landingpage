@@ -21,8 +21,8 @@ var app = {
 app.init = function() {
 	var self = this;
 	app.events();
-	$("#container").show();
-	$('#assunto').jScrollPane();
+	$("#container-pre").show();
+	$("#container-pre").css({'cursor': 'url(img/cursor.png) 15 15, pointer'});
 }
 
 app.initMaps = function() {
@@ -59,6 +59,10 @@ app.initMaps = function() {
 app.events = function() {
 	var self = this;
 	var foto = 1;
+	var estado1 = true;
+	var estado2 = true;
+	var estado3 = true;
+	var estadoFora = 0;
 
 	$("#seta1").click(function() {
 		if (foto == 1){
@@ -94,6 +98,104 @@ app.events = function() {
 			$("#conImg").fadeIn(300);
 			foto = 1;
 		}
+	});
+
+	$('#container-pre').click(function() {
+		$("#container-pre").hide();
+		$("#container").fadeIn();
+		$('#assunto').jScrollPane();
+		$('body').css({"overflow":"hidden"}); 
+		$('html').css({"overflow":"hidden"}); 
+		$(document).scrollTop(0);
+	});
+
+	$('#submeter').click(function() {
+		$("#container").hide();
+		$("#container-pos").fadeIn();
+		$('body').css({"overflow-y":"scroll"}); 
+		$('html').css({"overflow-y":"scroll"}); 
+	});
+
+
+
+	$('.marker').click(function() {
+		if (estado1 == true){
+			$(".marker2").hide();
+			$(".marker3").hide();
+			$(".repDes3").hide();
+			$(".repDes2").hide();
+			$(".repDes1").fadeIn();
+			estado1 = false;
+		}
+		else{
+			$(".marker2").fadeIn();
+			$(".marker3").fadeIn();
+			$(".repDes1").hide();
+			estado1 = true;
+		}
+	});
+
+	$('.marker2').click(function() {
+		if (estado2 == true){
+			$(".marker").hide();
+			$(".marker3").hide();
+			$(".repDes3").hide();
+			$(".repDes1").hide();
+			$(".repDes2").fadeIn();
+			estado2 = false;
+
+		}
+		else{
+			$(".marker").fadeIn();
+			$(".marker3").fadeIn();
+			$(".repDes2").hide();
+			estado2 = true;
+		}
+	});
+
+	$('.marker3').click(function() {
+		if (estado3 == true){
+			$(".marker").hide();
+			$(".marker2").hide();
+			$(".repDes2").hide();
+			$(".repDes1").hide();
+			$(".repDes3").fadeIn();
+			estado3 = false;
+		}
+		else{
+			$(".marker").fadeIn();
+			$(".marker2").fadeIn();
+			$(".repDes3").hide();
+			estado3 = true;
+		}
+	});
+
+
+
+
+	$('html').click(function() {
+		if(estadoFora == 1){
+			$(".marker").fadeIn();
+			$(".marker2").fadeIn();
+			$(".marker3").fadeIn();
+			$(".repDes1").hide();
+			$(".repDes2").hide();
+			$(".repDes3").hide();
+		}
+	});
+	$('.marker').click(function(event) {
+		estadoFora = 1;
+		event.stopPropagation();
+	});
+
+	$('.marker2').click(function(event) {
+		estadoFora = 1;
+		event.stopPropagation();
+	});
+
+	$('.marker3').click(function(event) {
+		estadoFora = 1;
+		event.stopPropagation();
 	});
 }
 
