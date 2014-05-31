@@ -88,8 +88,10 @@ table {
 }
 
 b {
-	font-family: Sbold;
+	font-family: Sreg;
 }
+
+
 
 
 html, body {
@@ -502,6 +504,19 @@ textarea {
 	margin-top: 60px;
 	display: none;
 	height: 2100px;
+}
+
+#thanks{
+	width:450px;
+	margin-left: 10%;
+	background: rgba(244, 208, 63, 0.8);
+	padding-top: 10px;
+	font-size: 20px;
+	text-align: center;
+	color:white;
+	font-family: Sit;
+	-webkit-font-smoothing: subpixel-antialiased;
+	height: 30px;
 }
 
 .marker{
