@@ -6,16 +6,16 @@ var app = {
 	count: true,
 	showN: 0,
 	start: false,
-	repUm: false,
-	repDois: false,
-	repTres: false,
-	repQuatro: false,
-	desc1: false,
+	repUm: 0,
+	repDois: 0,
+	repTres: 0,
+	repQuatro: 0,
 	foi: false,
 	foi2: false,
-	desc2: false,
-	desc3: false,
-	desc4: false,
+	desc1: 0,
+	desc2: 0,
+	desc3: 0,
+	desc4: 0,
 	fora: 0
 }
 
@@ -24,39 +24,7 @@ app.setScroll = function() {
 	var self = this;
 	$(document).scroll(function() {
 		var scroll = $(window).scrollTop();
-		
-		/*
-		var bt12 = $(".btMessUmDois").offset();
-		var slide2 = (bt12.top + 500);
 
-		var bt2 = $(".btMessDois").offset();
-		var slide3 = (bt2.top + 300);
-
-		if (scroll >= slide2) {
-			$(".tres").css({
-				"display": "none"
-			})
-			$(".tres2").css({
-				"display": "block"
-			})
-		}
-
-		if (scroll >= slide3) {
-			$(".tres").css({
-				"display": "block"
-			})
-			$(".tres2").css({
-				"display": "none"
-			})
-		} else {
-			$(".tres").css({
-				"display": "none"
-			})
-			$(".tres2").css({
-				"display": "block"
-			})
-		}
-		*/
 		var offUm = $(".sliUm").offset();
 
 		var doisOffset = $(".sliDois").offset();
@@ -135,53 +103,133 @@ app.animations = function() {
 
 app.descriptions = function() {
 	var self = this;
-	$(".ConRepUm").click(function() {
-		if (!self.repUm) {
-			$('.repDes1').fadeIn(300);
-			$('.ConProb').fadeIn(300);
+	
+	$('body').click(function(e) {
+		// REPORT UM -------------------
+		if( e.target.id == 'imgRepUm' || e.target.id == 'ConDesUm'){
+			if (self.repUm%2 == 0) {
+				$('.repDes1').fadeIn(300);
+				$('.ConProb').fadeIn(300);
+				$('#imgRepDois').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConRepDois').css({
+					"pointer-events": "none","cursor":"default"
+				})
+				$('#imgRepTres').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConRepTres').css({
+					"pointer-events": "none","cursor":"default"
+				})
+				$('#imgRepQuatro').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConRepQuatro').css({
+					"pointer-events": "none","cursor":"default"
+				})
+				$('.ConDesDois').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConDesTres').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConDesQuatro').css({
+					"opacity": "0","pointer-events": "none"
+				})
 
-			$('#imgRepDois').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepDois').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepTres').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepTres').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepQuatro').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepQuatro').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('.ConDesDois').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesTres').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesQuatro').css({
-				"opacity": "0","pointer-events": "none"
-			})
+				$('.btMessUm').css({
+					"opacity": "0","pointer-events": "none"
+				});
+				$('.btMessUmDois').css({
+					"opacity": "0","pointer-events": "none"
+				});
+				self.repUm = 1; 
+			}
+			else if (self.repUm == 1) {
+				$('.repDes1').fadeOut(100);
+				$('.ConProb').fadeOut(100);
+				setTimeout(function() {
+					$('#imgRepDois').css({
+						"opacity": "1","pointer-events": "visible"
+					})
+				}, 200);
 
-			$('.btMessUm').css({
-				"opacity": "0","pointer-events": "none"
-			});
-			$('.btMessUmDois').css({
-				"opacity": "0","pointer-events": "none"
-			});
+				$('.ConRepDois').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
+				
+				setTimeout(function() {
+				$('#imgRepTres').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConRepTres').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			self.repUm = true;
-		} else {
+				setTimeout(function() {
+				$('#imgRepQuatro').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConRepQuatro').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
+
+				setTimeout(function() {
+				$('.ConDesDois').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConDesDois').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
+
+				setTimeout(function() {
+				$('.ConDesTres').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConDesTres').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
+
+				setTimeout(function() {
+				$('.ConDesQuatro').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConDesQuatro').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
+
+				setTimeout(function() {
+				$('.btMessUm').css({
+					"opacity": "1","pointer-events": "visible"
+				});
+				}, 200);
+				$('.btMessUm').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
+
+				setTimeout(function() {
+				$('.btMessUmDois').css({
+					"opacity": "1","pointer-events": "visible"
+				});
+				}, 200);
+				$('.btMessUmDois').css({
+					"cursor":"pointer","pointer-events": "visible"
+				});
+					self.repUm = 2; 
+			}
+		}
+		else if(self.repUm > 0) {
 			$('.repDes1').fadeOut(100);
 			$('.ConProb').fadeOut(100);
 			setTimeout(function() {
 				$('#imgRepDois').css({
-					"opacity": "1"
+					"opacity": "1","pointer-events": "visible"
 				})
 			}, 200);
 
@@ -191,7 +239,7 @@ app.descriptions = function() {
 			
 			setTimeout(function() {
 			$('#imgRepTres').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConRepTres').css({
@@ -200,7 +248,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('#imgRepQuatro').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConRepQuatro').css({
@@ -209,7 +257,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.ConDesDois').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConDesDois').css({
@@ -218,7 +266,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.ConDesTres').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConDesTres').css({
@@ -227,7 +275,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.ConDesQuatro').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConDesQuatro').css({
@@ -236,7 +284,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.btMessUm').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			});
 			}, 200);
 			$('.btMessUm').css({
@@ -245,185 +293,141 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.btMessUmDois').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			});
 			}, 200);
 			$('.btMessUmDois').css({
 				"cursor":"pointer","pointer-events": "visible"
-			})
-			self.repUm = false;
+			});
+			self.repUm = 0; 
 		}
-	});
-	$(".ConDesUm").click(function() {
-		if (!self.repUm) {
-			$('.repDes1').fadeIn(300);
-			$('.ConProb').fadeIn(300);
+		// REPORT DOIS -------------------
+		if( e.target.id == 'imgRepDois' || e.target.id == 'ConDesDois'){
+			if (self.repDois%2 == 0) {
+				$('.repDes2').fadeIn(300);
+				$('.ConProb2').fadeIn(300);
 
-			$('#imgRepDois').css({
-				"opacity": "0","pointer-events": "none","cursor":"default"
-			})
-			$('.ConRepDois').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepTres').css({
-				"opacity": "0","pointer-events": "none","cursor":"default"
-			})
-			$('.ConRepTres').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepQuatro').css({
-				"opacity": "0","pointer-events": "none","cursor":"default"
-			})
-			$('.ConRepQuatro').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('.ConDesDois').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesTres').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesQuatro').css({
-				"opacity": "0","pointer-events": "none"
-			})
+				$('#imgRepUm').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConRepUm').css({
+					"pointer-events": "none","cursor":"default"
+				})
+				$('#imgRepTres').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConRepTres').css({
+					"pointer-events": "none","cursor":"default"
+				})
+				$('#imgRepQuatro').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConRepQuatro').css({
+					"pointer-events": "none","cursor":"default"
+				})
+				$('.ConDesUm').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConDesTres').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConDesQuatro').css({
+					"opacity": "0","pointer-events": "none"
+				})
 
-			$('.btMessUm').css({
-				"opacity": "0","pointer-events": "none"
-			});
-			$('.btMessUmDois').css({
-				"opacity": "0","pointer-events": "none"
-			});
+				$('.btMessUm').css({
+					"opacity": "0","pointer-events": "none"
+				});
+				$('.btMessUmDois').css({
+					"opacity": "0","pointer-events": "none"
+				});
+				self.repDois = 1; 
+			}
+			else if (self.repDois == 1) {
+				$('.repDes2').fadeOut(100);
+				$('.ConProb2').fadeOut(100);
 
-			self.repUm = true;
-		} else {
-			$('.repDes1').fadeOut(100);
-			$('.ConProb').fadeOut(100);
+				setTimeout(function() {
+				$('#imgRepUm').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConRepUm').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('#imgRepDois').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConRepDois').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('#imgRepTres').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConRepTres').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('#imgRepTres').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConRepTres').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('#imgRepQuatro').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConRepQuatro').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('#imgRepQuatro').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConRepQuatro').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('.ConDesUm').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConDesUm').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('.ConDesDois').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConDesDois').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('.ConDesTres').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConDesTres').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('.ConDesTres').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConDesTres').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('.ConDesQuatro').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConDesQuatro').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('.ConDesQuatro').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConDesQuatro').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('.btMessUm').css({
+					"opacity": "1","pointer-events": "visible"
+				});
+				}, 200);
+				$('.btMessUm').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('.btMessUm').css({
-				"opacity": "1"
-			});
-			}, 200);
-			$('.btMessUm').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
-
-			setTimeout(function() {
-			$('.btMessUmDois').css({
-				"opacity": "1"
-			});
-			}, 200);
-			$('.btMessUmDois').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
-
-			self.repUm = false;
+				setTimeout(function() {
+				$('.btMessUmDois').css({
+					"opacity": "1","pointer-events": "visible"
+				});
+				}, 200);
+				$('.btMessUmDois').css({
+					"cursor":"pointer","pointer-events": "visible"
+				});
+				self.repDois = 2; 
+			}
 		}
-	});
-
-
-	$(".ConRepDois").click(function() {
-		if (!self.repDois) {
-			$('.repDes2').fadeIn(300);
-			$('.ConProb2').fadeIn(300);
-
-			$('#imgRepUm').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepUm').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepTres').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepTres').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepQuatro').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepQuatro').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('.ConDesUm').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesTres').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesQuatro').css({
-				"opacity": "0","pointer-events": "none"
-			})
-
-			$('.btMessUm').css({
-				"opacity": "0","pointer-events": "none"
-			});
-			$('.btMessUmDois').css({
-				"opacity": "0","pointer-events": "none"
-			});
-
-			self.repDois = true;
-		} else {
+		else if (self.repDois > 0){
 			$('.repDes2').fadeOut(100);
 			$('.ConProb2').fadeOut(100);
 
 			setTimeout(function() {
 			$('#imgRepUm').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConRepUm').css({
@@ -432,7 +436,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('#imgRepTres').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConRepTres').css({
@@ -441,7 +445,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('#imgRepQuatro').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConRepQuatro').css({
@@ -450,7 +454,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.ConDesUm').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConDesUm').css({
@@ -459,7 +463,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.ConDesTres').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConDesTres').css({
@@ -468,7 +472,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.ConDesQuatro').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConDesQuatro').css({
@@ -477,7 +481,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.btMessUm').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			});
 			}, 200);
 			$('.btMessUm').css({
@@ -486,185 +490,141 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.btMessUmDois').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			});
 			}, 200);
 			$('.btMessUmDois').css({
 				"cursor":"pointer","pointer-events": "visible"
 			})
-			self.repDois = false;
+			self.repDois = 0; 
 		}
-	});
-	$(".ConDesDois").click(function() {
-		if (!self.repDois) {
-			$('.repDes2').fadeIn(300);
-			$('.ConProb2').fadeIn(300);
+		// REPORT TRES -------------------
+		if( e.target.id == 'imgRepTres' || e.target.id == 'ConDesTres'){
+			if (self.repTres%2 == 0) {
+				$('.repDes3').fadeIn(300);
+				$('.ConProb3').fadeIn(300);
 
-			$('#imgRepUm').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepUm').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepTres').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepTres').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepQuatro').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepQuatro').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('.ConDesUm').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesTres').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesQuatro').css({
-				"opacity": "0","pointer-events": "none"
-			})
+				$('#imgRepUm').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConRepUm').css({
+					"pointer-events": "none","cursor":"default"
+				})
+				$('#imgRepDois').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConRepDois').css({
+					"pointer-events": "none","cursor":"default"
+				})
+				$('#imgRepQuatro').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConRepQuatro').css({
+					"pointer-events": "none","cursor":"default"
+				})
+				$('.ConDesUm').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConDesDois').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConDesQuatro').css({
+					"opacity": "0","pointer-events": "none"
+				})
 
-			$('.btMessUm').css({
-				"opacity": "0","pointer-events": "none"
-			});
-			$('.btMessUmDois').css({
-				"opacity": "0","pointer-events": "none"
-			});
+				$('.btMessUm').css({
+					"opacity": "0","pointer-events": "none"
+				});
+				$('.btMessUmDois').css({
+					"opacity": "0","pointer-events": "none"
+				});
+				self.repTres = 1; 
+			}
+			else if (self.repTres == 1) {
+				$('.repDes3').fadeOut(100);
+				$('.ConProb3').fadeOut(100);
 
-			self.repDois = true;
-		} else {
-			$('.repDes2').fadeOut(100);
-			$('.ConProb2').fadeOut(100);
+				setTimeout(function() {
+				$('#imgRepUm').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConRepUm').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('#imgRepUm').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConRepUm').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('#imgRepDois').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConRepDois').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('#imgRepTres').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConRepTres').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('#imgRepQuatro').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConRepQuatro').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('#imgRepQuatro').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConRepQuatro').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('.ConDesUm').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConDesUm').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('.ConDesUm').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConDesUm').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('.ConDesDois').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConDesDois').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('.ConDesTres').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConDesTres').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('.ConDesQuatro').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConDesQuatro').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('.ConDesQuatro').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConDesQuatro').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('.btMessUm').css({
+					"opacity": "1","pointer-events": "visible"
+				});
+				}, 200);
+				$('.btMessUm').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('.btMessUm').css({
-				"opacity": "1"
-			});
-			}, 200);
-			$('.btMessUm').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
-
-			setTimeout(function() {
-			$('.btMessUmDois').css({
-				"opacity": "1"
-			});
-			}, 200);
-			$('.btMessUmDois').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
-
-			self.repDois = false;
+				setTimeout(function() {
+				$('.btMessUmDois').css({
+					"opacity": "1","pointer-events": "visible"
+				});
+				}, 200);
+				$('.btMessUmDois').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
+				self.repTres = 2; 
+			}
 		}
-	});
-
-
-	$(".ConRepTres").click(function() {
-		if (!self.repTres) {
-			$('.repDes3').fadeIn(300);
-			$('.ConProb3').fadeIn(300);
-
-			$('#imgRepUm').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepUm').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepDois').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepDois').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepQuatro').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepQuatro').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('.ConDesUm').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesDois').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesQuatro').css({
-				"opacity": "0","pointer-events": "none"
-			})
-
-			$('.btMessUm').css({
-				"opacity": "0","pointer-events": "none"
-			});
-			$('.btMessUmDois').css({
-				"opacity": "0","pointer-events": "none"
-			});
-
-			self.repTres = true;
-		} else {
+		else if (self.repTres) {
 			$('.repDes3').fadeOut(100);
 			$('.ConProb3').fadeOut(100);
 
 			setTimeout(function() {
 			$('#imgRepUm').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConRepUm').css({
@@ -673,7 +633,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('#imgRepDois').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConRepDois').css({
@@ -682,7 +642,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('#imgRepQuatro').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConRepQuatro').css({
@@ -691,7 +651,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.ConDesUm').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConDesUm').css({
@@ -700,7 +660,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.ConDesDois').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConDesDois').css({
@@ -709,7 +669,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.ConDesQuatro').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConDesQuatro').css({
@@ -718,7 +678,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.btMessUm').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			});
 			}, 200);
 			$('.btMessUm').css({
@@ -727,186 +687,141 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.btMessUmDois').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			});
 			}, 200);
 			$('.btMessUmDois').css({
 				"cursor":"pointer","pointer-events": "visible"
 			})
-
-			self.repTres = false;
+			self.repTres = 0; 
 		}
-	});
-	$(".ConDesTres").click(function() {
-		if (!self.repTres) {
-			$('.repDes3').fadeIn(300);
-			$('.ConProb3').fadeIn(300);
+		// REPORT QUATRO -------------------
+		if( e.target.id == 'imgRepQuatro' || e.target.id == 'ConDesQuatro'){
+			if (self.repQuatro%2 == 0) {
+				$('.repDes4').fadeIn(300);
+				$('.ConProb4').fadeIn(300);
 
-			$('#imgRepUm').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepUm').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepDois').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepDois').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepQuatro').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepQuatro').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('.ConDesUm').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesDois').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesQuatro').css({
-				"opacity": "0","pointer-events": "none"
-			})
+				$('#imgRepUm').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConRepUm').css({
+					"pointer-events": "none","cursor":"default"
+				})
+				$('#imgRepDois').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConRepDois').css({
+					"pointer-events": "none","cursor":"default"
+				})
+				$('#imgRepTres').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConRepTres').css({
+					"pointer-events": "none","cursor":"default"
+				})
+				$('.ConDesUm').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConDesDois').css({
+					"opacity": "0","pointer-events": "none"
+				})
+				$('.ConDesTres').css({
+					"opacity": "0","pointer-events": "none"
+				})
 
-			$('.btMessUm').css({
-				"opacity": "0","pointer-events": "none"
-			});
-			$('.btMessUmDois').css({
-				"opacity": "0","pointer-events": "none"
-			});
+				$('.btMessUm').css({
+					"opacity": "0","pointer-events": "none"
+				});
+				$('.btMessUmDois').css({
+					"opacity": "0","pointer-events": "none"
+				});
+				self.repQuatro = 1; 
+			}
+			else if (self.repQuatro == 1) {
+				$('.repDes4').fadeOut(100);
+				$('.ConProb4').fadeOut(100);
 
-			self.repTres = true;
-		} else {
-			$('.repDes3').fadeOut(100);
-			$('.ConProb3').fadeOut(100);
+				setTimeout(function() {
+				$('#imgRepUm').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConRepUm').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('#imgRepUm').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConRepUm').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('#imgRepDois').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConRepDois').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('#imgRepDois').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConRepDois').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('#imgRepTres').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConRepTres').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('#imgRepQuatro').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConRepQuatro').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('.ConDesUm').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConDesUm').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('.ConDesUm').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConDesUm').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('.ConDesDois').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConDesDois').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('.ConDesDois').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConDesDois').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('.ConDesTres').css({
+					"opacity": "1","pointer-events": "visible"
+				})
+				}, 200);
+				$('.ConDesTres').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('.ConDesQuatro').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConDesQuatro').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
+				setTimeout(function() {
+				$('.btMessUm').css({
+					"opacity": "1","pointer-events": "visible"
+				});
+				}, 200);
+				$('.btMessUm').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
 
-			setTimeout(function() {
-			$('.btMessUm').css({
-				"opacity": "1"
-			});
-			}, 200);
-			$('.btMessUm').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
-
-			setTimeout(function() {
-			$('.btMessUmDois').css({
-				"opacity": "1"
-			});
-			}, 200);
-			$('.btMessUmDois').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
-
-			self.repTres = false;
+				setTimeout(function() {
+				$('.btMessUmDois').css({
+					"opacity": "1","pointer-events": "visible"
+				});
+				}, 200);
+				$('.btMessUmDois').css({
+					"cursor":"pointer","pointer-events": "visible"
+				})
+				self.repQuatro = 2; 
+			}
 		}
-	});
-
-
-	$(".ConRepQuatro").click(function() {
-		if (!self.repQuatro) {
-			$('.repDes4').fadeIn(300);
-			$('.ConProb4').fadeIn(300);
-
-			$('#imgRepUm').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepUm').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepDois').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepDois').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepTres').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepTres').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('.ConDesUm').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesDois').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesTres').css({
-				"opacity": "0","pointer-events": "none"
-			})
-
-			$('.btMessUm').css({
-				"opacity": "0","pointer-events": "none"
-			});
-			$('.btMessUmDois').css({
-				"opacity": "0","pointer-events": "none"
-			});
-
-			self.repQuatro = true;
-		} else {
+		else if (self.repQuatro) {
 			$('.repDes4').fadeOut(100);
 			$('.ConProb4').fadeOut(100);
 
 			setTimeout(function() {
 			$('#imgRepUm').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConRepUm').css({
@@ -915,7 +830,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('#imgRepDois').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConRepDois').css({
@@ -924,7 +839,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('#imgRepTres').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConRepTres').css({
@@ -933,7 +848,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.ConDesUm').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConDesUm').css({
@@ -942,7 +857,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.ConDesDois').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConDesDois').css({
@@ -951,7 +866,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.ConDesTres').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			})
 			}, 200);
 			$('.ConDesTres').css({
@@ -960,7 +875,7 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.btMessUm').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			});
 			}, 200);
 			$('.btMessUm').css({
@@ -969,136 +884,15 @@ app.descriptions = function() {
 
 			setTimeout(function() {
 			$('.btMessUmDois').css({
-				"opacity": "1"
+				"opacity": "1","pointer-events": "visible"
 			});
 			}, 200);
 			$('.btMessUmDois').css({
 				"cursor":"pointer","pointer-events": "visible"
 			})
-
-			self.repQuatro = false;
+			self.repQuatro = 0; 
 		}
-	});
-	$(".ConDesQuatro").click(function() {
-		if (!self.repQuatro) {
-			$('.repDes4').fadeIn(300);
-			$('.ConProb4').fadeIn(300);
-
-			$('#imgRepUm').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepUm').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepDois').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepDois').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('#imgRepTres').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConRepTres').css({
-				"pointer-events": "none","cursor":"default"
-			})
-			$('.ConDesUm').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesDois').css({
-				"opacity": "0","pointer-events": "none"
-			})
-			$('.ConDesTres').css({
-				"opacity": "0","pointer-events": "none"
-			})
-
-			$('.btMessUm').css({
-				"opacity": "0","pointer-events": "none"
-			});
-			$('.btMessUmDois').css({
-				"opacity": "0","pointer-events": "none"
-			});
-
-			self.repQuatro = true;
-		} else {
-			$('.repDes4').fadeOut(100);
-			$('.ConProb4').fadeOut(100);
-
-			setTimeout(function() {
-			$('#imgRepUm').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConRepUm').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
-
-			setTimeout(function() {
-			$('#imgRepDois').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConRepDois').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
-
-			setTimeout(function() {
-			$('#imgRepTres').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConRepTres').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
-
-			setTimeout(function() {
-			$('.ConDesUm').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConDesUm').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
-
-			setTimeout(function() {
-			$('.ConDesDois').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConDesDois').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
-
-			setTimeout(function() {
-			$('.ConDesTres').css({
-				"opacity": "1"
-			})
-			}, 200);
-			$('.ConDesTres').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
-
-			setTimeout(function() {
-			$('.btMessUm').css({
-				"opacity": "1"
-			});
-			}, 200);
-			$('.btMessUm').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
-
-			setTimeout(function() {
-			$('.btMessUmDois').css({
-				"opacity": "1"
-			});
-			}, 200);
-			$('.btMessUmDois').css({
-				"cursor":"pointer","pointer-events": "visible"
-			})
-
-			self.repQuatro = false;
-		}
-	});
+	});	
 }
 
 app.events = function() {
@@ -1228,139 +1022,39 @@ app.events = function() {
 		}, 300);
 	});
 	/* -------------  MENU -------------------------------*/
-	$('html').click(function() {
-		$('.repDes1').fadeOut(100);
-		$('.ConProb').fadeOut(100);
 
-		$('.repDes2').fadeOut(100);
-		$('.ConProb2').fadeOut(100);
+	$('body').click(function(e) {
+		// EDIF -------------------
+		if( e.target.id == 'imgEd'){
+			if (self.desc1%2 == 0) {
 
-		$('.repDes3').fadeOut(100);
-		$('.ConProb3').fadeOut(100);
+				$('.desc1').show(300);
+				setTimeout(function() {
+					$('.txDesc1').fadeIn(200);
+				}, 200);
 
-		$('.repDes4').fadeOut(100);
-		$('.ConProb4').fadeOut(100);
+				$('.estr').fadeOut(100);
+				$('.munic').fadeOut(100);
+				$('.agua').fadeOut(100);
+				$('.planeta').css({
+					"opacity": "0"
+				})
+				self.desc1 = 1;	
+			}	
+			else if (self.desc1 == 1) {
+				$('.desc1').fadeOut(100);
+				$('.txDesc1').fadeOut(100);
 
-		setTimeout(function() {
-		$('#imgRepUm').css({
-			"opacity": "1"
-		})
-		}, 200);
-		$('.ConRepUm').css({
-			"cursor":"pointer","pointer-events": "visible"
-		})
-
-		setTimeout(function() {
-		$('#imgRepDois').css({
-			"opacity": "1"
-		})
-		}, 200);
-		$('.ConRepDois').css({
-			"cursor":"pointer","pointer-events": "visible"
-		})
-
-		setTimeout(function() {
-		$('#imgRepTres').css({
-			"opacity": "1"
-		})
-		}, 200);
-		$('.ConRepTres').css({
-			"cursor":"pointer","pointer-events": "visible"
-		})
-
-		setTimeout(function() {
-		$('#imgRepQuatro').css({
-			"opacity": "1"
-		})
-		}, 200);
-		$('.ConRepQuatro').css({
-			"cursor":"pointer","pointer-events": "visible"
-		})
-
-		setTimeout(function() {
-		$('.ConDesUm').css({
-			"opacity": "1"
-		})
-		}, 200);
-		$('.ConDesUm').css({
-			"cursor":"pointer","pointer-events": "visible"
-		})
-
-		setTimeout(function() {
-		$('.ConDesDois').css({
-			"opacity": "1"
-		})
-		}, 200);
-		$('.ConDesDois').css({
-			"cursor":"pointer","pointer-events": "visible"
-		})
-
-		setTimeout(function() {
-		$('.ConDesTres').css({
-			"opacity": "1"
-		})
-		}, 200);
-		$('.ConDesTres').css({
-			"cursor":"pointer","pointer-events": "visible"
-		})
-
-		setTimeout(function() {
-		$('.ConDesQuatro').css({
-			"opacity": "1"
-		})
-		}, 200);
-		$('.ConDesQuatro').css({
-			"cursor":"pointer","pointer-events": "visible"
-		})
-
-		setTimeout(function() {
-		$('.btMessUm').css({
-			"opacity": "1"
-		});
-		}, 200);
-		$('.btMessUm').css({
-			"cursor":"pointer","pointer-events": "visible"
-		})
-
-		setTimeout(function() {
-		$('.btMessUmDois').css({
-			"opacity": "1"
-		});
-		}, 200);
-		$('.btMessUmDois').css({
-			"cursor":"pointer","pointer-events": "visible"
-		})
-	});
-
-	$('.repQuatro').click(function(event) {
-		event.stopPropagation();
-	});
-	$('.repTres').click(function(event) {
-		event.stopPropagation();
-	});
-	$('.repDois').click(function(event) {
-		event.stopPropagation();
-	});
-	$('.repUm').click(function(event) {
-		event.stopPropagation();
-	});
-
-	$(".edif").click(function() {
-		if (!self.desc1) {
-			$('.desc1').show(300);
-			setTimeout(function() {
-				$('.txDesc1').fadeIn(200);
-			}, 200);
-
-			$('.estr').fadeOut(100);
-			$('.munic').fadeOut(100);
-			$('.agua').fadeOut(100);
-			$('.planeta').css({
-				"opacity": "0"
-			})
-
-			self.desc1 = true;
-		} else {
+				$('.estr').fadeIn(300);
+				$('.munic').fadeIn(300);
+				$('.agua').fadeIn(300);
+				$('.planeta').css({
+					"opacity": "1"
+				})
+				self.desc1 = 2;	
+			}	
+		}
+		else if(self.desc1 > 0) {
 			$('.desc1').fadeOut(100);
 			$('.txDesc1').fadeOut(100);
 
@@ -1370,27 +1064,39 @@ app.events = function() {
 			$('.planeta').css({
 				"opacity": "1"
 			})
-
-			self.desc1 = false;
+			self.desc1 = 0;	
 		}
-	});
+		// ESTR -------------------
+		if( e.target.id == 'imgEs'){
+			if (self.desc2%2 == 0) {
 
-	$(".estr").click(function() {
-		if (!self.desc2) {
-			$('.desc2').show(300);
-			setTimeout(function() {
-				$('.txDesc2').fadeIn(200);
-			}, 200);
+				$('.desc2').show(300);
+				setTimeout(function() {
+					$('.txDesc2').fadeIn(200);
+				}, 200);
 
-			$('.edif').fadeOut(100);
-			$('.munic').fadeOut(100);
-			$('.agua').fadeOut(100);
-			$('.planeta').css({
-				"opacity": "0"
-			})
+				$('.edif').fadeOut(100);
+				$('.munic').fadeOut(100);
+				$('.agua').fadeOut(100);
+				$('.planeta').css({
+					"opacity": "0"
+				})
+				self.desc2 = 1;	
+			}	
+			else if (self.desc2 == 1) {
+				$('.desc2').fadeOut(100);
+				$('.txDesc2').fadeOut(100);
 
-			self.desc2 = true;
-		} else {
+				$('.edif').fadeIn(300);
+				$('.munic').fadeIn(300);
+				$('.agua').fadeIn(300);
+				$('.planeta').css({
+					"opacity": "1"
+				})
+				self.desc2 = 2;	
+			}	
+		}
+		else if(self.desc2 > 0) {
 			$('.desc2').fadeOut(100);
 			$('.txDesc2').fadeOut(100);
 
@@ -1400,33 +1106,48 @@ app.events = function() {
 			$('.planeta').css({
 				"opacity": "1"
 			})
-
-			self.desc2 = false;
+			self.desc2 = 0;	
 		}
-	});
+		// MUNIC -------------------
+		if( e.target.id == 'imgMun'){
+			if (self.desc3%2 == 0) {
+				$('.desc3').show(300);
+				setTimeout(function() {
+					$('.txDesc3').fadeIn(200);
+				}, 200);
 
-	$(".munic").click(function() {
-		if (!self.desc3) {
-			$('.desc3').show(300);
-			setTimeout(function() {
-				$('.txDesc3').fadeIn(200);
-			}, 200);
-
-			$('.estr').fadeOut(100);
-			$('.edif').fadeOut(100);
-			$('.agua').fadeOut(100);
-			$('.planeta').css({
-				"opacity": "0"
-			})
-
-			setTimeout(function() {
-				$(".munic").css({
-					"margin-left": "10%"
+				$('.estr').fadeOut(100);
+				$('.edif').fadeOut(100);
+				$('.agua').fadeOut(100);
+				$('.planeta').css({
+					"opacity": "0"
 				})
-			}, 100);
 
-			self.desc3 = true;
-		} else {
+				setTimeout(function() {
+					$(".munic").css({
+						"margin-left": "10%"
+					})
+				}, 100);
+				self.desc3 = 1;	
+			}	
+			else if (self.desc3 == 1) {
+				$('.desc3').fadeOut(100);
+				$('.txDesc3').fadeOut(100);
+
+				$('.estr').fadeIn(300);
+				$('.edif').fadeIn(300);
+				$('.agua').fadeIn(300);
+				$('.planeta').css({
+					"opacity": "1"
+				})
+
+				$(".munic").css({
+					"margin-left": "20%"
+				})
+				self.desc3 = 2;	
+			}	
+		}
+		else if(self.desc3 > 0) {
 			$('.desc3').fadeOut(100);
 			$('.txDesc3').fadeOut(100);
 
@@ -1440,32 +1161,51 @@ app.events = function() {
 			$(".munic").css({
 				"margin-left": "20%"
 			})
-
-			self.desc3 = false;
+			self.desc3 = 0;	
 		}
-	});
-	$(".agua").click(function() {
-		if (!self.desc4) {
-			$('.desc4').show(300);
-			setTimeout(function() {
-				$('.txDesc4').fadeIn(200);
-			}, 200);
+		// AGUA -------------------
+		if( e.target.id == 'imgAg'){
+			if (self.desc4%2 == 0) {
+				$('.desc4').show(300);
+				setTimeout(function() {
+					$('.txDesc4').fadeIn(200);
+				}, 200);
 
-			$('.estr').fadeOut(100);
-			$('.edif').fadeOut(100);
-			$('.munic').fadeOut(100);
-			$('.planeta').css({
-				"opacity": "0"
-			})
+				$('.estr').fadeOut(100);
+				$('.edif').fadeOut(100);
+				$('.munic').fadeOut(100);
+				$('.planeta').css({
+					"opacity": "0"
+				})
 
-			setTimeout(function() {
+				setTimeout(function() {
+					$(".agua").css({
+						"margin-left": "10%"
+					})
+				}, 200);
+				self.desc4 = 1;	
+			}	
+			else if (self.desc4 == 1) {
+				$('.desc4').fadeOut(100);
+				$('.txDesc4').fadeOut(100);
+
+				$('.estr').fadeIn(300);
+				$('.edif').fadeIn(300);
+				$('.munic').fadeIn(300);
+				$('.planeta').css({
+					"opacity": "1"
+				})
+
+				$(".munic").css({
+					"margin-left": "20%"
+				})
 				$(".agua").css({
 					"margin-left": "10%"
 				})
-			}, 200);
-
-			self.desc4 = true;
-		} else {
+				self.desc4 = 2;	
+			}	
+		}
+		else if(self.desc4 > 0) {
 			$('.desc4').fadeOut(100);
 			$('.txDesc4').fadeOut(100);
 
@@ -1482,59 +1222,12 @@ app.events = function() {
 			$(".agua").css({
 				"margin-left": "10%"
 			})
-
-			self.desc4 = false;
+			self.desc4 = 0;	
 		}
-	});
-
-	$('html').click(function() {
-		if (self.fora == 1) {
-			$('.desc1').fadeOut(100);
-			$('.desc2').fadeOut(100);
-			$('.desc3').fadeOut(100);
-			$('.desc4').fadeOut(100);
-			$('.txDesc1').fadeOut(100);
-			$('.txDesc2').fadeOut(100);
-			$('.txDesc3').fadeOut(100);
-			$('.txDesc4').fadeOut(100);
-
-			$('.estr').fadeIn(300);
-			$('.edif').fadeIn(300);
-			$('.munic').fadeIn(300);
-			$('.agua').fadeIn(300);
-			$('.planeta').css({
-				"opacity": "1"
-			})
-
-			$(".munic").css({
-				"margin-left": "20%"
-			})
-			$(".agua").css({
-				"margin-left": "margin-left:10%"
-			})
-		}
-	});
-
-	$('.edif').click(function(event) {
-		event.stopPropagation();
-		self.fora = 1;
-	});
-	$('.estr').click(function(event) {
-		event.stopPropagation();
-		self.fora = 1;
-	});
-	$('.munic').click(function(event) {
-		event.stopPropagation();
-		self.fora = 1;
-	});
-	$('.agua').click(function(event) {
-		event.stopPropagation();
-		self.fora = 1;
-	});
+	});		
 }
 
 app.slide = function() {
-	//console.log("slide");
 	if (app.start) {
 		if (app.counter == 0) {
 			$(".ConT3").hide(10);

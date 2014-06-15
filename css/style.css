@@ -211,11 +211,13 @@ a{
 
 html{
 	overflow: auto; 
+	overflow-x:hidden; 
 }
 
 body{
 	overflow: auto;
 	margin:0px;
+	overflow-x:hidden;
 }
 
 .content-container {
@@ -761,7 +763,7 @@ body{
 
     z-index: 1000;
 
-    cursor: pointer;
+    cursor: pointer !important;
 }
 #imgRepUm{
 	position:absolute;
