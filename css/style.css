@@ -1068,8 +1068,6 @@ body{
 
 	margin: auto;
 	margin-top: 300px;
-
-	background: transparent;
 }
 
 
@@ -1078,6 +1076,7 @@ body{
 	height: 520px;
 	float: left;
 	margin-left:-5%;
+	margin-top: 50px;
 	background: transparent;
 }
 /* IMG TELEMOVEL -----------------*/
@@ -1356,7 +1355,7 @@ body{
 	height: 100px;
 
 	float: right;
-	margin-top: 170px;
+	margin-top: 180px;
 
 	line-height: 150%;
 	text-align: center;
@@ -3422,7 +3421,7 @@ body{
 	position: fixed;
 	top:20px;
 	left: -40px;
-	width: 650px;
+	width: 150px;
 	height: 35px;
 	z-index: 999999999999;
 }
@@ -3778,10 +3777,10 @@ body{
 
 
 .sliDois{
-	width:100%;
+	width:95%;
 	height: 530px;
 
-	margin: auto;
+	margin-right: 0px;
 	margin-top: 300px;
 
 	background: transparent;
@@ -3790,6 +3789,7 @@ body{
 .conAni{
 	width:360px;
 	height: 520px;
+	margin-top: 0px;
 	background: transparent;
 	margin-left: calc(50% - 180px);
 }
@@ -4281,10 +4281,46 @@ body {
 .menu{
 	position: fixed;
 	top:10px;
-	left: -70px;
-	width: 650px;
-	height: 50px;
+	left: -90px;
+	width: 70px;
+	height: 30px;
 	z-index: 999999999999;
+}
+.seta{
+	width:15px;
+	height:15px;
+
+	margin-top: 8px;
+	margin-left: 10px;
+
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+}
+
+.um.fase2{
+	display: block;
+	-webkit-animation: opacidadeBt 0.5s;
+	-moz-animation: opacidadeBt 0.5s;
+	-o-animation: opacidadeBt 0.5s;
+	animation: opacidadeBt 0.5s;
+	background: rgba(40, 40, 40, 0.8);
+	float: left;
+	width: 35px;
+	height: 30px;
+}
+.quatro.fase2{
+	display: block;
+	-webkit-animation: opacidadeBtD 0.5s;
+	-moz-animation: opacidadeBtD 0.5s;
+	-o-animation: opacidadeBtD 0.5s;
+	animation: opacidadeBtD 0.5s;
+	background: rgba(80, 80, 80, 0.8);
+	float: left;
+	width: 35px;
+	height: 30px;
 }
 
 #language{
@@ -4293,7 +4329,7 @@ body {
 	right:10px; 
 	top:10px;
 	width:50px;
-	height: 35px;
+	height: 30px;
 	z-index: 999999999999;
 	position: fixed;
 	color:white;
@@ -4312,8 +4348,8 @@ body {
 }
 
 .logotipo{
-	width: 150px;
-	height: 35px;
+	width: 130px;
+	height: 30px;
 
 	top: 10px;
 	left: 10px;
@@ -4321,6 +4357,20 @@ body {
 	position: fixed;
 
 	background: rgba(0,0,0,0.8);
+}
+
+.conLog{
+	width:100px;
+	height:30px;
+
+	margin-top: 3px;
+	margin-left: 5px;
+
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
 }
 
 .sliUm{
@@ -4369,23 +4419,22 @@ body {
 }
 
 .repUm{
-	width:160px;
-	height: 150px;
+	width:140px;
+	height: 130px;
 	position: absolute;
-	margin-top: 20px;
+	margin-top: 30px;
 	margin-left: calc(65% - 80px);
-	background: transparent;
 }
 
 .ConRepUm{
-	width:40px;
+	width:30px;
 	height: 80px;
 	display:block; 
     position:relative;
     overflow:hidden;
 
     margin: auto;
-    margin-top: 30px;
+    margin-top: 20px;
 
     background: transparent;
 
@@ -4397,12 +4446,12 @@ body {
 .ConDesUm{
 	position: absolute;
 	margin-top: -30px;
-	width:150px;
-	height: 15px;
+	width:120px;
+	height: 10px;
 	background: rgba(192, 57, 43, 0.8);
 	font-family: Ssemi;
 	color: white;
-	font-size: 16px;
+	font-size: 14px;
 	text-align: center;
 	padding: 10px;
 	cursor: pointer;
@@ -4572,6 +4621,7 @@ body {
 .conAni{
 	width:280px;
 	height: 520px;
+	margin-top: 0px;
 	background: transparent;
 	margin-left: calc(50% - 140px);
 }
@@ -4705,7 +4755,7 @@ body {
 .but{
 	width:50px;
 	height: 10px;
-	margin-top: 20px;
+	margin-top: 15px;
 	margin-left: calc(60% - 20px);
 
 	font-family: Sbold;

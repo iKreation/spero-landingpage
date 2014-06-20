@@ -959,7 +959,7 @@ app.events = function() {
 
 	$('.btMessUm').click(function() {
 		$('html, body').animate({
-			scrollTop: (($(".conAni").offset().top) - 150)
+			scrollTop: (($(".sliDois").offset().top) - 90)
 		}, 300);
 	});
 
@@ -971,7 +971,7 @@ app.events = function() {
 
 	$('.btMessDois').click(function() {
 		$('html, body').animate({
-			scrollTop: (($(".sliTres").offset().top) - 40)
+			scrollTop: (($(".sliTres").offset().top) - 140)
 		}, 300);
 	});
 
@@ -997,7 +997,7 @@ app.events = function() {
 		}
 		if(foi == false){
 			$('html, body').animate({
-				scrollTop: (($(".sliDois").offset().top) - 140)
+				scrollTop: (($(".sliDois").offset().top) - 90)
 			}, 300);
 		}
 	});
@@ -1005,7 +1005,7 @@ app.events = function() {
 	/* -------------  MENU -------------------------------*/
 	$('.tres').click(function() {
 		$('html, body').animate({
-			scrollTop: (($(".conAni").offset().top) - 105)
+			scrollTop: (($(".sliDois").offset().top) - 90)
 		}, 300);
 		self.start = true;
 	});
