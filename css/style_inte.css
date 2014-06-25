@@ -125,8 +125,8 @@ body{
 
 
 
-/*1200*/
-@media only screen and (min-width : 75.000em) {
+/*1100*/
+@media only screen and (min-width : 68.750em) {
 #container{
 	width:1200px !important;
 	position: absolute;
@@ -175,7 +175,7 @@ body{
 	z-index: 999999999999;
 	position: fixed;
 
-	background: rgba(0,0,0,0.8);
+	background: rgba(38, 166, 91, 0.8);
 }
 
 .conLog{
@@ -251,7 +251,7 @@ body{
 #legenda{
 	width:200px;
 	margin: auto;
-	background: rgba(244, 208, 63, 0.8);
+	background: rgba(245, 171, 53, 0.8);
 	padding-top: 10px;
 	font-size: 20px;
 	text-align: center;
@@ -280,7 +280,7 @@ body{
 	outline: none;
 	width: 100%;
 	border: none;
-	background: rgba(244, 208, 63, 0.8);
+	background: rgba(245, 171, 53, 0.8);
 	height: 80px;
 	color:white;
 	font-family: Sreg;
@@ -302,10 +302,11 @@ body{
 	float: left;
 }
 #intAss{
-	width:101%;
+	width:100%;
 	float: right;
+	margin-left: 5%;
 	height: 100%;
-	background: rgba(244, 208, 63, 0.8);
+	background: rgba(245, 171, 53, 0.8);
 }
 #titAss{
 	font-family: Sit;
@@ -326,9 +327,9 @@ body{
 #submeter{
 	width:20%;
 	height: 150px;
-	background: rgba(244, 208, 63, 0.8);
+	background: rgba(245, 171, 53, 0.8);
 	float: left;
-	margin-left: 10px;
+	margin-left: 5px;
 	cursor: pointer;
 }
 #submit{
@@ -362,7 +363,7 @@ body{
 #place{
 	width:200px;
 	margin-left: 10%;
-	background: rgba(244, 208, 63, 0.8);
+	background: rgba(245, 171, 53, 0.8);
 	padding-top: 10px;
 	font-size: 20px;
 	text-align: center;
@@ -402,7 +403,7 @@ body{
 #thanks{
 	width:450px;
 	margin-left: 10%;
-	background: rgba(244, 208, 63, 0.8);
+	background: rgba(245, 171, 53, 0.8);
 	padding-top: 10px;
 	font-size: 20px;
 	text-align: center;
@@ -606,8 +607,8 @@ body{
 
 
 /* RESPONSIVE > 650px---------------------------------------------*/
-/*900*/
-@media only screen and (max-width : 56.250em) {
+/*1100*/
+@media only screen and (max-width : 68.750em) {
 #imagemD{
 	width:50%;
 	height: 180px;
@@ -717,29 +718,28 @@ textarea {
 */
 
 @-webkit-keyframes corOp {
-  0%   { background: rgba(244, 208, 63, 0.8); }
-  100% { background: rgba(244, 208, 63, 1); }
+  0%   { background: rgba(245, 171, 53, 0.8); }
+  100% { background: rgba(245, 171, 53, 1); }
 }
 @-moz-keyframes corOp {
-  0%   { background: rgba(244, 208, 63, 0.8); }
-  100% { background: rgba(244, 208, 63, 1); }
+  0%   { background: rgba(245, 171, 53, 0.8); }
+  100% { background: rgba(245, 171, 53, 1); }
 }
 @-o-keyframes corOp {
-  0%   { background: rgba(244, 208, 63, 0.8); }
-  100% { background: rgba(244, 208, 63, 1);}
+  0%   { background: rgba(245, 171, 53, 0.8); }
+  100% { background: rgba(245, 171, 53, 1);}
 }
 @keyframes corOp {
-  0%   { background: rgba(244, 208, 63, 0.8); }
-  100% { background: rgba(244, 208, 63, 1);}
+  0%   { background: rgba(245, 171, 53, 0.8); }
+  100% { background: rgba(245, 171, 53, 1);}
 }
 #submeter:hover, #intAss:hover, #titRect:hover, #descRect:hover{
 	-webkit-animation: corOp 1s;
 	-moz-animation: corOp 1s;
 	-o-animation: corOp 1s;
 	animation: corOp 1s;
-	background: rgba(244, 208, 63, 1);
+	background: rgba(245, 171, 53, 1);
 }
-
 
 
 
