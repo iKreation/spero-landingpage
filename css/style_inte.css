@@ -653,6 +653,8 @@ label {
     cursor: pointer;  
     position: relative;  
     padding-left: 30px;
+    font-weight:normal;
+    font-family: Sreg;
 }  
 input[type=radio] {  
     display: none;  
