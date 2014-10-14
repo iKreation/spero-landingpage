@@ -50,6 +50,7 @@ table {
 
 html, body {
 	height: 2330px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @font-face
@@ -210,8 +211,8 @@ a{
 }
 
 html{
-	overflow: auto; 
-	overflow-x:hidden; 
+	overflow: auto;
+	overflow-x:hidden;
 }
 
 body{
@@ -298,7 +299,7 @@ body{
 	margin-top: 20px;
 	margin-left: 18px;
 
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -307,7 +308,7 @@ body{
 #imgBaixo, #imgCima{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
     background: transparent;
 }
@@ -335,7 +336,7 @@ body{
 #language{
 	font-family: Sreg;
 	font-size: 16px;
-	right:30px; 
+	right:30px;
 	top:30px;
 	width:90px;
 	height: 50px;
@@ -381,7 +382,7 @@ body{
 	margin-top: 6px;
 	margin-left: calc(50% - 88px);
 
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -390,7 +391,7 @@ body{
 #imgLog{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
     background: transparent;
 }
@@ -427,7 +428,7 @@ body{
 .ConProb{
 	width:15%;
 	height: 300px;
-	display:block; 
+	display:block;
     position:absolute;
     overflow:hidden;
     z-index: 9999;
@@ -440,14 +441,14 @@ body{
 #imgProb{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .ConSoc2{
 	width:35px;
 	height: 35px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -459,13 +460,13 @@ body{
 #imgSoc2{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 .ConSoc3{
 	width:35px;
 	height: 35px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -477,7 +478,7 @@ body{
 #imgSoc3{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* DESCRIÇÃO REPORTS 1---------------------------------------------*/
@@ -507,7 +508,7 @@ body{
 .ConProb2{
 	width:25%;
 	height: 300px;
-	display:block; 
+	display:block;
     position:absolute;
     overflow:hidden;
     z-index: 9999;
@@ -520,14 +521,14 @@ body{
 #imgProb2{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .ConSoc2{
 	width:35px;
 	height: 35px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -539,13 +540,13 @@ body{
 #imgSoc2{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 .ConSoc3{
 	width:35px;
 	height: 35px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -557,7 +558,7 @@ body{
 #imgSoc3{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* DESCRIÇÃO REPORTS 2---------------------------------------------*/
@@ -588,7 +589,7 @@ body{
 .ConProb3{
 	width:20%;
 	height: 300px;
-	display:block; 
+	display:block;
     position:absolute;
     overflow:hidden;
     z-index: 9999;
@@ -601,14 +602,14 @@ body{
 #imgProb3{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .ConSoc2{
 	width:35px;
 	height: 35px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -620,13 +621,13 @@ body{
 #imgSoc2{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 .ConSoc3{
 	width:35px;
 	height: 35px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -638,7 +639,7 @@ body{
 #imgSoc3{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* DESCRIÇÃO REPORTS 3---------------------------------------------*/
@@ -675,7 +676,7 @@ body{
 .tri4{
 	width:80px;
 	height: 55px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -687,7 +688,7 @@ body{
 #imgTri4{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* DESCRIÇÃO REPORTS 4---------------------------------------------*/
@@ -708,7 +709,7 @@ body{
 .ConRep{
 	width:100%;
 	height: 360px;
-	display:block; 
+	display:block;
     position:relative;
 
     margin: auto;
@@ -752,7 +753,7 @@ body{
 .ConRepUm{
 	width:40px;
 	height: 80px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -768,7 +769,7 @@ body{
 #imgRepUm{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /*UM*/
@@ -806,7 +807,7 @@ body{
 .ConRepDois{
 	width:40px;
 	height: 80px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -822,7 +823,7 @@ body{
 #imgRepDois{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /*DOIS*/
@@ -862,7 +863,7 @@ body{
 .ConRepTres{
 	width:40px;
 	height: 80px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -878,7 +879,7 @@ body{
 #imgRepTres{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /*TRES*/
@@ -918,13 +919,13 @@ body{
 #imgDesQuatro{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 .ConRepQuatro{
 	width:40px;
 	height: 80px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -940,7 +941,7 @@ body{
 #imgRepQuatro{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /*TRES*/
@@ -981,7 +982,7 @@ body{
 .Contri{
 	width:80px;
 	height: 55px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -994,7 +995,7 @@ body{
 #imgTri{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* MENSAGEM UM -----------------*/
@@ -1038,7 +1039,7 @@ body{
 .triangulo2{
 	width:80px;
 	height: 55px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1085,7 +1086,7 @@ body{
 	/*width:270px;*/
 	width:460px;
 	height: 460px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1096,7 +1097,7 @@ body{
 .ConT2{
 	width:460px;
 	height: 460px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1109,7 +1110,7 @@ body{
 .ConT3{
 	width:460px;
 	height: 460px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1123,7 +1124,7 @@ body{
 #imgT{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* IMG TELEMOVEL -----------------*/
@@ -1199,7 +1200,7 @@ body{
 .ConEx{
 	width:15px;
 	height: 90px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1212,7 +1213,7 @@ body{
 #imgEx{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
@@ -1234,7 +1235,7 @@ body{
 .ConSoc{
 	width:50px;
 	height: 25px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1247,7 +1248,7 @@ body{
 #imgSoc{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* EXCLAMAÇÃO -----------------*/
@@ -1265,9 +1266,9 @@ body{
 	margin-top: -30px;
 	padding-left: 10;
 	padding-top: 10;
-	 
-	font-family: Ssemi;	
-	font-size: 28px; 
+
+	font-family: Ssemi;
+	font-size: 28px;
 	color:white;
 
 	background: rgba(46, 204, 113,0.8);
@@ -1290,9 +1291,9 @@ body{
 
 	background: none;
 	border-color: white;
-	
+
 	border:0.125em solid white;
-	padding-left:5; 
+	padding-left:5;
 }
 
 .but{
@@ -1307,7 +1308,7 @@ body{
 
 	cursor: pointer;
 	border: none;
-	background-color:transparent; 
+	background-color:transparent;
 	border:0em solid white;
 }
 
@@ -1333,14 +1334,14 @@ body{
 }
 :-moz-placeholder { /* Firefox 18- */
    color: white;
-   font-family: Sit;  
+   font-family: Sit;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: white; 
-   font-family: Sit; 
+   color: white;
+   font-family: Sit;
 }
-:-ms-input-placeholder {  
-   color: white;  
+:-ms-input-placeholder {
+   color: white;
    font-family: Sit;
 }
 /* NEWSLETTER -----------------*/
@@ -1369,7 +1370,7 @@ body{
 
 .btMessDois{
 	width:390px;
-	background: transparent;	
+	background: transparent;
 }
 
 .txMessDois{
@@ -1385,7 +1386,7 @@ body{
 .ConTriDois{
 	width:80px;
 	height: 55px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1397,7 +1398,7 @@ body{
 #imgTriDois{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* MENSAGEM DOIS -----------------*/
@@ -1458,7 +1459,7 @@ body{
 /* SERVIÇOS -----------------*/
 .servi{
 	width:60%;
-	height: 440px;	
+	height: 440px;
 
 	margin-top: 60px;
 	float: left;
@@ -1468,7 +1469,7 @@ body{
 .edif{
 	width:154px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1482,7 +1483,7 @@ body{
 .ConEd{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1496,14 +1497,14 @@ body{
 #imgEd{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .estr{
 	width:154px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1517,7 +1518,7 @@ body{
 .ConEs{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1531,14 +1532,14 @@ body{
 #imgEs{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .munic{
 	width:154px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1552,7 +1553,7 @@ body{
 .ConMun{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1567,14 +1568,14 @@ body{
 #imgMun{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .agua{
 	width:154px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1588,7 +1589,7 @@ body{
 .ConAg{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1602,7 +1603,7 @@ body{
 #imgAg{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* SERVIÇOS -----------------*/
@@ -1613,7 +1614,7 @@ body{
 .planeta{
 	width:260px;
 	height: 340px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1626,7 +1627,7 @@ body{
 #imgP{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* IMG PLANETA -----------------*/
@@ -1848,7 +1849,7 @@ body{
 	margin-top: 20px;
 	margin-left: 18px;
 
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1857,7 +1858,7 @@ body{
 #imgBaixo, #imgCima{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
     background: transparent;
 }
@@ -1886,7 +1887,7 @@ body{
 #language{
 	font-family: Sreg;
 	font-size: 16px;
-	right:20px; 
+	right:20px;
 	top:20px;
 	width:90px;
 	height: 30px;
@@ -1934,7 +1935,7 @@ body{
 	margin-top: 6px;
 	margin-left: calc(50% - 88px);
 
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -1943,7 +1944,7 @@ body{
 #imgLog{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
     background: transparent;
 }
@@ -1980,7 +1981,7 @@ body{
 .ConProb{
 	width:15%;
 	height: 300px;
-	display:block; 
+	display:block;
     position:absolute;
     overflow:hidden;
     z-index: 9999;
@@ -1993,14 +1994,14 @@ body{
 #imgProb{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .ConSoc2{
 	width:35px;
 	height: 35px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2012,13 +2013,13 @@ body{
 #imgSoc2{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 .ConSoc3{
 	width:35px;
 	height: 35px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2030,7 +2031,7 @@ body{
 #imgSoc3{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* DESCRIÇÃO REPORTS 1---------------------------------------------*/
@@ -2060,7 +2061,7 @@ body{
 .ConProb2{
 	width:25%;
 	height: 300px;
-	display:block; 
+	display:block;
     position:absolute;
     overflow:hidden;
     z-index: 9999;
@@ -2073,14 +2074,14 @@ body{
 #imgProb2{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .ConSoc2{
 	width:35px;
 	height: 35px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2092,13 +2093,13 @@ body{
 #imgSoc2{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 .ConSoc3{
 	width:35px;
 	height: 35px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2110,7 +2111,7 @@ body{
 #imgSoc3{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* DESCRIÇÃO REPORTS 2---------------------------------------------*/
@@ -2141,7 +2142,7 @@ body{
 .ConProb3{
 	width:20%;
 	height: 300px;
-	display:block; 
+	display:block;
     position:absolute;
     overflow:hidden;
     z-index: 9999;
@@ -2154,14 +2155,14 @@ body{
 #imgProb3{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .ConSoc2{
 	width:35px;
 	height: 35px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2173,13 +2174,13 @@ body{
 #imgSoc2{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 .ConSoc3{
 	width:35px;
 	height: 35px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2191,7 +2192,7 @@ body{
 #imgSoc3{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* DESCRIÇÃO REPORTS 3---------------------------------------------*/
@@ -2228,7 +2229,7 @@ body{
 .tri4{
 	width:80px;
 	height: 55px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2240,7 +2241,7 @@ body{
 #imgTri4{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* DESCRIÇÃO REPORTS 4---------------------------------------------*/
@@ -2261,7 +2262,7 @@ body{
 .ConRep{
 	width:100%;
 	height: 360px;
-	display:block; 
+	display:block;
     position:relative;
 
     margin: auto;
@@ -2305,7 +2306,7 @@ body{
 .ConRepUm{
 	width:40px;
 	height: 80px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2321,7 +2322,7 @@ body{
 #imgRepUm{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /*UM*/
@@ -2359,7 +2360,7 @@ body{
 .ConRepDois{
 	width:40px;
 	height: 80px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2375,7 +2376,7 @@ body{
 #imgRepDois{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /*DOIS*/
@@ -2415,7 +2416,7 @@ body{
 .ConRepTres{
 	width:40px;
 	height: 80px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2431,7 +2432,7 @@ body{
 #imgRepTres{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /*TRES*/
@@ -2471,13 +2472,13 @@ body{
 #imgDesQuatro{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 .ConRepQuatro{
 	width:40px;
 	height: 80px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2493,7 +2494,7 @@ body{
 #imgRepQuatro{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /*TRES*/
@@ -2534,7 +2535,7 @@ body{
 .Contri{
 	width:80px;
 	height: 55px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2547,7 +2548,7 @@ body{
 #imgTri{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* MENSAGEM UM -----------------*/
@@ -2591,7 +2592,7 @@ body{
 .triangulo2{
 	width:80px;
 	height: 55px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2639,7 +2640,7 @@ body{
 	/*width:270px;*/
 	width:460px;
 	height: 460px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2650,7 +2651,7 @@ body{
 .ConT2{
 	width:460px;
 	height: 460px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2663,7 +2664,7 @@ body{
 .ConT3{
 	width:460px;
 	height: 460px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2677,7 +2678,7 @@ body{
 #imgT{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* IMG TELEMOVEL -----------------*/
@@ -2753,7 +2754,7 @@ body{
 .ConEx{
 	width:15px;
 	height: 90px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2766,7 +2767,7 @@ body{
 #imgEx{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
@@ -2788,7 +2789,7 @@ body{
 .ConSoc{
 	width:50px;
 	height: 25px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2801,7 +2802,7 @@ body{
 #imgSoc{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* EXCLAMAÇÃO -----------------*/
@@ -2819,9 +2820,9 @@ body{
 	margin-top: -30px;
 	padding-left: 10;
 	padding-top: 10;
-	 
-	font-family: Ssemi;	
-	font-size: 28px; 
+
+	font-family: Ssemi;
+	font-size: 28px;
 	color:white;
 
 	background: rgba(46, 204, 113,0.8);
@@ -2844,9 +2845,9 @@ body{
 
 	background: none;
 	border-color: white;
-	
+
 	border:0.125em solid white;
-	padding-left:5; 
+	padding-left:5;
 }
 
 .but{
@@ -2861,7 +2862,7 @@ body{
 
 	cursor: pointer;
 	border: none;
-	background-color:transparent; 
+	background-color:transparent;
 	border:0em solid white;
 }
 
@@ -2887,14 +2888,14 @@ body{
 }
 :-moz-placeholder { /* Firefox 18- */
    color: white;
-   font-family: Sit;  
+   font-family: Sit;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: white; 
-   font-family: Sit; 
+   color: white;
+   font-family: Sit;
 }
-:-ms-input-placeholder {  
-   color: white;  
+:-ms-input-placeholder {
+   color: white;
    font-family: Sit;
 }
 /* NEWSLETTER -----------------*/
@@ -2923,7 +2924,7 @@ body{
 
 .btMessDois{
 	width:390px;
-	background: transparent;	
+	background: transparent;
 }
 
 .txMessDois{
@@ -2939,7 +2940,7 @@ body{
 .ConTriDois{
 	width:80px;
 	height: 55px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -2951,7 +2952,7 @@ body{
 #imgTriDois{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* MENSAGEM DOIS -----------------*/
@@ -3012,7 +3013,7 @@ body{
 /* SERVIÇOS -----------------*/
 .servi{
 	width:60%;
-	height: 440px;	
+	height: 440px;
 
 	margin-top: 60px;
 	float: left;
@@ -3022,7 +3023,7 @@ body{
 .edif{
 	width:154px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -3036,7 +3037,7 @@ body{
 .ConEd{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -3050,14 +3051,14 @@ body{
 #imgEd{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .estr{
 	width:154px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -3071,7 +3072,7 @@ body{
 .ConEs{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -3085,14 +3086,14 @@ body{
 #imgEs{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .munic{
 	width:154px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -3106,7 +3107,7 @@ body{
 .ConMun{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -3121,14 +3122,14 @@ body{
 #imgMun{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .agua{
 	width:154px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -3142,7 +3143,7 @@ body{
 .ConAg{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -3156,7 +3157,7 @@ body{
 #imgAg{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* SERVIÇOS -----------------*/
@@ -3167,7 +3168,7 @@ body{
 .planeta{
 	width:260px;
 	height: 340px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -3180,7 +3181,7 @@ body{
 #imgP{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 /* IMG PLANETA -----------------*/
@@ -3384,9 +3385,9 @@ body{
 	margin-top: -30px;
 	padding-left: 10;
 	padding-top: 10;
-	 
-	font-family: Ssemi;	
-	font-size: 28px; 
+
+	font-family: Ssemi;
+	font-size: 28px;
 	color:white;
 
 	background: rgba(46, 204, 113,0.8);
@@ -3456,7 +3457,7 @@ body{
 	margin-top: 10px;
 	margin-left: 10px;
 
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -3467,7 +3468,7 @@ body{
 #language{
 	font-family: Sreg;
 	font-size: 16px;
-	right:20px; 
+	right:20px;
 	top:20px;
 	width:90px;
 	height: 35px;
@@ -3507,7 +3508,7 @@ body{
 	margin-top: 3px;
 	margin-left: calc(50% - 70px);
 
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -3516,7 +3517,7 @@ body{
 #imgLog{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
     background: transparent;
 }
@@ -3602,13 +3603,13 @@ body{
 #imgDesQuatro{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 .ConRepQuatro{
 	width:40px;
 	height: 80px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -3624,7 +3625,7 @@ body{
 #imgRepQuatro{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
@@ -3799,7 +3800,7 @@ body{
 	/*width:270px;*/
 	width:360px;
 	height: 360px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -3810,7 +3811,7 @@ body{
 .ConT2{
 	width:360px;
 	height: 360px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -3823,7 +3824,7 @@ body{
 .ConT3{
 	width:360px;
 	height: 360px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -3879,9 +3880,9 @@ body{
 	margin-top: 410px;
 	padding-left: 10;
 	padding-top: 20;
-	 
-	font-family: Ssemi;	
-	font-size: 22px; 
+
+	font-family: Ssemi;
+	font-size: 22px;
 	color:white;
 
 	background: rgba(46, 204, 113,0.8);
@@ -3905,9 +3906,9 @@ body{
 
 	background: none;
 	border-color: white;
-	
+
 	border:0.125em solid white;
-	padding-left:5; 
+	padding-left:5;
 }
 
 .but{
@@ -3922,7 +3923,7 @@ body{
 
 	cursor: pointer;
 	border: none;
-	background-color:white; 
+	background-color:white;
 	border:0.125em solid white;
 	opacity: 0;
 }
@@ -3962,7 +3963,7 @@ body{
 
 .btMessDois{
 	width:270px;
-	background: transparent;	
+	background: transparent;
 }
 
 .txMessDois{
@@ -4011,7 +4012,7 @@ body {
 
 .servi{
 	width:95%;
-	height: 440px;	
+	height: 440px;
 
 	margin-top: 170px;
 
@@ -4020,7 +4021,7 @@ body {
 .edif{
 	width:154px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4034,7 +4035,7 @@ body {
 .ConEd{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4048,14 +4049,14 @@ body {
 #imgEd{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .estr{
 	width:154px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4069,7 +4070,7 @@ body {
 .ConEs{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4083,14 +4084,14 @@ body {
 #imgEs{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .munic{
 	width:154px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4104,7 +4105,7 @@ body {
 .ConMun{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4119,14 +4120,14 @@ body {
 #imgMun{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .agua{
 	width:154px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4140,7 +4141,7 @@ body {
 .ConAg{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4154,14 +4155,14 @@ body {
 #imgAg{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .planeta{
 	width:30%;
 	height: 280px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4293,7 +4294,7 @@ body {
 	margin-top: 8px;
 	margin-left: 10px;
 
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4326,7 +4327,7 @@ body {
 #language{
 	font-family: Sreg;
 	font-size: 12px;
-	right:10px; 
+	right:10px;
 	top:10px;
 	width:50px;
 	height: 30px;
@@ -4366,7 +4367,7 @@ body {
 	margin-top: 3px;
 	margin-left: 5px;
 
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4397,7 +4398,7 @@ body {
 	margin-top: 530px;
 
 	background: transparent;
-}	
+}
 
 .repDois{
 	width:160px;
@@ -4429,7 +4430,7 @@ body {
 .ConRepUm{
 	width:30px;
 	height: 80px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4491,7 +4492,7 @@ body {
 .ConProb{
 	width:30%;
 	height: 300px;
-	display:block; 
+	display:block;
     position:absolute;
     overflow:hidden;
     z-index: 9999;
@@ -4535,7 +4536,7 @@ body {
 .Contri{
 	width:60px;
 	height: 55px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4578,7 +4579,7 @@ body {
 .triangulo2{
 	width:60px;
 	height: 55px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4631,7 +4632,7 @@ body {
 	/*width:270px;*/
 	width:280px;
 	height: 280px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4642,7 +4643,7 @@ body {
 .ConT2{
 	width:280px;
 	height: 280px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4655,7 +4656,7 @@ body {
 .ConT3{
 	width:280px;
 	height: 280px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4721,9 +4722,9 @@ body {
 	margin-top: 0px;
 	padding-left: 10;
 	padding-top: 20;
-	 
-	font-family: Ssemi;	
-	font-size: 20px; 
+
+	font-family: Ssemi;
+	font-size: 20px;
 	color:white;
 
 	background: rgba(46, 204, 113,0.8);
@@ -4747,9 +4748,9 @@ body {
 
 	background: none;
 	border-color: white;
-	
+
 	border:0.125em solid white;
-	padding-left:5; 
+	padding-left:5;
 }
 
 .but{
@@ -4764,7 +4765,7 @@ body {
 
 	cursor: pointer;
 	border: none;
-	background-color:white; 
+	background-color:white;
 	border:0.125em solid white;
 }
 
@@ -4803,7 +4804,7 @@ body {
 
 .btMessDois{
 	width:240px;
-	background: transparent;	
+	background: transparent;
 }
 
 .txMessDois{
@@ -4819,7 +4820,7 @@ body {
 .ConTriDois{
 	width:60px;
 	height: 55px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4872,7 +4873,7 @@ body {
 
 .servi{
 	width:100%;
-	height: 440px;	
+	height: 440px;
 
 	margin-top: 80px;
 
@@ -4883,7 +4884,7 @@ body {
 .edif{
 	width:130px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4898,7 +4899,7 @@ body {
 .ConEd{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4912,14 +4913,14 @@ body {
 #imgEd{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .estr{
 	width:130px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4934,7 +4935,7 @@ body {
 .ConEs{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4948,14 +4949,14 @@ body {
 #imgEs{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .munic{
 	width:130px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4970,7 +4971,7 @@ body {
 .ConMun{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -4985,14 +4986,14 @@ body {
 #imgMun{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .agua{
 	width:130px;
 	height: 184px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -5007,7 +5008,7 @@ body {
 .ConAg{
 	width:100%;
 	height: 180px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -5021,14 +5022,14 @@ body {
 #imgAg{
 	position:absolute;
     top:0;
-    left:0; 
+    left:0;
     width:100%;
 }
 
 .planeta{
 	width:150px;
 	height: 280px;
-	display:block; 
+	display:block;
     position:relative;
     overflow:hidden;
 
@@ -5085,3 +5086,82 @@ body {
 
 }
 /* RESPONSIVE < 650px---------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+#loading{
+	z-index: 999999999999;
+	position: fixed;
+	right:calc(50% - 40px) !important;
+	top:300px !important;
+}
+.loader {
+  display: inline-block;
+  width: 80px;
+  height: 90px;
+  position: relative;
+  border: 6px solid rgba(46, 200, 113, 0.8);
+  top: 50%;
+  animation: loader 4s infinite ease;
+  background: transparent;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(46, 200, 113, 0.8);
+  animation: loader-inner 4s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}

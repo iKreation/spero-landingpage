@@ -34,27 +34,27 @@ app.setScroll = function() {
 
 
 
-		if ($(this).scrollTop() >= 400){  
+		if ($(this).scrollTop() >= 400){
 		    $('.um').addClass("fase2");
 		    $('.quatro').addClass("fase2");
 		  }
 
 
 
-		if ($(this).scrollTop() >= dPos2){  
+		if ($(this).scrollTop() >= dPos2){
 		    foi = true;
-		  } 
+		  }
 		if ($(this).scrollTop() >= dPos3){
 			foi = false;
-		}  
+		}
 
 
-		if ($(this).scrollTop() >= dPos2){  
+		if ($(this).scrollTop() >= dPos2){
 		    foi2 = true;
-		} 
-		else {  
+		}
+		else {
 		    foi2 = false;
-		} 
+		}
 
 
 
@@ -98,7 +98,7 @@ app.animations = function() {
 
 app.descriptions = function() {
 	var self = this;
-	
+
 	$('body').click(function(e) {
 		// REPORT UM -------------------
 		if( e.target.id == 'imgRepUm' || e.target.id == 'ConDesUm'){
@@ -139,7 +139,7 @@ app.descriptions = function() {
 				$('.btMessUmDois').css({
 					"opacity": "0","pointer-events": "none"
 				});
-				self.repUm = 1; 
+				self.repUm = 1;
 			}
 			else if (self.repUm == 1) {
 				$('.repDes1').fadeOut(100);
@@ -153,7 +153,7 @@ app.descriptions = function() {
 				$('.ConRepDois').css({
 					"cursor":"pointer","pointer-events": "visible"
 				})
-				
+
 				setTimeout(function() {
 				$('#imgRepTres').css({
 					"opacity": "1","pointer-events": "visible"
@@ -216,7 +216,7 @@ app.descriptions = function() {
 				$('.btMessUmDois').css({
 					"cursor":"pointer","pointer-events": "visible"
 				});
-					self.repUm = 2; 
+					self.repUm = 2;
 			}
 		}
 		else if(self.repUm > 0) {
@@ -231,7 +231,7 @@ app.descriptions = function() {
 			$('.ConRepDois').css({
 				"cursor":"pointer","pointer-events": "visible"
 			})
-			
+
 			setTimeout(function() {
 			$('#imgRepTres').css({
 				"opacity": "1","pointer-events": "visible"
@@ -294,7 +294,7 @@ app.descriptions = function() {
 			$('.btMessUmDois').css({
 				"cursor":"pointer","pointer-events": "visible"
 			});
-			self.repUm = 0; 
+			self.repUm = 0;
 		}
 		// REPORT DOIS -------------------
 		if( e.target.id == 'imgRepDois' || e.target.id == 'ConDesDois'){
@@ -336,7 +336,7 @@ app.descriptions = function() {
 				$('.btMessUmDois').css({
 					"opacity": "0","pointer-events": "none"
 				});
-				self.repDois = 1; 
+				self.repDois = 1;
 			}
 			else if (self.repDois == 1) {
 				$('.repDes2').fadeOut(100);
@@ -413,7 +413,7 @@ app.descriptions = function() {
 				$('.btMessUmDois').css({
 					"cursor":"pointer","pointer-events": "visible"
 				});
-				self.repDois = 2; 
+				self.repDois = 2;
 			}
 		}
 		else if (self.repDois > 0){
@@ -491,7 +491,7 @@ app.descriptions = function() {
 			$('.btMessUmDois').css({
 				"cursor":"pointer","pointer-events": "visible"
 			})
-			self.repDois = 0; 
+			self.repDois = 0;
 		}
 		// REPORT TRES -------------------
 		if( e.target.id == 'imgRepTres' || e.target.id == 'ConDesTres'){
@@ -533,7 +533,7 @@ app.descriptions = function() {
 				$('.btMessUmDois').css({
 					"opacity": "0","pointer-events": "none"
 				});
-				self.repTres = 1; 
+				self.repTres = 1;
 			}
 			else if (self.repTres == 1) {
 				$('.repDes3').fadeOut(100);
@@ -610,7 +610,7 @@ app.descriptions = function() {
 				$('.btMessUmDois').css({
 					"cursor":"pointer","pointer-events": "visible"
 				})
-				self.repTres = 2; 
+				self.repTres = 2;
 			}
 		}
 		else if (self.repTres) {
@@ -688,7 +688,7 @@ app.descriptions = function() {
 			$('.btMessUmDois').css({
 				"cursor":"pointer","pointer-events": "visible"
 			})
-			self.repTres = 0; 
+			self.repTres = 0;
 		}
 		// REPORT QUATRO -------------------
 		if( e.target.id == 'imgRepQuatro' || e.target.id == 'ConDesQuatro'){
@@ -730,7 +730,7 @@ app.descriptions = function() {
 				$('.btMessUmDois').css({
 					"opacity": "0","pointer-events": "none"
 				});
-				self.repQuatro = 1; 
+				self.repQuatro = 1;
 			}
 			else if (self.repQuatro == 1) {
 				$('.repDes4').fadeOut(100);
@@ -807,7 +807,7 @@ app.descriptions = function() {
 				$('.btMessUmDois').css({
 					"cursor":"pointer","pointer-events": "visible"
 				})
-				self.repQuatro = 2; 
+				self.repQuatro = 2;
 			}
 		}
 		else if (self.repQuatro) {
@@ -885,9 +885,9 @@ app.descriptions = function() {
 			$('.btMessUmDois').css({
 				"cursor":"pointer","pointer-events": "visible"
 			})
-			self.repQuatro = 0; 
+			self.repQuatro = 0;
 		}
-	});	
+	});
 }
 
 app.events = function() {
@@ -1034,8 +1034,8 @@ app.events = function() {
 				$('.planeta').css({
 					"opacity": "0"
 				})
-				self.desc1 = 1;	
-			}	
+				self.desc1 = 1;
+			}
 			else if (self.desc1 == 1) {
 				$('.desc1').fadeOut(100);
 				$('.txDesc1').fadeOut(100);
@@ -1046,8 +1046,8 @@ app.events = function() {
 				$('.planeta').css({
 					"opacity": "1"
 				})
-				self.desc1 = 2;	
-			}	
+				self.desc1 = 2;
+			}
 		}
 		else if(self.desc1 > 0) {
 			$('.desc1').fadeOut(100);
@@ -1059,7 +1059,7 @@ app.events = function() {
 			$('.planeta').css({
 				"opacity": "1"
 			})
-			self.desc1 = 0;	
+			self.desc1 = 0;
 		}
 		// ESTR -------------------
 		if( e.target.id == 'imgEs'){
@@ -1076,8 +1076,8 @@ app.events = function() {
 				$('.planeta').css({
 					"opacity": "0"
 				})
-				self.desc2 = 1;	
-			}	
+				self.desc2 = 1;
+			}
 			else if (self.desc2 == 1) {
 				$('.desc2').fadeOut(100);
 				$('.txDesc2').fadeOut(100);
@@ -1088,8 +1088,8 @@ app.events = function() {
 				$('.planeta').css({
 					"opacity": "1"
 				})
-				self.desc2 = 2;	
-			}	
+				self.desc2 = 2;
+			}
 		}
 		else if(self.desc2 > 0) {
 			$('.desc2').fadeOut(100);
@@ -1101,7 +1101,7 @@ app.events = function() {
 			$('.planeta').css({
 				"opacity": "1"
 			})
-			self.desc2 = 0;	
+			self.desc2 = 0;
 		}
 		// MUNIC -------------------
 		if( e.target.id == 'imgMun'){
@@ -1123,8 +1123,8 @@ app.events = function() {
 						"margin-left": "10%"
 					})
 				}, 100);
-				self.desc3 = 1;	
-			}	
+				self.desc3 = 1;
+			}
 			else if (self.desc3 == 1) {
 				$('.desc3').fadeOut(100);
 				$('.txDesc3').fadeOut(100);
@@ -1139,8 +1139,8 @@ app.events = function() {
 				$(".munic").css({
 					"margin-left": "20%"
 				})
-				self.desc3 = 2;	
-			}	
+				self.desc3 = 2;
+			}
 		}
 		else if(self.desc3 > 0) {
 			$('.desc3').fadeOut(100);
@@ -1156,7 +1156,7 @@ app.events = function() {
 			$(".munic").css({
 				"margin-left": "20%"
 			})
-			self.desc3 = 0;	
+			self.desc3 = 0;
 		}
 		// AGUA -------------------
 		if( e.target.id == 'imgAg'){
@@ -1178,8 +1178,8 @@ app.events = function() {
 						"margin-left": "10%"
 					})
 				}, 200);
-				self.desc4 = 1;	
-			}	
+				self.desc4 = 1;
+			}
 			else if (self.desc4 == 1) {
 				$('.desc4').fadeOut(100);
 				$('.txDesc4').fadeOut(100);
@@ -1197,8 +1197,8 @@ app.events = function() {
 				$(".agua").css({
 					"margin-left": "10%"
 				})
-				self.desc4 = 2;	
-			}	
+				self.desc4 = 2;
+			}
 		}
 		else if(self.desc4 > 0) {
 			$('.desc4').fadeOut(100);
@@ -1217,9 +1217,9 @@ app.events = function() {
 			$(".agua").css({
 				"margin-left": "10%"
 			})
-			self.desc4 = 0;	
+			self.desc4 = 0;
 		}
-	});		
+	});
 }
 
 app.slide = function() {
@@ -1263,7 +1263,7 @@ app.slide = function() {
 			$(".numTres").css({
 				"background": "rgba(46, 204, 113,0.8)"
 			});
-			
+
 			if (app.count) {
 				app.counter++;
 			}
@@ -1298,7 +1298,10 @@ app.init = function() {
 	app.events();
 	app.descriptions();
 	app.animations();
-	$(".content-container").show();
+	setTimeout(function() {
+		$("#loading").fadeOut(100);
+		$(".content-container").fadeIn(300);
+	}, 500);
 }
 
 app.initMaps = function() {
@@ -1320,7 +1323,7 @@ app.initMaps = function() {
 		center: new google.maps.LatLng(40.9900, -73.9900), // New York
 
 		styles: [{"elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"color":"#f5f5f2"},{"visibility":"on"}]},{"featureType":"administrative","stylers":[{"visibility":"off"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"poi.attraction","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.place_of_worship","stylers":[{"visibility":"off"}]},{"featureType":"poi.school","stylers":[{"visibility":"off"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#ffffff"},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"visibility":"simplified"},{"color":"#ffffff"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"color":"#ffffff"},{"visibility":"on"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"visibility":"on"}]},{"featureType":"road.arterial","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","stylers":[{"color":"#000000"}]},{"featureType":"poi.park","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#05E9FF"}]},{"featureType":"landscape","stylers":[{"color":"#e5e8e7"}]},{"featureType":"poi.park","stylers":[{"color":"#8ba129"}]},{"featureType":"road","stylers":[{"color":"#FAFAFA"}]},{"featureType":"poi.sports_complex","elementType":"geometry","stylers":[{"color":"#c7c7c7"},{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#05E9FF"}]},{"featureType":"poi.park","stylers":[{"color":"#1abc9c"}]},{"featureType":"poi.park","stylers":[{"gamma":1.51}]},{"featureType":"road.local","stylers":[{"visibility":"on"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"poi.government","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"landscape","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","stylers":[{"visibility":"simplified"}]},{"featureType":"road"},{"featureType":"road"},{},{"featureType":"road.highway"},{"elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"color":"#8C8C8C"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]}]
-    
+
     };
 
 	var mapElement = document.getElementById('map');
