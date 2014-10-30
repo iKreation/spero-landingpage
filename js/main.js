@@ -1301,7 +1301,7 @@ app.init = function() {
 	setTimeout(function() {
 		$("#loading").fadeOut(100);
 		$(".content-container").fadeIn(300);
-	}, 500);
+	}, 1500);
 }
 
 app.initMaps = function() {

@@ -5100,68 +5100,40 @@ body {
 #loading{
 	z-index: 999999999999;
 	position: fixed;
-	right:calc(50% - 40px) !important;
-	top:300px !important;
-}
-.loader {
-  display: inline-block;
-  width: 80px;
-  height: 90px;
-  position: relative;
-  border: 6px solid rgba(46, 200, 113, 0.8);
-  top: 50%;
-  animation: loader 4s infinite ease;
-  background: transparent;
+	right:calc(50% - 80px) !important;
+  top: 250px !important;
+  width: 160px;
+  height: 120px;
+  background-image: url("sprite.png");
+  -webkit-animation: play 2s steps(43) infinite;
+  -moz-animation: play 2s steps(43) infinite;
+  -ms-animation: play 2s steps(43) infinite;
+  -o-animation: play 2s steps(43) infinite;
+  animation: play 2s steps(43) infinite;
 }
 
-.loader-inner {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-  background-color: rgba(46, 200, 113, 0.8);
-  animation: loader-inner 4s infinite ease-in;
+
+@-webkit-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -6880px; }
 }
 
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  25% {
-    transform: rotate(180deg);
-  }
-
-  50% {
-    transform: rotate(180deg);
-  }
-
-  75% {
-    transform: rotate(360deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+@-moz-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -6880px; }
 }
 
-@keyframes loader-inner {
-  0% {
-    height: 0%;
-  }
+@-ms-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -6880px; }
+}
 
-  25% {
-    height: 0%;
-  }
+@-o-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -6880px; }
+}
 
-  50% {
-    height: 100%;
-  }
-
-  75% {
-    height: 100%;
-  }
-
-  100% {
-    height: 0%;
-  }
+@keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -6880px; }
 }
